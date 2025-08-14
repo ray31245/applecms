@@ -1,0 +1,68 @@
+<header class="stui-header__top clearfix" id="header-top">
+	<div class="container">	
+		<div class="row">
+			<div class="stui-header_bd clearfix">					
+			    <div class="stui-header__logo">
+					<a class="logo" href="{$maccms.path}"></a>										  
+				</div>
+				<div class="stui-header__side">					
+					<ul class="stui-header__user">
+						{if condition="$maccms.user_status eq 1"}
+						<li>
+							<a class="mac_user" href="javascript:;"><i class="icon iconfont icon-account"></i></a>
+						</li>
+						{else /}
+						<li>
+							<a href="javascript:;"><i class="icon iconfont icon-clock"></i></a>
+							<div class="dropdown history">					
+								<h5 class="margin-0 text-muted">
+									<a class="historyclean text-muted pull-right" href="">清空</a>
+									播放记录
+								</h5>
+								<ul class="clearfix" id="stui_history">
+								</ul>
+							</div>
+						</li>
+						{/if}
+					</ul>
+					<script type="text/javascript" src="{$maccms.path}statics/js/jquery.autocomplete.js"></script>
+					<div class="stui-header__search"> 
+				        <form id="search" name="search" method="get" action="{:mac_url('vod/search')}" onSubmit="return qrsearch();">
+	    					<input type="text" name="wd" class="mac_wd form-control" value="{$param.wd}" placeholder="请输入关键词..." autocomplete="off"/>
+							<button class="submit" id="searchbutton" type="submit"><i class="icon iconfont icon-search"></i></button>							
+						</form>
+				  	</div>
+				</div>									
+				<ul class="stui-header__menu type-slide">
+					<li {if condition="$maccms.aid eq 1"}class="active"{/if}><a href="{$maccms.path}">首页</a></li>
+					{maccms:type num="10" order="asc" by="sort" ids="parent"}
+	                <li {if condition="($vo.type_id eq $GLOBALS['type_id'] || $vo.type_id eq $GLOBALS['type_pid'])"}class="active"{/if}><a href="{:mac_url_type($vo)}">{$vo.type_name}</a></li>
+	                {/maccms:type}
+	                
+				</ul>				
+			  </div>		 							    
+		</div>
+	</div>
+</header>
+<script type="text/javascript">
+	$(".stui-header__user li,.stui-header__menu li").click(function(){
+		$(this).find(".dropdown").toggle();
+	});
+</script>
+
+<div style="padding:1rem;background:#ffffed;color:#333;border-radius:8px;border:1px solid #f1e7bc;font-size:14px;text-align:center;">
+    <strong style="color:red;">提示：</strong>10万视频资源保存在：
+    <strong style="color:red;">网盘</strong>
+    <strong style="color:red;">一键转存所有</strong>
+    <div class="mt-3 flex flex-wrap justify-center gap-2">
+        <a href="https://pan.quark.cn/s/aa24a62edfe2" rel="nofollow" target="_blank" style="background-color: #165DFF;color: white;padding: 6px 12px;border-radius: 4px;text-decoration: none;display: inline-block;margin-right: 10px;">
+            <i class="fa fa-cloud mr-1"></i>夸克网盘
+        </a>
+        <a href="http://so.caiwangwaweihu.com/" target="_blank" style="background-color: #FF7500;color: white;padding: 6px 12px;border-radius: 4px;text-decoration: none;display: inline-block;margin-right: 10px;">
+            <i class="fa fa-download mr-1"></i>海量免费资源
+        </a>
+
+    </div>
+</div>
+
+    

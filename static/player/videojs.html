@@ -1,0 +1,356 @@
+<!--<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>樱花动漫网</title>
+<meta name="viewport" content="initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+<style>
+*{margin:0;padding:0}body,html{width:100%;height:100%;overflow:hidden;font-family:Helvetica,Arial,Microsoft Yahei,sans-serif;background-image:url(back.jpg);background-color:#e16e34;background-repeat:repeat;background-size:cover;font-size:14px;position:fixed;text-shadow:1px 1px rgba(0,0,0,.3)}h2{color:#fff;font-size:28px;font-weight:400;text-transform:capitalize;margin:0 0 30px}li{display:inline-block;font-size:42px;font-weight:400;text-align:center;height:100px;text-shadow:none;vertical-align:middle;color:#fff;margin:10px 0;height:auto;padding-bottom:15px;background:0 0;width:136px;border-right:2px dashed rgba(255,255,255,.26)}li:last-child{border:none}li span{line-height:70px}li div{display:block;font-size:16px;margin-top:0;text-align:center;background:rgba(255,255,255,.06);color:#fff;padding:0;height:45px;line-height:45px}.fed-main-info{width:90%;min-width:320px;position:absolute;top:50%;left:50%;color:#fff;font-size:22px;text-align:center;transform:translate(-50%,-50%);z-index:999;padding-bottom:80px}.fed-foot-info{position:fixed;text-align:center;width:100%;bottom:40px;color:#eee}@media(max-width:768px){.fed-main-info{width:320px}li:nth-last-child(3){border:none}.fed-foot-info{bottom:20px}}
+</style>
+</head>
+<body>
+<div class="fed-main-info">
+<h2>海量视频资源免费观看</h2>
+所有资源已迁移至夸克网盘，转存后观看</br>
+<br><a href="http://app.jiahaoping.com/" target="_self"><img src="/x.png" alt="qrcode" width="200" border="0"/></a></br>
+</div>
+</body>
+</html>-->
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>樱花动漫网 - 资源提示</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Helvetica Neue', 'Segoe UI', 'Microsoft YaHei', sans-serif;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: #ffffff;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        /* 背景装饰元素 */
+        .decoration {
+            position: absolute;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.03);
+            z-index: -1;
+        }
+        
+        .decoration:nth-child(1) {
+            width: 300px;
+            height: 300px;
+            top: -150px;
+            left: -150px;
+        }
+        
+        .decoration:nth-child(2) {
+            width: 200px;
+            height: 200px;
+            bottom: -100px;
+            right: -100px;
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 600px;
+            text-align: center;
+            padding: 50px 40px;
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(12px);
+            border-radius: 24px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transform: translateY(0);
+            transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            z-index: 10;
+        }
+        
+        .container:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+        }
+        
+        .logo {
+            font-size: 2.8rem;
+            font-weight: 700;
+            margin-bottom: 25px;
+            color: #e94560;
+            letter-spacing: 1px;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .logo::after {
+            content: "";
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(to right, #e94560, #533483);
+            border-radius: 2px;
+        }
+        
+        .title {
+            font-size: 2.2rem;
+            font-weight: 600;
+            margin-bottom: 35px;
+            line-height: 1.4;
+            letter-spacing: 0.5px;
+        }
+        
+        .message {
+            font-size: 1.5rem;
+            line-height: 1.7;
+            margin-bottom: 45px;
+            color: #e0e0e0;
+            padding: 0 20px;
+        }
+        
+        .highlight {
+            color: #f8b500;
+            font-weight: 600;
+            position: relative;
+        }
+        
+        .highlight::after {
+            content: "";
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(to right, transparent, #f8b500, transparent);
+        }
+        
+        .btn-container {
+            margin: 40px 0 30px;
+        }
+        
+        .action-btn {
+            background: linear-gradient(45deg, #e94560, #533483);
+            color: white;
+            border: none;
+            padding: 18px 55px;
+            font-size: 1.4rem;
+            font-weight: 500;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            letter-spacing: 1px;
+            box-shadow: 0 8px 25px rgba(233, 69, 96, 0.35);
+            display: inline-block;
+            text-decoration: none; /* 移除链接下划线 */
+        }
+        
+        .action-btn:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 30px rgba(233, 69, 96, 0.5);
+        }
+        
+        .action-btn:active {
+            transform: translateY(1px);
+        }
+        
+        .action-btn::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+            transition: 0.6s;
+        }
+        
+        .action-btn:hover::after {
+            left: 100%;
+        }
+        
+        .tip {
+            font-size: 1.1rem;
+            color: rgba(255, 255, 255, 0.7);
+            margin-top: 25px;
+            padding: 12px 20px;
+            background: rgba(0, 0, 0, 0.15);
+            border-radius: 12px;
+            display: inline-block;
+        }
+        
+        .footer {
+            position: absolute;
+            bottom: 30px;
+            text-align: center;
+            font-size: 1rem;
+            color: rgba(255, 255, 255, 0.5);
+            width: 100%;
+        }
+        
+        /* 简约动画效果 */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .container {
+            animation: fadeIn 0.8s ease-out forwards;
+        }
+        
+        /* 响应式设计 */
+        @media (max-width: 768px) {
+            .container {
+                padding: 40px 25px;
+            }
+            
+            .logo {
+                font-size: 2.3rem;
+            }
+            
+            .title {
+                font-size: 1.8rem;
+            }
+            
+            .message {
+                font-size: 1.3rem;
+                padding: 0;
+            }
+            
+            .action-btn {
+                padding: 16px 45px;
+                font-size: 1.2rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .container {
+                padding: 35px 20px;
+            }
+            
+            .logo {
+                font-size: 2rem;
+            }
+            
+            .title {
+                font-size: 1.5rem;
+                margin-bottom: 25px;
+            }
+            
+            .message {
+                font-size: 1.1rem;
+                margin-bottom: 35px;
+            }
+            
+            .action-btn {
+                padding: 14px 35px;
+                font-size: 1.1rem;
+            }
+            
+            .tip {
+                font-size: 0.95rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- 背景装饰 -->
+    <div class="decoration"></div>
+    <div class="decoration"></div>
+    
+    <div class="container">
+        
+<div style="padding:1rem;background:#ffffed;color:#333;border-radius:8px;border:1px solid #f1e7bc;font-size:14px;max-width:1200px;margin:0 auto;">
+    <div style="margin-bottom:0.8rem;line-height:1.5;text-align:center;">
+        <strong style="color:red;">提示：</strong>10万视频资源保存在
+        <strong style="color:red;">网盘</strong>，支持
+        <strong style="color:red;">一键转存所有</strong>
+    </div>
+    <!-- 响应式网格布局：小屏靠左，大屏居中 -->
+    <div style="display: grid; 
+                grid-template-columns: repeat(auto-fit, minmax(100px, max-content)); 
+                gap: 0.8rem; 
+                padding: 0 0.5rem;
+                justify-content: center; /* 大屏默认居中 */" class="btn-container">
+        <!-- 小屏适配：屏幕宽度<480px时靠左排列 -->
+        <style>
+            @media (max-width: 480px) {
+                .btn-container {
+                    justify-content: start !important;
+                }
+            }
+        </style>
+        
+        <a href="https://pan.quark.cn/s/aa24a62edfe2" rel="nofollow" target="_blank" style="background-color: #165DFF;color: white;padding: 4px 12px;border-radius: 4px;text-decoration: none;display: inline-flex;align-items: center;min-width:100px;transition: all 0.2s;font-size:13px;">
+            <i class="fa fa-cloud mr-1"></i>夸克网盘
+        </a>
+        <a href="http://so.jiahaoping.com/" target="_blank" style="background-color: #36B37E;color: white;padding: 4px 12px;border-radius: 4px;text-decoration: none;display: inline-flex;align-items: center;min-width:100px;transition: all 0.2s;font-size:13px;">
+            <i class="fa fa-download mr-1"></i>免费海量资源
+        </a>
+        <a href="http://app.jiahaoping.com/2.html" target="_blank" style="background-color: #6554C0;color: white;padding: 4px 12px;border-radius: 4px;text-decoration: none;display: inline-flex;align-items: center;min-width:100px;transition: all 0.2s;font-size:13px;">
+            <i class="fa fa-download mr-1"></i>网盘拉新推广
+        </a>
+        <a href="https://pan.quark.cn/s/27d014abca4a" target="_blank" style="background-color: #FF5630;color: white;padding: 4px 12px;border-radius: 4px;text-decoration: none;display: inline-flex;align-items: center;min-width:100px;transition: all 0.2s;font-size:13px;">
+            <i class="fa fa-download mr-1"></i>F1狂飙飞车
+        </a>
+        <a href="https://pan.quark.cn/s/520aa93fd971" target="_blank" style="background-color: #FFAB00;color: white;padding: 4px 12px;border-radius: 4px;text-decoration: none;display: inline-flex;align-items: center;min-width:100px;transition: all 0.2s;font-size:13px;">
+            <i class="fa fa-download mr-1"></i>罗小黑战记2
+        </a>
+        <a href="https://pan.quark.cn/s/e39e111a3cde" target="_blank" style="background-color: #00B8D9;color: white;padding: 4px 12px;border-radius: 4px;text-decoration: none;display: inline-flex;align-items: center;min-width:100px;transition: all 0.2s;font-size:13px;">
+            <i class="fa fa-download mr-1"></i>侏罗纪世界
+        </a>
+
+    </div>
+</div>
+
+    </div>
+    
+    <script>
+        // 按钮点击效果
+        document.querySelector('.action-btn').addEventListener('click', function(e) {
+            // 如果链接是占位符，则阻止跳转
+            if(this.href === 'https://pan.quark.cn/s/aa24a62edfe2') {
+                e.preventDefault();
+                
+                // 保存原始文本
+                const originalText = this.textContent;
+                
+                // 添加动画效果
+                this.textContent = '跳转中...';
+                this.style.background = 'linear-gradient(45deg, #533483, #1a1a2e)';
+                
+
+                    
+                    // 恢复按钮状态
+                    this.textContent = originalText;
+                    this.style.background = 'linear-gradient(45deg, #e94560, #533483)';
+                }, 1200);
+            }
+        });
+    </script>
+</body>
+</html>
+
+
+

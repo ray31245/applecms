@@ -1,0 +1,2540 @@
+{include file="../../../application/admin/view/public/head" /}
+<div class="page-container">
+    <form class="layui-form layui-form-pane" action="">
+        <div class="layui-tab layui-tab-brief">
+            <ul class="layui-tab-title">
+                <li class="layui-this">主题说明</li>
+                <li class="">站点设置</li>
+                <li class="">导航菜单</li>
+                <li class="">首页配置</li>
+                <li class="">全局配置</li>
+                <li class="">个性配置</li>
+                <li class="">广告管理</li>
+                <li class="">特色插件</li>
+                <li class="">打赏作者</li>
+                <li class="">字体图标</li>
+                 <li class="">更新日志</li>
+            </ul>
+            <div class="layui-tab-content">
+                <!--首页-->
+                <div class="layui-tab-item layui-show">
+                   <blockquote class="layui-elem-quote" style="margin: 20px 0;">
+                	欢迎使用MXoneV6.3主题
+                    </blockquote>
+                    <div class="layui-col-md4" style="padding-right: 10px;">
+                        <table class="layui-table">
+                            <thead>
+                            <tr><th colspan="2" scope="col">出品</th></tr>
+                            </thead>
+                              <tr><td>出品方</td><td><span class="layui-badge">模板馆 www.iqshg.com</span></td></tr>
+                            <thead>
+                            <tr><th colspan="2" scope="col">主题简介</th></tr>
+                            </thead>
+                              <tr><td>主题名称</td><td><span>MXoneV6.3</span></td></tr>    
+                              <tr><td>适用系统</td><td><span class="layui-badge">MACCMS V10</span></td></tr>
+                              <tr><td>主题作者</td><td>模板馆 www.iqshg.com</td></tr>
+                              <tr><td>主题测试者</td><td>模板馆 www.iqshg.com</td></tr>
+                              <tr><td>当前版本</td><td><span class="layui-badge">6.3.1</td></tr>
+                              <tr><td>更新时间</td><td>2022-2-1</td></tr>
+                              <tr><td>CV源码网</td><td><a href="https://www.iqshg.com">CV源码网</a></td></tr>
+                              <tr><td>最新版本</td><td><a href="https://www.iqshg.com">查看最新版本</a></td></tr>
+                             
+                              </div>
+                               <thead>
+                               <tr><td> <span class="layui-badge">演示站</th></tr>
+                              </thead>
+                             <tr><td>演示站</td><td><a href="www.iqshg.com">6.3演示站</a></td></tr>
+                            
+                             <tr><td> <span class="layui-badge">关于更新</td><td>最新版V10.6</td></tr>
+                            
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="layui-col-md8">
+                        <table class="layui-table">
+                            <thead>
+                            <tr><th>主题声明</th></tr>
+                            </thead>
+                            <tbody>
+                            <tr><td>本模板改自MXone（5.2）</th></tr>
+                             <tr><td style="color: red;">模板馆 www.iqshg.com</th></tr>
+                
+                
+                            <thead>
+                            <tr><th>帮助中心</th></tr>
+                            </thead>
+                            <tbody>
+                           <tr><td style="color: red;">模板馆</th></tr>
+                           <tr><td> https://www.iqshg.com</th></tr>
+                           <tr><td style="color: red;">声明：非本站购买</th></tr>
+                          <tr><td>  如果你的模板不是本站购买的，因为挂马以及后门产生的问题我们一噶不负责！</th></tr>
+                          
+                
+                            <tbody>
+                            <thead>
+                            <tr><th>基础常识</th></tr>
+                            </thead>
+                            <tbody>
+                            <tr><td>1. 推荐使用PHP版本≥5.6以上8.0以下版本</td></tr>
+                            <tr><td>2. 主题文件读写权限755</td></tr>
+                            <tr><td>3. 不兼容IE8及以下浏览器</td></tr>
+                            <tr><td>4. 主题具备可复制性，请勿传播</td></tr>
+                            <tr><td>5. 非技术人员请勿私自修改主题核心文件</td></tr>
+                           	
+                            </tbody>
+                        </table>
+                    </div>
+                                   
+                <div class="layui-row">
+	            <blockquote class="layui-elem-quote" style="margin: 20px 0;">
+		        快捷入口： 
+	        	<a class="layui-btn layui-btn-primary theme" target='_blank' href="https://www.iqshg.com">CV源码网</a> 
+		        <a class="layui-btn layui-btn-primary theme" target='_blank' href="https://www.iqshg.com">查看最新版MXone模板</a>
+            	</blockquote>
+                </div>
+                </div>
+                <!--首页end-->
+
+                <div class="layui-tab-item ">
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">首页logo：</label>
+                        <div class="layui-input-inline w400">
+                            <input type="text" name="mxcms[s1][logo1]" placeholder="首页logo" value="{$config['mxcms']['s1']['logo1']}" class="layui-input upload-input" placeholder="建议350*90">
+                        </div>
+                        <div class="layui-input-inline w100">
+                            <button type="button" class="layui-btn layui-btn-primary layui-upload" lay-data="{data:{thumb:0,thumb_class:'mxcms[s1][logo1]'}}" id="upload11">选择文件</button>
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">左上角logo：</label>
+                        <div class="layui-input-inline w400">
+                            <input type="text" name="mxcms[s1][logo2]" placeholder="全站logo" value="{$config['mxcms']['s1']['logo2']}" class="layui-input upload-input" placeholder="建议200*200">
+                        </div>
+                        <div class="layui-input-inline w100">
+                            <button type="button" class="layui-btn layui-btn-primary layui-upload" lay-data="{data:{thumb:0,thumb_class:'mxcms[s1][logo2]'}}" id="upload12">选择文件</button>
+                        </div>
+                    </div>
+                    
+                     <div class="layui-form-item">
+                        <label class="layui-form-label">ico-logo：</label>
+                        <div class="layui-input-inline w400">
+                            <input type="text" name="mxcms[s1][logo3]" placeholder="全站logo" value="{$config['mxcms']['s1']['logo3']}" class="layui-input upload-input" placeholder="建议80*80">
+                        </div>
+                        <div class="layui-input-inline w100">
+                            <button type="button" class="layui-btn layui-btn-primary layui-upload" lay-data="{data:{thumb:0,thumb_class:'mxcms[s1][logo3]'}}" id="upload12">选择文件</button>
+                        </div>
+                    </div>                   
+                    
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">懒加载图：</label>
+                        <div class="layui-input-inline w400">
+                            <input type="text" name="mxcms[s1][pic]" placeholder="懒加载图片" value="{$config['mxcms']['s1']['pic']}" class="layui-input upload-input" placeholder="建议300*500">
+                        </div>
+                        <div class="layui-input-inline w100">
+                            <button type="button" class="layui-btn layui-btn-primary layui-upload" lay-data="{data:{thumb:0,thumb_class:'mxcms[s1][pic]'}}" id="upload13">选择文件</button>
+                        </div>
+                    </div>
+                       <div class="layui-form-item">
+                        <label class="layui-form-label">横向懒加载图：</label>
+                        <div class="layui-input-inline w400">
+                            <input type="text" name="mxcms[s1][pic1]" placeholder="横向懒加载图片" value="{$config['mxcms']['s1']['pic1']}" class="layui-input upload-input" placeholder="建议300*500">
+                        </div>
+                        <div class="layui-input-inline w100">
+                            <button type="button" class="layui-btn layui-btn-primary layui-upload" lay-data="{data:{thumb:0,thumb_class:'mxcms[s1][pic1]'}}" id="upload14">选择文件</button>
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">首页文字：</label>
+                        <div class="layui-input-inline w500">
+                            <input name="mxcms[s1][gg]" type="text" value="{$config['mxcms']['s1']['gg']}" size="60" class="layui-input" placeholder="首页左上角文字">
+                        </div>
+                    </div>
+                       <div class="layui-form-item">
+                        <label class="layui-form-label">搜索框文字：</label>
+                        <div class="layui-input-inline w500">
+                            <input name="mxcms[s1][searchwd]" type="text" value="{$config['mxcms']['s1']['searchwd']}" size="60" class="layui-input" placeholder="搜索框文字">
+                        </div>
+                    </div>
+                        <div class="layui-form-item">
+                        <label class="layui-form-label">搜索框排行榜</label>
+                        <div class="layui-input-block">
+                        <div class="layui-input-inline w200">
+                    <input type="radio" name="mxcms[s2][searchhoticon]" value="0" title="关闭" {if condition="$config['mxcms']['s2']['searchhoticon'] eq 0"}checked {/if}>
+                     <input type="radio" name="mxcms[s2][searchhoticon]" value="1" title="开启" {if condition="$config['mxcms']['s2']['searchhoticon'] eq 1"}checked {/if}>
+                        </div>
+                    <div class="layui-form-mid layui-word-aux">搜索框排行榜按钮，默认开启，关闭后不显示对应内容</div>
+                        </div>
+                    </div> 
+                            <div class="layui-form-item">
+                          	  <label class="layui-form-label w150">搜索框排行榜图标</label>
+                          	    <div class="layui-input-block">
+                        <div class="layui-input-inline w300">
+                            <input name="mxcms[s2][diysearchhoticon]" type="text" value="{$config['mxcms']['s2']['diysearchhoticon']}" size="60" class="layui-input" placeholder="搜索框排行榜图标">
+  
+                        </div>
+                         </div>
+                        </div> 
+                    
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">底部声明：</label>
+                        <div class="layui-input-block w500">
+                            <textarea name="mxcms[s1][sm]" class="layui-textarea" placeholder="底部声明">{$config['mxcms']['s1']['sm']}</textarea>
+                        </div>
+                    </div>
+                         <div class="layui-form-item">
+                        <label class="layui-form-label">视频横图封面</label>
+                        <div class="layui-input-block">
+                        <div class="layui-input-inline w300">
+                    <input type="radio" name="mxcms[s2][qzslt]" value="0" title="关闭" {if condition="$config['mxcms']['s2']['qzslt'] eq 0"}checked {/if}>
+                     <input type="radio" name="mxcms[s2][qzslt]" value="1" title="开启" {if condition="$config['mxcms']['s2']['qzslt'] eq 1"}checked {/if}>
+                        </div>
+                         <div class="layui-form-mid layui-word-aux">默认关闭，开启后PC一行显示6个，WAP端一行2个,必须把首页排行榜关了！</div>
+                        </div>
+                    </div>   
+                </div>
+        
+        
+        
+                <div class="layui-tab-item">
+                <div class="layui-tab layui-tab-card">
+                    <ul class="layui-tab-title">
+                    <li class="layui-this">默认配置</li>
+                     <li>首页幻灯下菜单</li>
+                     <li>电脑端导航</li>
+                     <li>手机端导航</li>
+                    <li>右下角菜单</li>
+                     <li>手机端底部导航</li>
+                    </ul>
+                     <div class="layui-tab-content">
+                          <div class="layui-tab-item layui-show">  
+                            <div class="layui-form-item">
+                        <label class="layui-form-label">固定导航</label>
+                        <div class="layui-input-block">
+                        <div class="layui-input-inline w300">
+                    <input type="radio" name="mxcms[s2][pcgddh]" value="0" title="关闭" {if condition="$config['mxcms']['s2']['pcgddh'] eq 0"}checked {/if}>
+                     <input type="radio" name="mxcms[s2][pcgddh]" value="1" title="开启" {if condition="$config['mxcms']['s2']['pcgddh'] eq 1"}checked {/if}>
+                        </div>
+                        </div>
+                    </div>   
+                    	<div class="layui-form-item">
+                        <label class="layui-form-label">导航背景颜色</label>
+                        <div class="layui-input-inline w70">
+							<select name="mxcms[s2][gddhbg]">
+                                <option value="0" {if condition="$config['mxcms']['s2']['gddhbg'] eq 0"}selected {/if}>关闭</option>
+                                <option value="1" {if condition="$config['mxcms']['s2']['gddhbg'] eq 1"}selected {/if}>开启</option>
+                            </select>
+						</div>
+						  <label class="layui-form-label">背景颜色代码</label>
+                        <div class="layui-input-inline w150">
+                            <input type="text" name="mxcms[s2][gddhbgdm]" placeholder="背景颜色代码" value="{$config['mxcms']['s2']['gddhbgdm']}" class="layui-input">
+                        </div>
+						</div>
+						      <div class="layui-form-item">
+                            <label class="layui-form-label">直播</label>
+                        <div class="layui-input-block">
+                        <div class="layui-input-inline w300">
+                            <input type="radio" name="mxcms[s2][zhiboym]" value="0" title="关闭" {if condition="$config['mxcms']['s2']['zhiboym'] eq 0"}checked {/if}>
+                            <input type="radio" name="mxcms[s2][zhiboym]" value="1" title="开启" {if condition="$config['mxcms']['s2']['zhiboym'] eq 1"}checked {/if}>
+                        </div>
+                                <div class="layui-form-mid layui-word-aux">默认开启，关闭后不显示对应模块和内容</div>
+                        </div>  
+                          </div> 
+                           <div class="layui-form-item">
+                          	  <label class="layui-form-label">直播图标</label>
+                          	    <div class="layui-input-block">
+                        <div class="layui-input-inline w300">
+                            <input type="text" name="mxcms[s2][diyliveicon]" placeholder="直播图标" value="{$config['mxcms']['s2']['diyliveicon']}" class="layui-input">
+                        </div>
+                         </div>
+                        </div> 
+                     </div>  
+                     
+                             <!--导航目录-->
+                        <div class="layui-tab-item"> 
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">导航（幻灯下）</label>
+                        <div class="layui-input-block">
+                        <div class="layui-input-inline w300">
+                    <input type="radio" name="mxcms[s2][nav]" value="0" title="关闭" {if condition="$config['mxcms']['s2']['nav'] eq 0"}checked {/if}>
+                     <input type="radio" name="mxcms[s2][nav]" value="1" title="开启" {if condition="$config['mxcms']['s2']['nav'] eq 1"}checked {/if}>
+                        </div>
+                        </div>
+                    </div> 
+                       <div class="layui-form-item">
+                        <label class="layui-form-label">分类ID：</label>
+                        <div class="layui-input-inline w200"><input name="mxcms[s2][navids]" type="text" value="{$config['mxcms']['s2']['navids']}" size="60" class="layui-input"></div>
+                        <div class="layui-form-mid layui-word-aux">分类id填入，多个用,隔开 【默认导航分类ID为parent】</div>
+                      </div>   
+                      
+                         <div class="layui-form-item">
+						<div class="layui-form-item">
+                        <label class="layui-form-label">自定义导航1</label>
+                        <div class="layui-input-inline w70">
+							<select name="mxcms[s2][navdiy1]">
+                                <option value="0" {if condition="$config['mxcms']['s2']['navdiy1'] eq 0"}selected {/if}>隐藏</option>
+                                <option value="1" {if condition="$config['mxcms']['s2']['navdiy1'] eq 1"}selected {/if}>显示</option>
+                            </select>
+						</div>
+                        <div class="layui-input-inline w300">
+                            <input type="text" name="mxcms[s2][navdiyn1]" placeholder="导航名称" value="{$config['mxcms']['s2']['navdiyn1']}" class="layui-input">
+                        </div>
+                        <div class="layui-input-inline w300">
+                            <input type="text" name="mxcms[s2][navdiyu1]" placeholder="导航链接" value="{$config['mxcms']['s2']['navdiyu1']}" class="layui-input">
+                        </div>
+						</div>
+                         </div>  
+                        
+                         <div class="layui-form-item">
+						<div class="layui-form-item">
+                        <label class="layui-form-label">自定义导航2</label>
+                        <div class="layui-input-inline w70">
+							<select name="mxcms[s2][navdiy2]">
+                                <option value="0" {if condition="$config['mxcms']['s2']['navdiy2'] eq 0"}selected {/if}>隐藏</option>
+                                <option value="1" {if condition="$config['mxcms']['s2']['navdiy2'] eq 1"}selected {/if}>显示</option>
+                            </select>
+						</div>
+                        <div class="layui-input-inline w300">
+                            <input type="text" name="mxcms[s2][navdiyn2]" placeholder="导航名称" value="{$config['mxcms']['s2']['navdiyn2']}" class="layui-input">
+                        </div>
+                        <div class="layui-input-inline w300">
+                            <input type="text" name="mxcms[s2][navdiyu2]" placeholder="导航链接" value="{$config['mxcms']['s2']['navdiyu2']}" class="layui-input">
+                        </div>
+						</div>
+                         </div>                          
+                         <div class="layui-form-item">
+						<div class="layui-form-item">
+                        <label class="layui-form-label">自定义导航3</label>
+                        <div class="layui-input-inline w70">
+							<select name="mxcms[s2][navdiy3]">
+                                <option value="0" {if condition="$config['mxcms']['s2']['navdiy3'] eq 0"}selected {/if}>隐藏</option>
+                                <option value="1" {if condition="$config['mxcms']['s2']['navdiy3'] eq 1"}selected {/if}>显示</option>
+                            </select>
+						</div>
+                        <div class="layui-input-inline w300">
+                            <input type="text" name="mxcms[s2][navdiyn3]" placeholder="导航名称" value="{$config['mxcms']['s2']['navdiyn3']}" class="layui-input">
+                        </div>
+                        <div class="layui-input-inline w300">
+                            <input type="text" name="mxcms[s2][navdiyu3]" placeholder="导航链接" value="{$config['mxcms']['s2']['navdiyu3']}" class="layui-input">
+                        </div>
+						</div>
+                         </div>                          
+                         <div class="layui-form-item">
+						<div class="layui-form-item">
+                        <label class="layui-form-label">自定义导航4</label>
+                        <div class="layui-input-inline w70">
+							<select name="mxcms[s2][navdiy4]">
+                                <option value="0" {if condition="$config['mxcms']['s2']['navdiy4'] eq 0"}selected {/if}>隐藏</option>
+                                <option value="1" {if condition="$config['mxcms']['s2']['navdiy4'] eq 1"}selected {/if}>显示</option>
+                            </select>
+						</div>
+                        <div class="layui-input-inline w300">
+                            <input type="text" name="mxcms[s2][navdiyn4]" placeholder="导航名称" value="{$config['mxcms']['s2']['navdiyn4']}" class="layui-input">
+                        </div>
+                        <div class="layui-input-inline w300">
+                            <input type="text" name="mxcms[s2][navdiyu4]" placeholder="导航链接" value="{$config['mxcms']['s2']['navdiyu4']}" class="layui-input">
+                        </div>
+						</div>
+                         </div>                          
+                         <div class="layui-form-item">
+						<div class="layui-form-item">
+                        <label class="layui-form-label">自定义导航5</label>
+                        <div class="layui-input-inline w70">
+							<select name="mxcms[s2][navdiy5]">
+                                <option value="0" {if condition="$config['mxcms']['s2']['navdiy5'] eq 0"}selected {/if}>隐藏</option>
+                                <option value="1" {if condition="$config['mxcms']['s2']['navdiy5'] eq 1"}selected {/if}>显示</option>
+                            </select>
+						</div>
+                        <div class="layui-input-inline w300">
+                            <input type="text" name="mxcms[s2][navdiyn5]" placeholder="导航名称" value="{$config['mxcms']['s2']['navdiyn5']}" class="layui-input">
+                        </div>
+                        <div class="layui-input-inline w300">
+                            <input type="text" name="mxcms[s2][navdiyu5]" placeholder="导航链接" value="{$config['mxcms']['s2']['navdiyu5']}" class="layui-input">
+                        </div>
+						</div>
+                         </div>                          
+                         <div class="layui-form-item">
+						<div class="layui-form-item">
+                        <label class="layui-form-label">自定义导航6</label>
+                        <div class="layui-input-inline w70">
+							<select name="mxcms[s2][navdiy6]">
+                                <option value="0" {if condition="$config['mxcms']['s2']['navdiy6'] eq 0"}selected {/if}>隐藏</option>
+                                <option value="1" {if condition="$config['mxcms']['s2']['navdiy6'] eq 1"}selected {/if}>显示</option>
+                            </select>
+						</div>
+                        <div class="layui-input-inline w300">
+                            <input type="text" name="mxcms[s2][navdiyn6]" placeholder="导航名称" value="{$config['mxcms']['s2']['navdiyn6']}" class="layui-input">
+                        </div>
+                        <div class="layui-input-inline w300">
+                            <input type="text" name="mxcms[s2][navdiyu6]" placeholder="导航链接" value="{$config['mxcms']['s2']['navdiyu6']}" class="layui-input">
+                        </div>
+						</div>
+                         </div>  
+                         
+                        
+                        </div>     
+                     
+                     <div class="layui-tab-item">  
+                         <div class="layui-form-item">
+						<div class="layui-form-item">
+                        <label class="layui-form-label">导航菜单</label>
+                        <div class="layui-input-inline w70">
+							<select name="mxcms[s2][sydh]">
+                                <option value="0" {if condition="$config['mxcms']['s2']['sydh'] eq 0"}selected {/if}>关闭</option>
+                                <option value="1" {if condition="$config['mxcms']['s2']['sydh'] eq 1"}selected {/if}>开启</option>
+                            </select>
+						</div>
+						  <label class="layui-form-label">菜单图标</label>
+                        <div class="layui-input-inline w300">
+                            <input type="text" name="mxcms[s2][sydhicon]" placeholder="菜单图标" value="{$config['mxcms']['s2']['sydhicon']}" class="layui-input">
+                        </div>
+                        <label class="layui-form-label">菜单分类ID：</label>
+                        <div class="layui-input-inline w300">
+                            <input type="text" name="mxcms[s2][sydhall]" placeholder="菜单分类" value="{$config['mxcms']['s2']['sydhall']}" class="layui-input">
+                        </div>
+						</div>
+                    </div>  
+                    <div class="layui-form-item">
+                      <label class="layui-form-label">导航分类ID：</label>
+                        <div class="layui-input-inline w300"><input name="mxcms[s2][daohangid]" type="text" value="{$config['mxcms']['s2']['daohangid']}" size="60" class="layui-input"></div> 
+                         <div class="layui-form-mid layui-word-aux">默认导航分类ID为parent,一级或二级分类id，多个用,隔开 【请填写ID再配置下面的ID和图标】</div>
+                        </div> 
+                        
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">导航分类图标</label>
+                        <div class="layui-input-block">
+                        <div class="layui-input-inline w300">
+                    <input type="radio" name="mxcms[s2][pcdhicon]" value="0" title="关闭" {if condition="$config['mxcms']['s2']['pcdhicon'] eq 0"}checked {/if}>
+                     <input type="radio" name="mxcms[s2][pcdhicon]" value="1" title="开启" {if condition="$config['mxcms']['s2']['pcdhicon'] eq 1"}checked {/if}>
+                        </div>
+                        </div>
+                    </div> 
+                    <div class="layui-form-item"><label class="layui-form-label">友情提示</label><div class="layui-input-block"><blockquote class="layui-elem-quote" style="padding: 10px;">建议导航分类显示7个即可，否则导航分类过多溢出影响美观。</blockquote></div></div>
+                           <div class="layui-form-item">
+                        <label class="layui-form-label">默认图标：</label>
+                        <div class="layui-input-inline w300"><input name="mxcms[s2][iconmr]" type="text" value="{$config['mxcms']['s2']['iconmr']}" size="60" class="layui-input"></div> 
+                         <div class="layui-form-mid layui-word-aux">图标请移步字体图标页面观看</div>
+                        </div> 
+                      <div class="layui-form-item">
+                      <label class="layui-form-label">菜单一的id：</label>
+                        <div class="layui-input-inline w70"><input name="mxcms[s2][num1]" type="text" value="{$config['mxcms']['s2']['num1']}" size="60" class="layui-input"></div> 
+                        <label class="layui-form-label">菜单一的图标：</label>
+                        <div class="layui-input-inline w300"><input name="mxcms[s2][icon1]" type="text" value="{$config['mxcms']['s2']['icon1']}" size="60" class="layui-input"></div> 
+                         <div class="layui-form-mid layui-word-aux">图标请移步字体图标页面观看</div>
+                        </div>  
+                            <div class="layui-form-item">
+                      <label class="layui-form-label">菜单二的id：</label>
+                        <div class="layui-input-inline w70"><input name="mxcms[s2][num2]" type="text" value="{$config['mxcms']['s2']['num2']}" size="60" class="layui-input"></div> 
+                        <label class="layui-form-label">菜单二的图标：</label>
+                        <div class="layui-input-inline w300"><input name="mxcms[s2][icon2]" type="text" value="{$config['mxcms']['s2']['icon2']}" size="60" class="layui-input"></div> 
+                         <div class="layui-form-mid layui-word-aux">图标请移步字体图标页面观看</div>
+                        </div>  
+                        
+                        <div class="layui-form-item">
+                      <label class="layui-form-label">菜单三的id：</label>
+                        <div class="layui-input-inline w70"><input name="mxcms[s2][num3]" type="text" value="{$config['mxcms']['s2']['num3']}" size="60" class="layui-input"></div> 
+                        <label class="layui-form-label">菜单三的图标：</label>
+                        <div class="layui-input-inline w300"><input name="mxcms[s2][icon3]" type="text" value="{$config['mxcms']['s2']['icon3']}" size="60" class="layui-input"></div> 
+                         <div class="layui-form-mid layui-word-aux">图标请移步字体图标页面观看</div>
+                        </div>  
+                        
+                        <div class="layui-form-item">
+                      <label class="layui-form-label">菜单四的id：</label>
+                        <div class="layui-input-inline w70"><input name="mxcms[s2][num4]" type="text" value="{$config['mxcms']['s2']['num4']}" size="60" class="layui-input"></div> 
+                        <label class="layui-form-label">菜单四的图标：</label>
+                        <div class="layui-input-inline w300"><input name="mxcms[s2][icon4]" type="text" value="{$config['mxcms']['s2']['icon4']}" size="60" class="layui-input"></div> 
+                         <div class="layui-form-mid layui-word-aux">图标请移步字体图标页面观看</div>
+                        </div>  
+                        
+                         <div class="layui-form-item">
+                      <label class="layui-form-label">菜单五的id：</label>
+                        <div class="layui-input-inline w70"><input name="mxcms[s2][num5]" type="text" value="{$config['mxcms']['s2']['num5']}" size="60" class="layui-input"></div> 
+                        <label class="layui-form-label">菜单五的图标：</label>
+                        <div class="layui-input-inline w300"><input name="mxcms[s2][icon5]" type="text" value="{$config['mxcms']['s2']['icon5']}" size="60" class="layui-input"></div> 
+                         <div class="layui-form-mid layui-word-aux">图标请移步字体图标页面观看</div>
+                        </div> 
+                        
+                         <div class="layui-form-item">
+                      <label class="layui-form-label">菜单六的id：</label>
+                        <div class="layui-input-inline w70"><input name="mxcms[s2][num6]" type="text" value="{$config['mxcms']['s2']['num6']}" size="60" class="layui-input"></div> 
+                        <label class="layui-form-label">菜单六的图标：</label>
+                        <div class="layui-input-inline w300"><input name="mxcms[s2][icon6]" type="text" value="{$config['mxcms']['s2']['icon6']}" size="60" class="layui-input"></div> 
+                         <div class="layui-form-mid layui-word-aux">图标请移步字体图标页面观看</div>
+                        </div> 
+                        
+                        <div class="layui-form-item">
+                      <label class="layui-form-label">菜单七的id：</label>
+                        <div class="layui-input-inline w70"><input name="mxcms[s2][num7]" type="text" value="{$config['mxcms']['s2']['num7']}" size="60" class="layui-input"></div> 
+                        <label class="layui-form-label">菜单七的图标：</label>
+                        <div class="layui-input-inline w300"><input name="mxcms[s2][icon7]" type="text" value="{$config['mxcms']['s2']['icon7']}" size="60" class="layui-input"></div> 
+                         <div class="layui-form-mid layui-word-aux">图标请移步字体图标页面观看</div>
+                        </div> 
+                        
+                        
+                         <div class="layui-form-item">
+						<div class="layui-form-item">
+                        <label class="layui-form-label">自定义导航1</label>
+                        <div class="layui-input-inline w70">
+							<select name="mxcms[s2][diy1]">
+                                <option value="0" {if condition="$config['mxcms']['s2']['diy1'] eq 0"}selected {/if}>隐藏</option>
+                                <option value="1" {if condition="$config['mxcms']['s2']['diy1'] eq 1"}selected {/if}>显示</option>
+                            </select>
+						</div>
+                        <div class="layui-input-inline w300">
+                            <input type="text" name="mxcms[s2][diy1name]" placeholder="导航名称" value="{$config['mxcms']['s2']['diy1name']}" class="layui-input">
+                        </div>
+                        <div class="layui-input-inline w300">
+                            <input type="text" name="mxcms[s2][diy1url]" placeholder="导航链接" value="{$config['mxcms']['s2']['diy1url']}" class="layui-input">
+                        </div>
+                         <div class="layui-input-inline w300">
+                            <input type="text" name="mxcms[s2][diy1icon]" placeholder="导航图标" value="{$config['mxcms']['s2']['diy1icon']}" class="layui-input">
+                        </div>
+						</div>
+                    </div>  
+                    
+                        
+                         <div class="layui-form-item">
+						<div class="layui-form-item">
+                        <label class="layui-form-label">自定义导航2</label>
+                        <div class="layui-input-inline w70">
+							<select name="mxcms[s2][diy2]">
+                                <option value="0" {if condition="$config['mxcms']['s2']['diy2'] eq 0"}selected {/if}>隐藏</option>
+                                <option value="1" {if condition="$config['mxcms']['s2']['diy2'] eq 1"}selected {/if}>显示</option>
+                            </select>
+						</div>
+                        <div class="layui-input-inline w300">
+                            <input type="text" name="mxcms[s2][diy2name]" placeholder="导航名称" value="{$config['mxcms']['s2']['diy2name']}" class="layui-input">
+                        </div>
+                        <div class="layui-input-inline w300">
+                            <input type="text" name="mxcms[s2][diy2url]" placeholder="导航链接" value="{$config['mxcms']['s2']['diy2url']}" class="layui-input">
+                        </div>
+                         <div class="layui-input-inline w300">
+                            <input type="text" name="mxcms[s2][diy2icon]" placeholder="导航图标" value="{$config['mxcms']['s2']['diy2icon']}" class="layui-input">
+                        </div>
+						</div>
+                    </div>  
+              
+                        
+                         <div class="layui-form-item">
+						<div class="layui-form-item">
+                        <label class="layui-form-label">自定义导航3</label>
+                        <div class="layui-input-inline w70">
+							<select name="mxcms[s2][diy3]">
+                                <option value="0" {if condition="$config['mxcms']['s2']['diy3'] eq 0"}selected {/if}>隐藏</option>
+                                <option value="1" {if condition="$config['mxcms']['s2']['diy3'] eq 1"}selected {/if}>显示</option>
+                            </select>
+						</div>
+                        <div class="layui-input-inline w300">
+                            <input type="text" name="mxcms[s2][diy3name]" placeholder="导航名称" value="{$config['mxcms']['s2']['diy3name']}" class="layui-input">
+                        </div>
+                        <div class="layui-input-inline w300">
+                            <input type="text" name="mxcms[s2][diy3url]" placeholder="导航链接" value="{$config['mxcms']['s2']['diy3url']}" class="layui-input">
+                        </div>
+                         <div class="layui-input-inline w300">
+                            <input type="text" name="mxcms[s2][diy3icon]" placeholder="导航图标" value="{$config['mxcms']['s2']['diy3icon']}" class="layui-input">
+                        </div>
+						</div>
+                    </div>  
+                     </div>
+                     <div class="layui-tab-item">
+                        <div class="layui-form-item">
+                           <label class="layui-form-label">导航菜单</label>
+                        <div class="layui-input-inline w70">
+							<select name="mxcms[s2][wapsydh]">
+                                <option value="0" {if condition="$config['mxcms']['s2']['wapsydh'] eq 0"}selected {/if}>关闭</option>
+                                <option value="1" {if condition="$config['mxcms']['s2']['wapsydh'] eq 1"}selected {/if}>开启</option>
+                            </select>
+						</div>     
+                      <label class="layui-form-label">导航分类ID：</label>
+                        <div class="layui-input-inline w300"><input name="mxcms[s5][wapdaohangid]" type="text" value="{$config['mxcms']['s5']['wapdaohangid']}" size="60" class="layui-input"></div> 
+                         <div class="layui-form-mid layui-word-aux">默认导航分类ID为parent,一级或二级分类id，多个用,隔开 【请填写ID再配置下面的ID和图标】</div>
+                        </div> 
+                               <div class="layui-form-item">
+                        <label class="layui-form-label">默认图标：</label>
+                        <div class="layui-input-inline w300"><input name="mxcms[s5][iconmr]" type="text" value="{$config['mxcms']['s5']['iconmr']}" size="60" class="layui-input"></div> 
+                         <div class="layui-form-mid layui-word-aux">图标请移步字体图标页面观看</div>
+                        </div> 
+                         <div class="layui-form-item">
+                      <label class="layui-form-label">菜单一的id：</label>
+                        <div class="layui-input-inline w70"><input name="mxcms[s5][num1]" type="text" value="{$config['mxcms']['s5']['num1']}" size="60" class="layui-input"></div> 
+                        <label class="layui-form-label">菜单一的图标：</label>
+                        <div class="layui-input-inline w300"><input name="mxcms[s5][icon1]" type="text" value="{$config['mxcms']['s5']['icon1']}" size="60" class="layui-input"></div> 
+                         <div class="layui-form-mid layui-word-aux">图标请移步字体图标页面观看</div>
+                        </div>  
+                            <div class="layui-form-item">
+                      <label class="layui-form-label">菜单二的id：</label>
+                        <div class="layui-input-inline w70"><input name="mxcms[s5][num2]" type="text" value="{$config['mxcms']['s5']['num2']}" size="60" class="layui-input"></div> 
+                        <label class="layui-form-label">菜单二的图标：</label>
+                        <div class="layui-input-inline w300"><input name="mxcms[s5][icon2]" type="text" value="{$config['mxcms']['s5']['icon2']}" size="60" class="layui-input"></div> 
+                         <div class="layui-form-mid layui-word-aux">图标请移步字体图标页面观看</div>
+                        </div>  
+                        
+                        <div class="layui-form-item">
+                      <label class="layui-form-label">菜单三的id：</label>
+                        <div class="layui-input-inline w70"><input name="mxcms[s5][num3]" type="text" value="{$config['mxcms']['s5']['num3']}" size="60" class="layui-input"></div> 
+                        <label class="layui-form-label">菜单三的图标：</label>
+                        <div class="layui-input-inline w300"><input name="mxcms[s5][icon3]" type="text" value="{$config['mxcms']['s5']['icon3']}" size="60" class="layui-input"></div> 
+                         <div class="layui-form-mid layui-word-aux">图标请移步字体图标页面观看</div>
+                        </div>  
+                        
+                        <div class="layui-form-item">
+                      <label class="layui-form-label">菜单四的id：</label>
+                        <div class="layui-input-inline w70"><input name="mxcms[s5][num4]" type="text" value="{$config['mxcms']['s5']['num4']}" size="60" class="layui-input"></div> 
+                        <label class="layui-form-label">菜单四的图标：</label>
+                        <div class="layui-input-inline w300"><input name="mxcms[s5][icon4]" type="text" value="{$config['mxcms']['s5']['icon4']}" size="60" class="layui-input"></div> 
+                         <div class="layui-form-mid layui-word-aux">图标请移步字体图标页面观看</div>
+                        </div>  
+                        
+                         <div class="layui-form-item">
+                      <label class="layui-form-label">菜单五的id：</label>
+                        <div class="layui-input-inline w70"><input name="mxcms[s5][num5]" type="text" value="{$config['mxcms']['s5']['num5']}" size="60" class="layui-input"></div> 
+                        <label class="layui-form-label">菜单五的图标：</label>
+                        <div class="layui-input-inline w300"><input name="mxcms[s5][icon5]" type="text" value="{$config['mxcms']['s5']['icon5']}" size="60" class="layui-input"></div> 
+                         <div class="layui-form-mid layui-word-aux">图标请移步字体图标页面观看</div>
+                        </div> 
+                        
+                         <div class="layui-form-item">
+                      <label class="layui-form-label">菜单六的id：</label>
+                        <div class="layui-input-inline w70"><input name="mxcms[s5][num6]" type="text" value="{$config['mxcms']['s5']['num6']}" size="60" class="layui-input"></div> 
+                        <label class="layui-form-label">菜单六的图标：</label>
+                        <div class="layui-input-inline w300"><input name="mxcms[s5][icon6]" type="text" value="{$config['mxcms']['s5']['icon6']}" size="60" class="layui-input"></div> 
+                         <div class="layui-form-mid layui-word-aux">图标请移步字体图标页面观看</div>
+                        </div> 
+                        
+                        <div class="layui-form-item">
+                      <label class="layui-form-label">菜单七的id：</label>
+                        <div class="layui-input-inline w70"><input name="mxcms[s5][num7]" type="text" value="{$config['mxcms']['s5']['num7']}" size="60" class="layui-input"></div> 
+                        <label class="layui-form-label">菜单七的图标：</label>
+                        <div class="layui-input-inline w300"><input name="mxcms[s5][icon7]" type="text" value="{$config['mxcms']['s5']['icon7']}" size="60" class="layui-input"></div> 
+                         <div class="layui-form-mid layui-word-aux">图标请移步字体图标页面观看</div>
+                        </div> 
+                        
+                        <div class="layui-form-item">
+                      <label class="layui-form-label">菜单八的id：</label>
+                        <div class="layui-input-inline w70"><input name="mxcms[s5][num8]" type="text" value="{$config['mxcms']['s5']['num8']}" size="60" class="layui-input"></div> 
+                        <label class="layui-form-label">菜单八的图标：</label>
+                        <div class="layui-input-inline w300"><input name="mxcms[s5][icon8]" type="text" value="{$config['mxcms']['s5']['icon8']}" size="60" class="layui-input"></div> 
+                         <div class="layui-form-mid layui-word-aux">图标请移步字体图标页面观看</div>
+                        </div> 
+                        
+                         <div class="layui-form-item">
+                      <label class="layui-form-label">菜单九的id：</label>
+                        <div class="layui-input-inline w70"><input name="mxcms[s5][num9]" type="text" value="{$config['mxcms']['s5']['num9']}" size="60" class="layui-input"></div> 
+                        <label class="layui-form-label">菜单九的图标：</label>
+                        <div class="layui-input-inline w300"><input name="mxcms[s5][icon9]" type="text" value="{$config['mxcms']['s5']['icon9']}" size="60" class="layui-input"></div> 
+                         <div class="layui-form-mid layui-word-aux">图标请移步字体图标页面观看</div>
+                        </div> 
+                        
+                         <div class="layui-form-item">
+                      <label class="layui-form-label">菜单十的id：</label>
+                        <div class="layui-input-inline w70"><input name="mxcms[s5][num10]" type="text" value="{$config['mxcms']['s5']['num10']}" size="60" class="layui-input"></div> 
+                        <label class="layui-form-label">菜单十的图标：</label>
+                        <div class="layui-input-inline w300"><input name="mxcms[s5][icon10]" type="text" value="{$config['mxcms']['s5']['icon10']}" size="60" class="layui-input"></div> 
+                         <div class="layui-form-mid layui-word-aux">图标请移步字体图标页面观看</div>
+                        </div> 
+                        
+                         <div class="layui-form-item">
+						<div class="layui-form-item">
+                        <label class="layui-form-label">自定义菜单1</label>
+                        <div class="layui-input-inline w70">
+							<select name="mxcms[s5][diy1]">
+                                <option value="0" {if condition="$config['mxcms']['s5']['diy1'] eq 0"}selected {/if}>隐藏</option>
+                                <option value="1" {if condition="$config['mxcms']['s5']['diy1'] eq 1"}selected {/if}>显示</option>
+                            </select>
+						</div>
+                        <div class="layui-input-inline w300">
+                            <input type="text" name="mxcms[s5][diy1name]" placeholder="菜单名称" value="{$config['mxcms']['s5']['diy1name']}" class="layui-input">
+                        </div>
+                        <div class="layui-input-inline w300">
+                            <input type="text" name="mxcms[s5][diy1url]" placeholder="菜单链接" value="{$config['mxcms']['s5']['diy1url']}" class="layui-input">
+                        </div>
+                           <div class="layui-input-inline w300">
+                            <input type="text" name="mxcms[s5][diy1icon]" placeholder="菜单图标" value="{$config['mxcms']['s5']['diy1icon']}" class="layui-input">
+                        </div>
+						</div>
+                    </div>  
+                    
+                       
+                         <div class="layui-form-item">
+						<div class="layui-form-item">
+                        <label class="layui-form-label">自定义菜单2</label>
+                        <div class="layui-input-inline w70">
+							<select name="mxcms[s5][diy2]">
+                                <option value="0" {if condition="$config['mxcms']['s5']['diy2'] eq 0"}selected {/if}>隐藏</option>
+                                <option value="1" {if condition="$config['mxcms']['s5']['diy2'] eq 1"}selected {/if}>显示</option>
+                            </select>
+						</div>
+                        <div class="layui-input-inline w300">
+                            <input type="text" name="mxcms[s5][diy2name]" placeholder="菜单名称" value="{$config['mxcms']['s5']['diy2name']}" class="layui-input">
+                        </div>
+                        <div class="layui-input-inline w300">
+                            <input type="text" name="mxcms[s5][diy2url]" placeholder="菜单链接" value="{$config['mxcms']['s5']['diy2url']}" class="layui-input">
+                        </div>
+                           <div class="layui-input-inline w300">
+                            <input type="text" name="mxcms[s5][diy2icon]" placeholder="菜单图标" value="{$config['mxcms']['s5']['diy2icon']}" class="layui-input">
+                        </div>
+						</div>
+                    </div>      
+                    </div>
+                    
+                           <div class="layui-tab-item">
+                       <div class="layui-form-item">
+                        <label class="layui-form-label">右下角菜单</label>
+                        <div class="layui-input-block">
+                        <div class="layui-input-inline w300">
+                            <input type="radio" name="mxcms[s2][yxjcd]" value="0" title="关闭" {if condition="$config['mxcms']['s2']['yxjcd'] eq 0"}checked {/if}>
+                            <input type="radio" name="mxcms[s2][yxjcd]" value="1" title="开启" {if condition="$config['mxcms']['s2']['yxjcd'] eq 1"}checked {/if}>
+                        </div>
+                        </div>
+                    </div>  
+                    	<div class="layui-form-item">
+                        <label class="layui-form-label">菜单自定义</label>
+                           <div class="layui-input-block">
+                        <div class="layui-input-inline">
+                    <input type="radio" name="mxcms[s2][yxjdiy]" value="0" title="关闭" {if condition="$config['mxcms']['s2']['yxjdiy'] eq 0"}checked {/if}>
+                     <input type="radio" name="mxcms[s2][yxjdiy]" value="1" title="开启" {if condition="$config['mxcms']['s2']['yxjdiy'] eq 1"}checked {/if}>
+                        </div>
+                         <div class="layui-form-mid layui-word-aux">默认关闭，开启后可自定义修改菜单背景颜色，图标背景、图标颜色、图标高亮颜色</div>
+                        </div>
+                        	<div class="layui-form-item">
+                        <div class="layui-input-inline w200">
+                            <input type="text" name="mxcms[s2][cdbjys]" placeholder="菜单按钮背景颜色" value="{$config['mxcms']['s2']['cdbjys']}" class="layui-input">
+                        </div>
+                        <div class="layui-input-inline w200">
+                            <input type="text" name="mxcms[s2][iconbjys]" placeholder="图标背景颜色" value="{$config['mxcms']['s2']['iconbjys']}" class="layui-input">
+                        </div>
+                         <div class="layui-input-inline w200">
+                            <input type="text" name="mxcms[s2][iconztys]" placeholder="图标字体颜色" value="{$config['mxcms']['s2']['iconztys']}" class="layui-input">
+                        </div>
+                           <div class="layui-input-inline w200">
+                            <input type="text" name="mxcms[s2][iconbjglys]" placeholder="图标字体背景高亮颜色" value="{$config['mxcms']['s2']['iconbjglys']}" class="layui-input">
+                        </div>
+                        </div>
+						</div>
+                        <div class="layui-form-item">
+                        <label class="layui-form-label">夜间切换</label>
+                        <div class="layui-input-block">
+                        <div class="layui-input-inline w300">
+                            <input type="radio" name="mxcms[s2][yjqh]" value="0" title="关闭" {if condition="$config['mxcms']['s2']['yjqh'] eq 0"}checked {/if}>
+                            <input type="radio" name="mxcms[s2][yjqh]" value="1" title="开启" {if condition="$config['mxcms']['s2']['yjqh'] eq 1"}checked {/if}>
+                        </div>
+                        </div>
+                    </div>    
+                     <div class="layui-form-item">
+                        <label class="layui-form-label">留言</label>
+                        <div class="layui-input-block">
+                        <div class="layui-input-inline w300">
+                            <input type="radio" name="mxcms[s2][liuyan]" value="0" title="关闭" {if condition="$config['mxcms']['s2']['liuyan'] eq 0"}checked {/if}>
+                            <input type="radio" name="mxcms[s2][liuyan]" value="1" title="开启" {if condition="$config['mxcms']['s2']['liuyan'] eq 1"}checked {/if}>
+                        </div>
+                        </div>
+                    </div>    
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">专题</label>
+                        <div class="layui-input-block">
+                        <div class="layui-input-inline w300">
+                            <input type="radio" name="mxcms[s2][topic]" value="0" title="关闭" {if condition="$config['mxcms']['s2']['topic'] eq 0"}checked {/if}>
+                            <input type="radio" name="mxcms[s2][topic]" value="1" title="开启" {if condition="$config['mxcms']['s2']['topic'] eq 1"}checked {/if}>
+                        </div>
+                        </div>
+                    </div>  
+                    </div>  
+                    
+                     <div class="layui-tab-item">
+                     <div class="layui-form-item">
+                        <label class="layui-form-label">底部导航</label>
+                        <div class="layui-input-block">
+                        <div class="layui-input-inline w300">
+                    <input type="radio" name="mxcms[s2][dbdh]" value="0" title="关闭" {if condition="$config['mxcms']['s2']['dbdh'] eq 0"}checked {/if}>
+                     <input type="radio" name="mxcms[s2][dbdh]" value="1" title="开启" {if condition="$config['mxcms']['s2']['dbdh'] eq 1"}checked {/if}>
+                        </div>
+                        </div>
+                    </div>   
+                     <div class="layui-form-item">
+                      <label class="layui-form-label">导航分类ID：</label>
+                        <div class="layui-input-inline w300"><input name="mxcms[s6][wapdaohangid]" type="text" value="{$config['mxcms']['s6']['wapdaohangid']}" size="60" class="layui-input"></div> 
+                         <div class="layui-form-mid layui-word-aux">默认导航分类ID为parent,一级或二级分类id，多个用,隔开 【请填写ID再配置下面的ID和图标】</div>
+                        </div> 
+                        
+                        <div class="layui-form-item">
+                      <label class="layui-form-label">菜单一的id：</label>
+                        <div class="layui-input-inline w70"><input name="mxcms[s6][num1]" type="text" value="{$config['mxcms']['s6']['num1']}" size="60" class="layui-input"></div> 
+                        <label class="layui-form-label">菜单一的图标：</label>
+                        <div class="layui-input-inline w300"><input name="mxcms[s6][icon1]" type="text" value="{$config['mxcms']['s6']['icon1']}" size="60" class="layui-input"></div> 
+                         <div class="layui-form-mid layui-word-aux">图标请移步字体图标页面观看</div>
+                        </div> 
+                                         <div class="layui-form-item">
+                      <label class="layui-form-label">菜单二的id：</label>
+                        <div class="layui-input-inline w70"><input name="mxcms[s6][num2]" type="text" value="{$config['mxcms']['s6']['num2']}" size="60" class="layui-input"></div> 
+                        <label class="layui-form-label">菜单二的图标：</label>
+                        <div class="layui-input-inline w300"><input name="mxcms[s6][icon2]" type="text" value="{$config['mxcms']['s6']['icon2']}" size="60" class="layui-input"></div> 
+                         <div class="layui-form-mid layui-word-aux">图标请移步字体图标页面观看</div>
+                        </div>  
+                                    <div class="layui-form-item">
+                      <label class="layui-form-label">菜单三的id：</label>
+                        <div class="layui-input-inline w70"><input name="mxcms[s6][num3]" type="text" value="{$config['mxcms']['s6']['num3']}" size="60" class="layui-input"></div> 
+                        <label class="layui-form-label">菜单三的图标：</label>
+                        <div class="layui-input-inline w300"><input name="mxcms[s6][icon3]" type="text" value="{$config['mxcms']['s6']['icon3']}" size="60" class="layui-input"></div> 
+                         <div class="layui-form-mid layui-word-aux">图标请移步字体图标页面观看</div>
+                        </div>  
+                                               
+                        <div class="layui-form-item">
+                      <label class="layui-form-label">菜单四的id：</label>
+                        <div class="layui-input-inline w70"><input name="mxcms[s6][num4]" type="text" value="{$config['mxcms']['s6']['num4']}" size="60" class="layui-input"></div> 
+                        <label class="layui-form-label">菜单四的图标：</label>
+                        <div class="layui-input-inline w300"><input name="mxcms[s6][icon4]" type="text" value="{$config['mxcms']['s6']['icon4']}" size="60" class="layui-input"></div> 
+                         <div class="layui-form-mid layui-word-aux">图标请移步字体图标页面观看</div>
+                        </div>  
+                        
+                         <div class="layui-form-item">
+                      <label class="layui-form-label">菜单五的id：</label>
+                        <div class="layui-input-inline w70"><input name="mxcms[s6][num5]" type="text" value="{$config['mxcms']['s6']['num5']}" size="60" class="layui-input"></div> 
+                        <label class="layui-form-label">菜单五的图标：</label>
+                        <div class="layui-input-inline w300"><input name="mxcms[s6][icon5]" type="text" value="{$config['mxcms']['s6']['icon5']}" size="60" class="layui-input"></div> 
+                         <div class="layui-form-mid layui-word-aux">图标请移步字体图标页面观看</div>
+                        </div> 
+                           <div class="layui-form-item">
+                        <label class="layui-form-label">默认图标：</label>
+                        <div class="layui-input-inline w300"><input name="mxcms[s6][iconmr]" type="text" value="{$config['mxcms']['s6']['iconmr']}" size="60" class="layui-input"></div> 
+                         <div class="layui-form-mid layui-word-aux">图标请移步字体图标页面观看</div>
+                        </div> 
+                         <div class="layui-form-item">
+						<div class="layui-form-item">
+                        <label class="layui-form-label">自定义菜单1</label>
+                        <div class="layui-input-inline w70">
+							<select name="mxcms[s6][diy1]">
+                                <option value="0" {if condition="$config['mxcms']['s6']['diy1'] eq 0"}selected {/if}>隐藏</option>
+                                <option value="1" {if condition="$config['mxcms']['s6']['diy1'] eq 1"}selected {/if}>显示</option>
+                            </select>
+						</div>
+                        <div class="layui-input-inline w300">
+                            <input type="text" name="mxcms[s6][diy1name]" placeholder="菜单名称" value="{$config['mxcms']['s6']['diy1name']}" class="layui-input">
+                        </div>
+                        <div class="layui-input-inline w300">
+                            <input type="text" name="mxcms[s6][diy1url]" placeholder="菜单链接" value="{$config['mxcms']['s6']['diy1url']}" class="layui-input">
+                        </div>
+                           <div class="layui-input-inline w300">
+                            <input type="text" name="mxcms[s6][diy1icon]" placeholder="菜单图标" value="{$config['mxcms']['s6']['diy1icon']}" class="layui-input">
+                        </div>
+						</div>
+                    </div>  
+                    
+                    
+                         <div class="layui-form-item">
+						<div class="layui-form-item">
+                        <label class="layui-form-label">自定义菜单2</label>
+                        <div class="layui-input-inline w70">
+							<select name="mxcms[s6][diy2]">
+                                <option value="0" {if condition="$config['mxcms']['s6']['diy2'] eq 0"}selected {/if}>隐藏</option>
+                                <option value="1" {if condition="$config['mxcms']['s6']['diy2'] eq 1"}selected {/if}>显示</option>
+                            </select>
+						</div>
+                        <div class="layui-input-inline w300">
+                            <input type="text" name="mxcms[s6][diy2name]" placeholder="菜单名称" value="{$config['mxcms']['s6']['diy2name']}" class="layui-input">
+                        </div>
+                        <div class="layui-input-inline w300">
+                            <input type="text" name="mxcms[s6][diy2url]" placeholder="菜单链接" value="{$config['mxcms']['s6']['diy2url']}" class="layui-input">
+                        </div>
+                           <div class="layui-input-inline w300">
+                            <input type="text" name="mxcms[s6][diy2icon]" placeholder="菜单图标" value="{$config['mxcms']['s6']['diy2icon']}" class="layui-input">
+                        </div>
+						</div>
+                    </div> 
+                     </div>
+              
+                     </div>
+                    </div>        
+                </div>
+                
+                 <div class="layui-tab-item">
+                      <div class="layui-tab layui-tab-card">
+                      <ul class="layui-tab-title"> 
+                     <li class="layui-this">默认配置</li>  
+                     <li>幻灯片设置</li>
+                     <li>热播推荐</li>
+                     <li>列表循环</li>
+                     <li>最新视频</li>
+                    </ul>
+                      <div class="layui-tab-content">
+                          <div class="layui-tab-item layui-show">
+                               <div class="layui-form-item">
+                            <label class="layui-form-label">今日更新</label>
+                        <div class="layui-input-block">
+                        <div class="layui-input-inline w300">
+                            <input type="radio" name="mxcms[s2][todaygx]" value="0" title="隐藏" {if condition="$config['mxcms']['s2']['todaygx'] eq 0"}checked {/if}>
+                            <input type="radio" name="mxcms[s2][todaygx]" value="1" title="显示" {if condition="$config['mxcms']['s2']['todaygx'] eq 1"}checked {/if}>
+                        </div>
+                        </div>  
+                          </div>  
+                           <div class="layui-form-item">
+                            <label class="layui-form-label">高亮颜色：</label>
+                        <div class="layui-input-inline w100">
+                            <input name="mxcms[s2][todaycss]" type="text" value="{$config['mxcms']['s2']['todaycss']}" size="60" class="layui-input" placeholder="今日更新高亮颜色代码">
+                        </div> 
+                        <div class="layui-form-mid layui-word-aux">今日更新数量高亮颜色代码</div>
+                             </div> 
+                            <div class="layui-form-item"><label class="layui-form-label">友情提示</label><div class="layui-input-block"><blockquote class="layui-elem-quote" style="padding: 10px;">排行榜是首页列表排行榜，不是排行榜页面！！！【可自定义标签by，level (根据官网文档填写视频排序标签) 】,以及分类名称后缀。<br/>指定推荐值(默认留空不启用，all为所有,推荐值1-9)  排序依据:hits(总)，hits_week(周)，hits_month(月)，默认月榜</blockquote></div></div>
+                                  <div class="layui-form-item">
+                            <label class="layui-form-label">排行榜</label>
+                        <div class="layui-input-block">
+                        <div class="layui-input-inline w300">
+                            <input type="radio" name="mxcms[s2][listphb]" value="0" title="隐藏" {if condition="$config['mxcms']['s2']['listphb'] eq 0"}checked {/if}>
+                            <input type="radio" name="mxcms[s2][listphb]" value="1" title="显示" {if condition="$config['mxcms']['s2']['listphb'] eq 1"}checked {/if}>
+                        </div>
+                                <div class="layui-form-mid layui-word-aux">关闭后不显示对应模块和内容</div>
+                        </div>  
+                          </div>  
+                          <div class="layui-form-item">
+                         <label class="layui-form-label">分类后缀：</label>
+                        <div class="layui-input-inline w100"><input name="mxcms[s2][listphbname]" type="text" value="{$config['mxcms']['s2']['listphbname']}" size="60" class="layui-input"></div> 
+                      <label class="layui-form-label">指定推荐值：</label>
+                        <div class="layui-input-inline w70"><input name="mxcms[s2][listphbtj]" type="text" value="{$config['mxcms']['s2']['listphbtj']}" size="60" class="layui-input"></div> 
+                        <label class="layui-form-label">排序依据：</label>
+                        <div class="layui-input-inline w150"><input name="mxcms[s2][listphbby]" type="text" value="{$config['mxcms']['s2']['listphbby']}" size="60" class="layui-input"></div>
+                        </div>
+                           <div class="layui-form-item">
+                            <label class="layui-form-label">专题</label>
+                        <div class="layui-input-block">
+                        <div class="layui-input-inline w300">
+                            <input type="radio" name="mxcms[s2][indextopic]" value="0" title="关闭" {if condition="$config['mxcms']['s2']['indextopic'] eq 0"}checked {/if}>
+                            <input type="radio" name="mxcms[s2][indextopic]" value="1" title="开启" {if condition="$config['mxcms']['s2']['indextopic'] eq 1"}checked {/if}>
+                        </div>
+                                <div class="layui-form-mid layui-word-aux">关闭后不显示对应模块和内容</div>
+                        </div>  
+                          </div> 
+                            <div class="layui-form-item">
+                        <label class="layui-form-label">专题图标</label>
+                        <div class="layui-input-block">
+                        <div class="layui-input-inline w300">
+                            <input type="radio" name="mxcms[s2][sytopicicon]" value="0" title="隐藏" {if condition="$config['mxcms']['s2']['sytopicicon'] eq 0"}checked {/if}>
+                            <input type="radio" name="mxcms[s2][sytopicicon]" value="1" title="显示" {if condition="$config['mxcms']['s2']['sytopicicon'] eq 1"}checked {/if}>
+                        </div>
+                        </div>
+                    </div>
+                          <div class="layui-form-item">
+                            <label class="layui-form-label">图标颜色：</label>
+                        <div class="layui-input-inline w100">
+                            <input name="mxcms[s2][sytopiciconcss]" type="text" value="{$config['mxcms']['s2']['sytopiciconcss']}" size="60" class="layui-input" placeholder="专题图标颜色代码">
+                        </div> 
+                             </div>  
+                             <div class="layui-form-item">
+                         <label class="layui-form-label">显示数量：</label>
+                        <div class="layui-input-inline w100"><input name="mxcms[s2][indextopicnum]" type="text" value="{$config['mxcms']['s2']['indextopicnum']}" size="60" class="layui-input"></div> 
+                        <div class="layui-form-mid layui-word-aux">首页专题显示的数量</div>
+                        </div>
+                           <div class="layui-form-item">
+                            <label class="layui-form-label">资讯</label>
+                        <div class="layui-input-block">
+                        <div class="layui-input-inline w300">
+                            <input type="radio" name="mxcms[s2][indexart]" value="0" title="关闭" {if condition="$config['mxcms']['s2']['indexart'] eq 0"}checked {/if}>
+                            <input type="radio" name="mxcms[s2][indexart]" value="1" title="开启" {if condition="$config['mxcms']['s2']['indexart'] eq 1"}checked {/if}>
+                        </div>
+                                <div class="layui-form-mid layui-word-aux">关闭后不显示对应模块和内容</div>
+                        </div>  
+                          </div> 
+                           <div class="layui-form-item">
+                        <label class="layui-form-label">资讯图标</label>
+                        <div class="layui-input-block">
+                        <div class="layui-input-inline w300">
+                            <input type="radio" name="mxcms[s2][syzixunicon]" value="0" title="隐藏" {if condition="$config['mxcms']['s2']['syzixunicon'] eq 0"}checked {/if}>
+                            <input type="radio" name="mxcms[s2][syzixunicon]" value="1" title="显示" {if condition="$config['mxcms']['s2']['syzixunicon'] eq 1"}checked {/if}>
+                        </div>
+                        </div>
+                    </div>
+                          <div class="layui-form-item">
+                            <label class="layui-form-label">图标颜色：</label>
+                        <div class="layui-input-inline w100">
+                            <input name="mxcms[s2][syzixuniconcss]" type="text" value="{$config['mxcms']['s2']['syzixuniconcss']}" size="60" class="layui-input" placeholder="资讯图标颜色代码">
+                        </div> 
+                             </div>  
+                             <div class="layui-form-item">
+                            <label class="layui-form-label">分类id：</label>
+                        <div class="layui-input-inline w70"><input name="mxcms[s2][indexartid]" type="text" value="{$config['mxcms']['s2']['indexartid']}" size="60" class="layui-input"></div>   
+                        <div class="layui-form-mid layui-word-aux">指定id多个用,隔开</div>
+                         <label class="layui-form-label">显示数量：</label>
+                        <div class="layui-input-inline w100"><input name="mxcms[s2][indexartnum]" type="text" value="{$config['mxcms']['s2']['indexartnum']}" size="60" class="layui-input"></div> 
+                        <div class="layui-form-mid layui-word-aux">首页资讯显示的数量</div>
+                        </div>
+                          </div> 
+                          
+                        
+                        
+                           <div class="layui-tab-item">
+                        <div class="layui-form-item">
+                        <label class="layui-form-label">首页幻灯片</label>
+                        <div class="layui-input-block">
+                        <div class="layui-input-inline w300">
+                            <input type="radio" name="mxcms[s2][slide]" value="0" title="隐藏" {if condition="$config['mxcms']['s2']['slide'] eq 0"}checked {/if}>
+                            <input type="radio" name="mxcms[s2][slide]" value="1" title="显示" {if condition="$config['mxcms']['s2']['slide'] eq 1"}checked {/if}>
+                        </div>
+                        <div class="layui-form-mid layui-word-aux">建议关闭，默认css已经修改（开启要错位）</div>
+                        </div>
+                    </div>
+                    
+                         <div class="layui-form-item">
+                        <label class="layui-form-label">首页大图幻灯片</label>
+                        <div class="layui-input-block">
+                        <div class="layui-input-inline w300">
+                            <input type="radio" name="mxcms[s2][bigslide]" value="0" title="隐藏" {if condition="$config['mxcms']['s2']['bigslide'] eq 0"}checked {/if}>
+                            <input type="radio" name="mxcms[s2][bigslide]" value="1" title="显示" {if condition="$config['mxcms']['s2']['bigslide'] eq 1"}checked {/if}>
+                        </div>
+                        </div>
+                    </div>                   
+                      <div class="layui-form-item">
+                      <label class="layui-form-label">指定推荐值：</label>
+                        <div class="layui-input-inline w70"><input name="mxcms[s2][slidetj]" type="text" value="{$config['mxcms']['s2']['slidetj']}" size="60" class="layui-input"></div> 
+                        <label class="layui-form-label">展示最大数量：</label>
+                        <div class="layui-input-inline w70"><input name="mxcms[s2][slidenum]" type="text" value="{$config['mxcms']['s2']['slidenum']}" size="60" class="layui-input"></div> 
+                         <div class="layui-form-mid layui-word-aux">幻灯片默认推荐“5”，默认显示数量“8”个</div>
+                        </div>  
+              
+						<div class="layui-form-item">
+                        <label class="layui-form-label">自定义幻灯片1</label>
+                        <div class="layui-input-inline w300">
+						  <input type="radio" name="mxcms[s2][slidediy1]" value="0" title="关闭" {if condition="$config['mxcms']['s2']['slidediy1'] eq 0"}checked {/if}>
+                            <input type="radio" name="mxcms[s2][slidediy1]" value="1" title="开启" {if condition="$config['mxcms']['s2']['slidediy1'] eq 1"}checked {/if}>
+						</div>
+			           <div class="layui-form-item">
+                        <div class="layui-input-inline w200">
+                            <input type="text" name="mxcms[s2][slidediy1name]" placeholder="幻灯片名称" value="{$config['mxcms']['s2']['slidediy1name']}" class="layui-input">
+                        </div>
+                        <div class="layui-input-inline w200">
+                            <input type="text" name="mxcms[s2][slidediy1fname]" placeholder="幻灯片副标题" value="{$config['mxcms']['s2']['slidediy1fname']}" class="layui-input">
+                        </div>                        
+                        <div class="layui-input-inline w300">
+                            <input type="text" name="mxcms[s2][slidediy1pic]" placeholder="幻灯片图片" value="{$config['mxcms']['s2']['slidediy1pic']}" class="layui-input">
+                        </div>
+                         <div class="layui-input-inline w200">
+                            <input type="text" name="mxcms[s2][slidediy1url]" placeholder="幻灯片链接" value="{$config['mxcms']['s2']['slidediy1url']}" class="layui-input">
+                        </div>			
+                        </div>
+                        
+						</div>
+                        
+						<div class="layui-form-item">
+                        <label class="layui-form-label">自定义幻灯片2</label>
+                        <div class="layui-input-inline w300">
+						  <input type="radio" name="mxcms[s2][slidediy2]" value="0" title="关闭" {if condition="$config['mxcms']['s2']['slidediy2'] eq 0"}checked {/if}>
+                            <input type="radio" name="mxcms[s2][slidediy2]" value="1" title="开启" {if condition="$config['mxcms']['s2']['slidediy2'] eq 1"}checked {/if}>
+						</div>
+			           <div class="layui-form-item">
+                        <div class="layui-input-inline w200">
+                            <input type="text" name="mxcms[s2][slidediy2name]" placeholder="幻灯片名称" value="{$config['mxcms']['s2']['slidediy2name']}" class="layui-input">
+                        </div>
+                        <div class="layui-input-inline w200">
+                            <input type="text" name="mxcms[s2][slidediy2fname]" placeholder="幻灯片副标题" value="{$config['mxcms']['s2']['slidediy2fname']}" class="layui-input">
+                        </div>                        
+                        <div class="layui-input-inline w300">
+                            <input type="text" name="mxcms[s2][slidediy2pic]" placeholder="幻灯片图片" value="{$config['mxcms']['s2']['slidediy2pic']}" class="layui-input">
+                        </div>
+                         <div class="layui-input-inline w200">
+                            <input type="text" name="mxcms[s2][slidediy2url]" placeholder="幻灯片链接" value="{$config['mxcms']['s2']['slidediy2url']}" class="layui-input">
+                        </div>			
+                        </div>
+                        
+						</div> 
+						
+						<div class="layui-form-item">
+                        <label class="layui-form-label">自定义幻灯片3</label>
+                        <div class="layui-input-inline w300">
+						  <input type="radio" name="mxcms[s2][slidediy3]" value="0" title="关闭" {if condition="$config['mxcms']['s2']['slidediy3'] eq 0"}checked {/if}>
+                            <input type="radio" name="mxcms[s2][slidediy3]" value="1" title="开启" {if condition="$config['mxcms']['s2']['slidediy3'] eq 1"}checked {/if}>
+						</div>
+			           <div class="layui-form-item">
+                        <div class="layui-input-inline w200">
+                            <input type="text" name="mxcms[s2][slidediy3name]" placeholder="幻灯片名称" value="{$config['mxcms']['s2']['slidediy3name']}" class="layui-input">
+                        </div>
+                        <div class="layui-input-inline w200">
+                            <input type="text" name="mxcms[s2][slidediy3fname]" placeholder="幻灯片副标题" value="{$config['mxcms']['s2']['slidediy3fname']}" class="layui-input">
+                        </div>                        
+                        <div class="layui-input-inline w300">
+                            <input type="text" name="mxcms[s2][slidediy3pic]" placeholder="幻灯片图片" value="{$config['mxcms']['s2']['slidediy3pic']}" class="layui-input">
+                        </div>
+                         <div class="layui-input-inline w200">
+                            <input type="text" name="mxcms[s2][slidediy3url]" placeholder="幻灯片链接" value="{$config['mxcms']['s2']['slidediy3url']}" class="layui-input">
+                        </div>			
+                        </div>
+                        
+						</div> 
+						
+                            </div> 
+                              <div class="layui-tab-item">   
+                       <div class="layui-form-item">
+                        <label class="layui-form-label">正在热播</label>
+                        <div class="layui-input-block">
+                        <div class="layui-input-inline w300">
+                            <input type="radio" name="mxcms[s2][hot]" value="0" title="关闭" {if condition="$config['mxcms']['s2']['hot'] eq 0"}checked {/if}>
+                            <input type="radio" name="mxcms[s2][hot]" value="1" title="开启" {if condition="$config['mxcms']['s2']['hot'] eq 1"}checked {/if}>
+                        </div>
+                        <div class="layui-form-mid layui-word-aux">关闭=同步内容页，播放页热播关闭</div>
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">热播图标</label>
+                        <div class="layui-input-block">
+                        <div class="layui-input-inline w300">
+                            <input type="radio" name="mxcms[s2][hoticon]" value="0" title="隐藏" {if condition="$config['mxcms']['s2']['hoticon'] eq 0"}checked {/if}>
+                            <input type="radio" name="mxcms[s2][hoticon]" value="1" title="显示" {if condition="$config['mxcms']['s2']['hoticon'] eq 1"}checked {/if}>
+                        </div>
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                            <label class="layui-form-label">图标颜色：</label>
+                        <div class="layui-input-inline w100">
+                            <input name="mxcms[s2][hoticoncss]" type="text" value="{$config['mxcms']['s2']['hoticoncss']}" size="60" class="layui-input" placeholder="热播图标颜色代码">
+                        </div> 
+                             </div>  
+                        <div class="layui-form-item">
+                      <label class="layui-form-label">指定参数：</label>
+                         <div class="layui-input-inline w70"><input name="mxcms[s2][hotlevels]" type="text" value="{$config['mxcms']['s2']['hotlevels']}" size="60" class="layui-input"></div> 
+                         <label class="layui-form-label">指定推荐值：</label>
+                        <div class="layui-input-inline w70"><input name="mxcms[s2][hotlevel]" type="text" value="{$config['mxcms']['s2']['hotlevel']}" size="60" class="layui-input"></div> 
+                        <label class="layui-form-label">指定分类ID：</label>
+                        <div class="layui-input-inline w100"><input name="mxcms[s2][hotall]" type="text" value="{$config['mxcms']['s2']['hotall']}" size="60" class="layui-input"></div> 
+                         <div class="layui-form-mid layui-word-aux">正在热播，默认分类ID为all,一级或二级分类id，多个用,隔开</div>
+                        </div>  </div> 
+                        <div class="layui-tab-item">  
+                          <div class="layui-form-item">
+                        <label class="layui-form-label">列表循环ID：</label>
+                        <div class="layui-input-inline w200"><input name="mxcms[s2][logtype]" type="text" value="{$config['mxcms']['s2']['logtype']}" size="60" class="layui-input"></div>
+                        <div class="layui-form-mid layui-word-aux">将要在首页显示的列表分类id填入，多个用,隔开 【请填写ID再配置下面的ID和图标】</div>
+                      </div>
+                         <div class="layui-form-item">
+                        <label class="layui-form-label">列表循环图标</label>
+                        <div class="layui-input-block">
+                        <div class="layui-input-inline w300">
+                            <input type="radio" name="mxcms[s2][lbiconkg]" value="0" title="隐藏" {if condition="$config['mxcms']['s2']['lbiconkg'] eq 0"}checked {/if}>
+                            <input type="radio" name="mxcms[s2][lbiconkg]" value="1" title="显示" {if condition="$config['mxcms']['s2']['lbiconkg'] eq 1"}checked {/if}>
+                        </div>
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                            <label class="layui-form-label">列表图标颜色：</label>
+                        <div class="layui-input-inline w100">
+                            <input name="mxcms[s2][lbiconcss]" type="text" value="{$config['mxcms']['s2']['lbiconcss']}" size="60" class="layui-input" placeholder="列表图标颜色">
+                        </div> 
+                             </div>  
+                    <div class="layui-form-item"><label class="layui-form-label">友情提示</label><div class="layui-input-block"><blockquote class="layui-elem-quote" style="padding: 10px;">列表循环只能显示8个分类哦</blockquote></div></div>
+                           <div class="layui-form-item">
+                        <label class="layui-form-label">默认图标：</label>
+                        <div class="layui-input-inline w300"><input name="mxcms[s2][lbiconmr]" type="text" value="{$config['mxcms']['s2']['lbiconmr']}" size="60" class="layui-input"></div> 
+                         <div class="layui-form-mid layui-word-aux">图标请移步字体图标页面观看</div>
+                        </div> 
+                      <div class="layui-form-item">
+                      <label class="layui-form-label">列表一的id：</label>
+                        <div class="layui-input-inline w70"><input name="mxcms[s2][lbnum1]" type="text" value="{$config['mxcms']['s2']['lbnum1']}" size="60" class="layui-input"></div> 
+                        <label class="layui-form-label">列表一的图标：</label>
+                        <div class="layui-input-inline w300"><input name="mxcms[s2][lbicon1]" type="text" value="{$config['mxcms']['s2']['lbicon1']}" size="60" class="layui-input"></div> 
+                         <div class="layui-form-mid layui-word-aux">图标请移步字体图标页面观看</div>
+                        </div>  
+                            <div class="layui-form-item">
+                      <label class="layui-form-label">列表二的id：</label>
+                        <div class="layui-input-inline w70"><input name="mxcms[s2][lbnum2]" type="text" value="{$config['mxcms']['s2']['lbnum2']}" size="60" class="layui-input"></div> 
+                        <label class="layui-form-label">列表二的图标：</label>
+                        <div class="layui-input-inline w300"><input name="mxcms[s2][lbicon2]" type="text" value="{$config['mxcms']['s2']['lbicon2']}" size="60" class="layui-input"></div> 
+                         <div class="layui-form-mid layui-word-aux">图标请移步字体图标页面观看</div>
+                        </div>  
+                        
+                        <div class="layui-form-item">
+                      <label class="layui-form-label">列表三的id：</label>
+                        <div class="layui-input-inline w70"><input name="mxcms[s2][lbnum3]" type="text" value="{$config['mxcms']['s2']['lbnum3']}" size="60" class="layui-input"></div> 
+                        <label class="layui-form-label">列表三的图标：</label>
+                        <div class="layui-input-inline w300"><input name="mxcms[s2][lbicon3]" type="text" value="{$config['mxcms']['s2']['lbicon3']}" size="60" class="layui-input"></div> 
+                         <div class="layui-form-mid layui-word-aux">图标请移步字体图标页面观看</div>
+                        </div>  
+                        
+                        <div class="layui-form-item">
+                      <label class="layui-form-label">列表四的id：</label>
+                        <div class="layui-input-inline w70"><input name="mxcms[s2][lbnum4]" type="text" value="{$config['mxcms']['s2']['lbnum4']}" size="60" class="layui-input"></div> 
+                        <label class="layui-form-label">列表四的图标：</label>
+                        <div class="layui-input-inline w300"><input name="mxcms[s2][lbicon4]" type="text" value="{$config['mxcms']['s2']['lbicon4']}" size="60" class="layui-input"></div> 
+                         <div class="layui-form-mid layui-word-aux">图标请移步字体图标页面观看</div>
+                        </div>  
+                        
+                         <div class="layui-form-item">
+                      <label class="layui-form-label">列表五的id：</label>
+                        <div class="layui-input-inline w70"><input name="mxcms[s2][lbnum5]" type="text" value="{$config['mxcms']['s2']['lbnum5']}" size="60" class="layui-input"></div> 
+                        <label class="layui-form-label">列表五的图标：</label>
+                        <div class="layui-input-inline w300"><input name="mxcms[s2][lbicon5]" type="text" value="{$config['mxcms']['s2']['lbicon5']}" size="60" class="layui-input"></div> 
+                         <div class="layui-form-mid layui-word-aux">图标请移步字体图标页面观看</div>
+                        </div> 
+                        
+                         <div class="layui-form-item">
+                      <label class="layui-form-label">列表六的id：</label>
+                        <div class="layui-input-inline w70"><input name="mxcms[s2][lbnum6]" type="text" value="{$config['mxcms']['s2']['lbnum6']}" size="60" class="layui-input"></div> 
+                        <label class="layui-form-label">列表六的图标：</label>
+                        <div class="layui-input-inline w300"><input name="mxcms[s2][lbicon6]" type="text" value="{$config['mxcms']['s2']['lbicon6']}" size="60" class="layui-input"></div> 
+                         <div class="layui-form-mid layui-word-aux">图标请移步字体图标页面观看</div>
+                        </div> 
+                        
+                        <div class="layui-form-item">
+                      <label class="layui-form-label">列表七的id：</label>
+                        <div class="layui-input-inline w70"><input name="mxcms[s2][lbnum7]" type="text" value="{$config['mxcms']['s2']['lbnum7']}" size="60" class="layui-input"></div> 
+                        <label class="layui-form-label">列表七的图标：</label>
+                        <div class="layui-input-inline w300"><input name="mxcms[s2][lbicon7]" type="text" value="{$config['mxcms']['s2']['lbicon7']}" size="60" class="layui-input"></div> 
+                         <div class="layui-form-mid layui-word-aux">图标请移步字体图标页面观看</div>
+                        </div> 
+                        
+                              <div class="layui-form-item">
+                      <label class="layui-form-label">列表八的id：</label>
+                        <div class="layui-input-inline w70"><input name="mxcms[s2][lbnum8]" type="text" value="{$config['mxcms']['s2']['lbnum8']}" size="60" class="layui-input"></div> 
+                        <label class="layui-form-label">列表八的图标：</label>
+                        <div class="layui-input-inline w300"><input name="mxcms[s2][lbicon8]" type="text" value="{$config['mxcms']['s2']['lbicon8']}" size="60" class="layui-input"></div> 
+                         <div class="layui-form-mid layui-word-aux">图标请移步字体图标页面观看</div>
+                        </div> 
+                        
+                      <div class="layui-form-item">
+                        <label class="layui-form-label">指定推荐值：</label>
+                        <div class="layui-input-inline w200"><input name="mxcms[s2][listlevel]" type="text" value="{$config['mxcms']['s2']['listlevel']}" size="60" class="layui-input"></div>
+                        <div class="layui-form-mid layui-word-aux">首页列表填入分类id后，视频推荐值，默认为空，推荐值1-9</div>
+                      </div></div> 
+                      <div class="layui-tab-item">
+                          <div class="layui-form-item">
+                        <label class="layui-form-label">最新影片</label>
+                        <div class="layui-input-block">
+                        <div class="layui-input-inline w300">
+                            <input type="radio" name="mxcms[s2][new]" value="0" title="隐藏" {if condition="$config['mxcms']['s2']['new'] eq 0"}checked {/if}>
+                            <input type="radio" name="mxcms[s2][new]" value="1" title="显示" {if condition="$config['mxcms']['s2']['new'] eq 1"}checked {/if}>
+                        </div>
+                        </div>
+                    </div>
+                        <div class="layui-form-item">
+                        <label class="layui-form-label">最新图标</label>
+                        <div class="layui-input-block">
+                        <div class="layui-input-inline w300">
+                            <input type="radio" name="mxcms[s2][newicon]" value="0" title="隐藏" {if condition="$config['mxcms']['s2']['newicon'] eq 0"}checked {/if}>
+                            <input type="radio" name="mxcms[s2][newicon]" value="1" title="显示" {if condition="$config['mxcms']['s2']['newicon'] eq 1"}checked {/if}>
+                        </div>
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                            <label class="layui-form-label">最新图标颜色：</label>
+                        <div class="layui-input-inline w100">
+                            <input name="mxcms[s2][newiconcss]" type="text" value="{$config['mxcms']['s2']['newiconcss']}" size="60" class="layui-input" placeholder="热播图标颜色代码">
+                        </div> 
+                             </div>  
+                          <div class="layui-form-item">
+                        <label class="layui-form-label">分类ID：</label>
+                        <div class="layui-input-inline w200"><input name="mxcms[s2][newids]" type="text" value="{$config['mxcms']['s2']['newids']}" size="60" class="layui-input"></div>
+                        <div class="layui-form-mid layui-word-aux">最新影片的分类id填入，多个用,隔开 【默认导航分类ID为parent】</div>
+                      </div>
+                      </div> 
+                         </div>   
+                      </div>   
+
+                </div> 
+                
+                <div class="layui-tab-item">
+                      <h3 class="layuih3">全局开关</h3>
+                           <div class="layui-form-item">
+                        <label class="layui-form-label">默认夜间</label>
+                        <div class="layui-input-block">
+                        <div class="layui-input-inline w200">
+                    <input type="radio" name="mxcms[s2][mryj]" value="0" title="关闭" {if condition="$config['mxcms']['s2']['mryj'] eq 0"}checked {/if}>
+                     <input type="radio" name="mxcms[s2][mryj]" value="1" title="开启" {if condition="$config['mxcms']['s2']['mryj'] eq 1"}checked {/if}>
+                        </div>
+                    <div class="layui-form-mid layui-word-aux">默认关闭，开启后默认夜间模式</div>
+                        </div>
+                    </div> 
+                      <div class="layui-form-item">
+                        <label class="layui-form-label">TAG</label>
+                        <div class="layui-input-block">
+                        <div class="layui-input-inline w200">
+                    <input type="radio" name="mxcms[s2][tagkg]" value="0" title="关闭" {if condition="$config['mxcms']['s2']['tagkg'] eq 0"}checked {/if}>
+                     <input type="radio" name="mxcms[s2][tagkg]" value="1" title="开启" {if condition="$config['mxcms']['s2']['tagkg'] eq 1"}checked {/if}>
+                        </div>
+                    <div class="layui-form-mid layui-word-aux">默认开启，关闭则不显示内容页tag标签</div>
+                        </div>
+                    </div>   
+                       <div class="layui-form-item">
+                        <label class="layui-form-label">跳转状态</label>
+                        <div class="layui-input-block">
+                        <div class="layui-input-inline w200">
+                    <input type="radio" name="mxcms[s2][tzzt]" value="0" title="关闭" {if condition="$config['mxcms']['s2']['tzzt'] eq 0"}checked {/if}>
+                     <input type="radio" name="mxcms[s2][tzzt]" value="1" title="开启" {if condition="$config['mxcms']['s2']['tzzt'] eq 1"}checked {/if}>
+                        </div>
+                    <div class="layui-form-mid layui-word-aux">开启后点击视频直接跳到播放页，关闭状态下跳转到详情页</div>
+                        </div>
+                    </div>   
+                        <div class="layui-form-item">
+                        <label class="layui-form-label">相关话题</label>
+                        <div class="layui-input-block">
+                        <div class="layui-input-inline w200">
+                    <input type="radio" name="mxcms[s2][xght]" value="0" title="关闭" {if condition="$config['mxcms']['s2']['xght'] eq 0"}checked {/if}>
+                     <input type="radio" name="mxcms[s2][xght]" value="1" title="开启" {if condition="$config['mxcms']['s2']['xght'] eq 1"}checked {/if}>
+                        </div>
+                    <div class="layui-form-mid layui-word-aux">详情页相关话题</div>
+                        </div>
+                    </div>   
+                        <div class="layui-form-item">
+                        <label class="layui-form-label">底部关于</label>
+                        <div class="layui-input-block">
+                        <div class="layui-input-inline w300">
+                    <input type="radio" name="mxcms[s2][about]" value="0" title="关闭" {if condition="$config['mxcms']['s2']['about'] eq 0"}checked {/if}>
+                     <input type="radio" name="mxcms[s2][about]" value="1" title="开启" {if condition="$config['mxcms']['s2']['about'] eq 1"}checked {/if}>
+                        </div>
+                        </div>
+                    </div>  
+                       <div class="layui-form-item">
+                        <label class="layui-form-label">底部排行榜</label>
+                        <div class="layui-input-block">
+                        <div class="layui-input-inline w300">
+                    <input type="radio" name="mxcms[s2][dbtop]" value="0" title="关闭" {if condition="$config['mxcms']['s2']['dbtop'] eq 0"}checked {/if}>
+                     <input type="radio" name="mxcms[s2][dbtop]" value="1" title="开启" {if condition="$config['mxcms']['s2']['dbtop'] eq 1"}checked {/if}>
+                        </div>
+                        </div>
+                    </div>  
+                         <div class="layui-form-item">
+                        <label class="layui-form-label">豆瓣跳转</label>
+                        <div class="layui-input-block">
+                        <div class="layui-input-inline w300">
+                    <input type="radio" name="mxcms[s2][doubanlj]" value="0" title="关闭" {if condition="$config['mxcms']['s2']['doubanlj'] eq 0"}checked {/if}>
+                     <input type="radio" name="mxcms[s2][doubanlj]" value="1" title="开启" {if condition="$config['mxcms']['s2']['doubanlj'] eq 1"}checked {/if}>
+                        </div>
+                        </div>
+                    </div>  
+ 
+                      <div class="layui-form-item">
+                        <label class="layui-form-label">会员</label>
+                        <div class="layui-input-block">
+                        <div class="layui-input-inline w300">
+                            <input type="radio" name="mxcms[s2][user]" value="0" title="关闭" {if condition="$config['mxcms']['s2']['user'] eq 0"}checked {/if}>
+                            <input type="radio" name="mxcms[s2][user]" value="1" title="开启" {if condition="$config['mxcms']['s2']['user'] eq 1"}checked {/if}>
+                        </div>
+                          <div class="layui-form-mid layui-word-aux">右上角的会员中心</div>
+                        </div>
+                    </div> 
+                          <div class="layui-form-item">
+                        <label class="layui-form-label">收藏</label>
+                        <div class="layui-input-block">
+                        <div class="layui-input-inline w300">
+                            <input type="radio" name="mxcms[s2][shoucang]" value="0" title="关闭" {if condition="$config['mxcms']['s2']['shoucang'] eq 0"}checked {/if}>
+                            <input type="radio" name="mxcms[s2][shoucang]" value="1" title="开启" {if condition="$config['mxcms']['s2']['shoucang'] eq 1"}checked {/if}>
+                        </div>
+                          <div class="layui-form-mid layui-word-aux">详情页收藏功能</div>
+                        </div>
+                    </div>  
+                     <div class="layui-form-item">
+                        <label class="layui-form-label">评论</label>
+                        <div class="layui-input-block">
+                        <div class="layui-input-inline w300">
+                            <input type="radio" name="mxcms[s2][comment]" value="0" title="关闭" {if condition="$config['mxcms']['s2']['comment'] eq 0"}checked {/if}>
+                            <input type="radio" name="mxcms[s2][comment]" value="1" title="开启" {if condition="$config['mxcms']['s2']['comment'] eq 1"}checked {/if}>
+                        </div>
+                          <div class="layui-form-mid layui-word-aux">关闭评论功能</div>
+                        </div>
+                    </div>  
+                       <div class="layui-form-item">
+                        <label class="layui-form-label">别名</label>
+                        <div class="layui-input-block">
+                        <div class="layui-input-inline w300">
+                            <input type="radio" name="mxcms[s2][detailen]" value="0" title="关闭" {if condition="$config['mxcms']['s2']['detailen'] eq 0"}checked {/if}>
+                            <input type="radio" name="mxcms[s2][detailen]" value="1" title="开启" {if condition="$config['mxcms']['s2']['detailen'] eq 1"}checked {/if}>
+                        </div>
+                          <div class="layui-form-mid layui-word-aux">详情页关闭影片别名</div>
+                        </div>
+                    </div>  
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">播放器小窗</label>
+                        <div class="layui-input-block">
+                        <div class="layui-input-inline w300">
+                            <input type="radio" name="mxcms[s2][miniplay]" value="0" title="关闭" {if condition="$config['mxcms']['s2']['miniplay'] eq 0"}checked {/if}>
+                            <input type="radio" name="mxcms[s2][miniplay]" value="1" title="开启" {if condition="$config['mxcms']['s2']['miniplay'] eq 1"}checked {/if}>
+                        </div>
+                         <div class="layui-form-mid layui-word-aux">PC端播放视频时滚动悬浮小窗</div>
+                        </div>
+                    </div> 
+                    
+                </div>
+
+
+                 <div class="layui-tab-item">
+                     <div class="layui-tab layui-tab-card">
+                      <ul class="layui-tab-title"> 
+                     <li class="layui-this">弹窗公告</li>  
+                     <li>播放器设置</li>
+                     <li>下载客户端</li>
+                     <li>网址弹窗列表</li>
+                     <li>排行榜页面配置</li>
+                    </ul>
+                      <div class="layui-tab-content">
+                    <div class="layui-tab-item layui-show">
+                                        <div class="layui-form-item">
+                        <label class="layui-form-label">状态：</label>
+                        <div class="layui-input-inline w300">
+                            <input type="radio" name="mxcms[s2][tc]" value="0" title="关闭" {if condition="$config['mxcms']['s2']['tc'] eq 0"}checked {/if}>
+                            <input type="radio" name="mxcms[s2][tc]" value="1" title="开启" {if condition="$config['mxcms']['s2']['tc'] eq 1"}checked {/if}>
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">弹窗内容：</label>
+                        <div class="layui-input-block">
+                            <textarea name="mxcms[s2][tc_noti]" class="layui-textarea"  placeholder="请输入弹窗内容<p>为一行</p>">{$config['mxcms']['s2']['tc_noti']}</textarea>
+                        </div>
+                    </div>  
+                          
+                       </div>    
+                   <div class="layui-tab-item"> 
+                   <div class="layui-form-item">
+                        <label class="layui-form-label">状态：</label>
+                           <div class="layui-input-inline w300">
+                 <input type="radio" name="mxcms[s2][bftip]" value="0" title="关闭" {if condition="$config['mxcms']['s2']['bftip'] eq 0"}checked {/if}>
+                <input type="radio" name="mxcms[s2][bftip]" value="1" title="开启" {if condition="$config['mxcms']['s2']['bftip'] eq 1"}checked {/if}>
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                          <label class="layui-form-label">提醒</label>
+                         <div class="layui-input-inline w500">
+                            <input name="mxcms[s2][bftips1]" type="text" value="{$config['mxcms']['s2']['bftips1']}" size="60" class="layui-input" placeholder="输入提醒文字">                            
+                        </div>
+                    </div>  
+                     <div class="layui-form-item">
+                          <label class="layui-form-label">技巧</label>
+                         <div class="layui-input-inline w500">
+                            <input name="mxcms[s2][bftips2]" type="text" value="{$config['mxcms']['s2']['bftips2']}" size="60" class="layui-input" placeholder="输入技巧文字">                            
+                        </div>
+                    </div>  
+                    
+                     <div class="layui-form-item">
+                        <label class="layui-form-label">解析地址：</label>
+                        <div class="layui-input-block  w500">
+                            <textarea name="mxcms[s2][play][jxxl]" class="layui-textarea" placeholder="填写解析链路代码">{$config['mxcms'][s2]['play']['jxxl']}</textarea>
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">播放页小技巧：</label>
+                        <div class="layui-input-block  w500">
+                            <textarea name="mxcms[s2][play][indextccont]" class="layui-textarea" placeholder="填写播放页小技巧">{$config['mxcms'][s2]['play']['indextccont']}</textarea>
+                        </div>
+                    </div>                   
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                       </div>
+                     <div class="layui-tab-item">  
+                     <label class="layui-form-label">状态</label>                        
+                        <div class="layui-input-inline w300">
+                            <input type="radio" name="mxcms[s2][app]" value="0" title="隐藏" {if condition="$config['mxcms']['s2']['app'] eq 0"}checked {/if}>
+                            <input type="radio" name="mxcms[s2][app]" value="1" title="显示" {if condition="$config['mxcms']['s2']['app'] eq 1"}checked {/if}>
+                        </div>
+                         <div class="layui-form-item">
+                          <label class="layui-form-label">安卓APP下载链接</label>
+                         <div class="layui-input-inline w500">
+                             <input name="mxcms[s2][app_url]" type="text" value="{$config['mxcms']['s2']['app_url']}" size="60" class="layui-input" placeholder="安卓APP下载链接">
+                        </div>
+                    </div>  
+                     <div class="layui-form-item">
+                          <label class="layui-form-label">苹果APP下载链接</label>
+                         <div class="layui-input-inline w500">
+                               <input name="mxcms[s2][app_url2]" type="text" value="{$config['mxcms']['s2']['app_url2']}" size="60" class="layui-input" placeholder="苹果APP下载链接">             
+                        </div>
+                    </div>  
+                    </div>
+                     <div class="layui-tab-item">
+                     <label class="layui-form-label">状态</label>                        
+                        <div class="layui-input-inline w300">
+                             <input type="radio" name="mxcms[s2][wz0]" value="0" title="关闭" {if condition="$config['mxcms']['s2']['wz0'] eq 0"}checked {/if}>
+                            <input type="radio" name="mxcms[s2][wz0]" value="1" title="开启" {if condition="$config['mxcms']['s2']['wz0'] eq 1"}checked {/if}>
+                        </div>
+                         <div class="layui-form-item">       
+                            <label class="layui-form-label">备用域名一：</label>
+                          <div class="layui-input-inline w500">
+                         <input name="mxcms[s2][web1]" type="text" value="{$config['mxcms']['s2']['web1']}" size="60" class="layui-input" placeholder="输入备用域名1">  
+                              </div>
+                              <div class="layui-input-inline w300">
+                            <input type="radio" name="mxcms[s2][wz01]" value="0" title="隐藏" {if condition="$config['mxcms']['s2']['wz01'] eq 0"}checked {/if}>
+                            <input type="radio" name="mxcms[s2][wz01]" value="1" title="显示" {if condition="$config['mxcms']['s2']['wz01'] eq 1"}checked {/if}>
+                         </div>    
+                        </div>  
+                           
+                               <div class="layui-form-item">       
+                            <label class="layui-form-label">备用域名二：</label>
+                          <div class="layui-input-inline w500">
+                         <input name="mxcms[s2][web2]" type="text" value="{$config['mxcms']['s2']['web2']}" size="60" class="layui-input" placeholder="输入备用域名1">  
+                              </div>
+                              <div class="layui-input-inline w300">
+                             <input type="radio" name="mxcms[s2][wz2]" value="0" title="隐藏" {if condition="$config['mxcms']['s2']['wz2'] eq 0"}checked {/if}>
+                            <input type="radio" name="mxcms[s2][wz2]" value="1" title="显示" {if condition="$config['mxcms']['s2']['wz2'] eq 1"}checked {/if}>
+                         </div>    
+                        </div>   
+                           
+                                <div class="layui-form-item">       
+                            <label class="layui-form-label">备用域名三：</label>
+                          <div class="layui-input-inline w500">
+                         <input name="mxcms[s2][web3]" type="text" value="{$config['mxcms']['s2']['web3']}" size="60" class="layui-input" placeholder="输入备用域名1">  
+                              </div>
+                              <div class="layui-input-inline w300">
+                             <input type="radio" name="mxcms[s2][wz3]" value="0" title="隐藏" {if condition="$config['mxcms']['s2']['wz3'] eq 0"}checked {/if}>
+                            <input type="radio" name="mxcms[s2][wz3]" value="1" title="显示" {if condition="$config['mxcms']['s2']['wz3'] eq 1"}checked {/if}>
+                         </div>    
+                        </div>  
+                        
+                        <div class="layui-form-item">       
+                            <label class="layui-form-label">备用域名四：</label>
+                          <div class="layui-input-inline w500">
+                         <input name="mxcms[s2][web4]" type="text" value="{$config['mxcms']['s2']['web4']}" size="60" class="layui-input" placeholder="输入备用域名1">  
+                              </div>
+                              <div class="layui-input-inline w300">
+                             <input type="radio" name="mxcms[s2][wz4]" value="0" title="隐藏" {if condition="$config['mxcms']['s2']['wz4'] eq 0"}checked {/if}>
+                            <input type="radio" name="mxcms[s2][wz4]" value="1" title="显示" {if condition="$config['mxcms']['s2']['wz4'] eq 1"}checked {/if}>
+                         </div>    
+                        </div>  
+                           <div class="layui-form-item">       
+                            <label class="layui-form-label">备用域名五：</label>
+                          <div class="layui-input-inline w500">
+                         <input name="mxcms[s2][web5]" type="text" value="{$config['mxcms']['s2']['web5']}" size="60" class="layui-input" placeholder="输入备用域名1">  
+                              </div>
+                              <div class="layui-input-inline w300">
+                             <input type="radio" name="mxcms[s2][wz5]" value="0" title="隐藏" {if condition="$config['mxcms']['s2']['wz5'] eq 0"}checked {/if}>
+                            <input type="radio" name="mxcms[s2][wz5]" value="1" title="显示" {if condition="$config['mxcms']['s2']['wz5'] eq 1"}checked {/if}>
+                         </div>    
+                        </div> 
+                        </div>
+                        
+                           <div class="layui-tab-item">
+                                  <h3 class="layuih3">热播排行榜</h3>
+                               <div class="layui-form-item">
+                        <label class="layui-form-label">热播排行榜：</label>
+                           <div class="layui-input-inline w300">
+                 <input type="radio" name="mxcms[s7][hotpxb]" value="0" title="关闭" {if condition="$config['mxcms']['s7']['hotpxb'] eq 0"}checked {/if}>
+                <input type="radio" name="mxcms[s7][hotpxb]" value="1" title="开启" {if condition="$config['mxcms']['s7']['hotpxb'] eq 1"}checked {/if}>
+                        </div>
+                    </div>  
+                         <div class="layui-form-item">
+                      <label class="layui-form-label">指定推荐值：</label>
+                        <div class="layui-input-inline w70"><input name="mxcms[s7][hotlevel]" type="text" value="{$config['mxcms']['s7']['hotlevel']}" size="60" class="layui-input"></div> 
+                        <label class="layui-form-label">展示最大数量：</label>
+                        <div class="layui-input-inline w70"><input name="mxcms[s7][hotnum]" type="text" value="{$config['mxcms']['s7']['hotnum']}" size="60" class="layui-input"></div> 
+                         <div class="layui-form-mid layui-word-aux">默认推荐“空”，填写all为显示全部推荐，默认显示数量“10”个</div>
+                        </div>  
+                         <h3 class="layuih3">站长推荐榜</h3>
+                                    <div class="layui-form-item">
+                        <label class="layui-form-label">站长推荐榜：</label>
+                           <div class="layui-input-inline w300">
+                 <input type="radio" name="mxcms[s7][zztjb]" value="0" title="关闭" {if condition="$config['mxcms']['s7']['zztjb'] eq 0"}checked {/if}>
+                <input type="radio" name="mxcms[s7][zztjb]" value="1" title="开启" {if condition="$config['mxcms']['s7']['zztjb'] eq 1"}checked {/if}>
+                        </div>
+                    </div>  
+                         <div class="layui-form-item">
+                      <label class="layui-form-label">指定推荐值：</label>
+                        <div class="layui-input-inline w70"><input name="mxcms[s7][zztjlevel]" type="text" value="{$config['mxcms']['s7']['zztjlevel']}" size="60" class="layui-input"></div> 
+                        <label class="layui-form-label">展示最大数量：</label>
+                        <div class="layui-input-inline w70"><input name="mxcms[s7][zztjnum]" type="text" value="{$config['mxcms']['s7']['zztjnum']}" size="60" class="layui-input"></div> 
+                         <div class="layui-form-mid layui-word-aux">默认推荐“all”，填写all为显示全部推荐，默认显示数量“10”个</div>
+                        </div> 
+                     <h3 class="layuih3">自定义排行榜分类ID</h3>
+                         <div class="layui-form-item">
+                      <label class="layui-form-label">指定推荐值：</label>
+                        <div class="layui-input-inline w70"><input name="mxcms[s7][diytopidslevel]" type="text" value="{$config['mxcms']['s7']['diytopidslevel']}" size="60" class="layui-input"></div> 
+                        <label class="layui-form-label">展示最大数量：</label>
+                        <div class="layui-input-inline w70"><input name="mxcms[s7][diytopidsnum]" type="text" value="{$config['mxcms']['s7']['diytopidsnum']}" size="60" class="layui-input"></div> 
+                         <div class="layui-form-mid layui-word-aux">默认推荐“空”，填写all为显示全部推荐，默认显示数量“10”个</div>
+                        </div>  
+                        <div class="layui-form-item">
+                        <label class="layui-form-label">自定义ID：</label>
+                        <div class="layui-input-inline w200"><input name="mxcms[s7][diytopids]" type="text" value="{$config['mxcms']['s7']['diytopids']}" size="60" class="layui-input"></div>
+                        <div class="layui-form-mid layui-word-aux">排行榜分类id填入，多个用,隔开 【请填写ID再配置下面的ID和图标】</div>
+                        </div>
+                               <div class="layui-form-item">
+                        <label class="layui-form-label">默认图标：</label>
+                        <div class="layui-input-inline w300"><input name="mxcms[s7][iconmr]" type="text" value="{$config['mxcms']['s7']['iconmr']}" size="60" class="layui-input"></div> 
+                         <div class="layui-form-mid layui-word-aux">图标请移步字体图标页面观看</div>
+                        </div> 
+                        <div class="layui-form-item">
+                      <label class="layui-form-label">自定义一的id：</label>
+                        <div class="layui-input-inline w70"><input name="mxcms[s7][num1]" type="text" value="{$config['mxcms']['s7']['num1']}" size="60" class="layui-input"></div> 
+                        <label class="layui-form-label w150">自定义一的图标：</label>
+                        <div class="layui-input-inline w300"><input name="mxcms[s7][icon1]" type="text" value="{$config['mxcms']['s7']['icon1']}" size="60" class="layui-input"></div> 
+                         <div class="layui-form-mid layui-word-aux">图标请移步字体图标页面观看</div>
+                        </div>  
+                            <div class="layui-form-item">
+                      <label class="layui-form-label">自定义二的id：</label>
+                        <div class="layui-input-inline w70"><input name="mxcms[s7][num2]" type="text" value="{$config['mxcms']['s7']['num2']}" size="60" class="layui-input"></div> 
+                        <label class="layui-form-label w150">自定义二的图标：</label>
+                        <div class="layui-input-inline w300"><input name="mxcms[s7][icon2]" type="text" value="{$config['mxcms']['s7']['icon2']}" size="60" class="layui-input"></div> 
+                         <div class="layui-form-mid layui-word-aux">图标请移步字体图标页面观看</div>
+                        </div>  
+                        
+                        <div class="layui-form-item">
+                      <label class="layui-form-label">自定义三的id：</label>
+                        <div class="layui-input-inline w70"><input name="mxcms[s7][num3]" type="text" value="{$config['mxcms']['s7']['num3']}" size="60" class="layui-input"></div> 
+                        <label class="layui-form-label w150">自定义三的图标：</label>
+                        <div class="layui-input-inline w300"><input name="mxcms[s7][icon3]" type="text" value="{$config['mxcms']['s7']['icon3']}" size="60" class="layui-input"></div> 
+                         <div class="layui-form-mid layui-word-aux">图标请移步字体图标页面观看</div>
+                        </div>  
+                        
+                        <div class="layui-form-item">
+                      <label class="layui-form-label">自定义四的id：</label>
+                        <div class="layui-input-inline w70"><input name="mxcms[s7][num4]" type="text" value="{$config['mxcms']['s7']['num4']}" size="60" class="layui-input"></div> 
+                        <label class="layui-form-label w150">自定义四的图标：</label>
+                        <div class="layui-input-inline w300"><input name="mxcms[s7][icon4]" type="text" value="{$config['mxcms']['s7']['icon4']}" size="60" class="layui-input"></div> 
+                         <div class="layui-form-mid layui-word-aux">图标请移步字体图标页面观看</div>
+                        </div>  
+                        
+                         <div class="layui-form-item">
+                      <label class="layui-form-label">自定义五的id：</label>
+                        <div class="layui-input-inline w70"><input name="mxcms[s7][num5]" type="text" value="{$config['mxcms']['s7']['num5']}" size="60" class="layui-input"></div> 
+                        <label class="layui-form-label w150">自定义五的图标：</label>
+                        <div class="layui-input-inline w300"><input name="mxcms[s7][icon5]" type="text" value="{$config['mxcms']['s7']['icon5']}" size="60" class="layui-input"></div> 
+                         <div class="layui-form-mid layui-word-aux">图标请移步字体图标页面观看</div>
+                        </div> 
+                        
+                         <div class="layui-form-item">
+                      <label class="layui-form-label">自定义六的id：</label>
+                        <div class="layui-input-inline w70"><input name="mxcms[s7][num6]" type="text" value="{$config['mxcms']['s7']['num6']}" size="60" class="layui-input"></div> 
+                        <label class="layui-form-label w150">自定义六的图标：</label>
+                        <div class="layui-input-inline w300"><input name="mxcms[s7][icon6]" type="text" value="{$config['mxcms']['s7']['icon6']}" size="60" class="layui-input"></div> 
+                         <div class="layui-form-mid layui-word-aux">图标请移步字体图标页面观看</div>
+                        </div> 
+                          </div>  
+                     </div>
+                    </div>  
+                  </div>
+
+
+                <div class="layui-tab-item">
+                      <div class="layui-tab layui-tab-card">
+                      <ul class="layui-tab-title"> 
+                     <li class="layui-this">自适应广告</li>  
+                     <li >广告添加教程</li> 
+                     
+                    </ul>
+                      <div class="layui-tab-content"> 
+                      <blockquote class="layui-elem-quote" style="margin: 20px 0;">
+                        友情提示：自适应广告兼容电脑和手机。 联盟悬浮广告添加底部广告即可！其他广告可按位置自行添加。
+                    </blockquote>
+                     <div class="layui-tab-item layui-show"> 
+                       <h3 class="layuih3">全站通栏广告</h3>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">广告状态：</label>
+                        <div class="layui-input-block">
+                            <input type="radio" name="mxcms[s3][adqj]" value="0" title="关闭" {if condition="$config['mxcms']['s3']['adqj'] eq 0"}checked {/if}>
+                            <input type="radio" name="mxcms[s3][adqj]" value="1" title="开启" {if condition="$config['mxcms']['s3']['adqj'] eq 1"}checked {/if}>
+                        </div>
+                    </div>
+                       <div class="layui-form-item">
+                          <div class="layui-input-block">
+                            <textarea name="mxcms[s3][aadqj]" class="layui-textarea" placeholder="填写自定义广告代码">{$config['mxcms']['s3']['aadqj']}</textarea>
+                        </div>
+                    </div>  
+                <h3 class="layuih3">首页广告</h3>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">广告状态：</label>
+                        <div class="layui-input-block">
+                            <input type="radio" name="mxcms[s3][ad1]" value="0" title="关闭" {if condition="$config['mxcms']['s3']['ad1'] eq 0"}checked {/if}>
+                            <input type="radio" name="mxcms[s3][ad1]" value="1" title="开启" {if condition="$config['mxcms']['s3']['ad1'] eq 1"}checked {/if}>
+                        </div>
+                    </div>
+                       <div class="layui-form-item">
+                          <div class="layui-input-block">
+                            <textarea name="mxcms[s3][aad1]" class="layui-textarea" placeholder="填写自定义广告代码">{$config['mxcms']['s3']['aad1']}</textarea>
+                        </div>
+                    </div>
+                        <h3 class="layuih3">全站底部广告</h3>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">广告状态：</label>
+                        <div class="layui-input-block">
+                            <input type="radio" name="mxcms[s3][addb]" value="0" title="关闭" {if condition="$config['mxcms']['s3']['addb'] eq 0"}checked {/if}>
+                            <input type="radio" name="mxcms[s3][addb]" value="1" title="开启" {if condition="$config['mxcms']['s3']['addb'] eq 1"}checked {/if}>
+                        </div>
+                    </div>
+                       <div class="layui-form-item">
+                          <div class="layui-input-block">
+                            <textarea name="mxcms[s3][aaddb]" class="layui-textarea" placeholder="填写自定义广告代码">{$config['mxcms']['s3']['aaddb']}</textarea>
+                        </div>
+                    </div>  
+                    
+                    
+                      <h3 class="layuih3">详情页文字广告</h3>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">广告状态：</label>
+                        <div class="layui-input-block">
+                            <input type="radio" name="mxcms[s3][ad2]" value="0" title="关闭" {if condition="$config['mxcms']['s3']['ad2'] eq 0"}checked {/if}>
+                            <input type="radio" name="mxcms[s3][ad2]" value="1" title="开启" {if condition="$config['mxcms']['s3']['ad2'] eq 1"}checked {/if}>
+                        </div>
+                    </div>
+                       <div class="layui-form-item">
+                          <div class="layui-input-block">
+                            <textarea name="mxcms[s3][aad2]" class="layui-textarea" placeholder="填写自定义广告代码">{$config['mxcms']['s3']['aad2']}</textarea>
+                        </div>
+                    </div>
+                    
+                    
+                      <h3 class="layuih3">详情页图片广告</h3>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">广告状态：</label>
+                        <div class="layui-input-block">
+                            <input type="radio" name="mxcms[s3][ad22]" value="0" title="关闭" {if condition="$config['mxcms']['s3']['ad22'] eq 0"}checked {/if}>
+                            <input type="radio" name="mxcms[s3][ad22]" value="1" title="开启" {if condition="$config['mxcms']['s3']['ad22'] eq 1"}checked {/if}>
+                        </div>
+                    </div>
+                       <div class="layui-form-item">
+                          <div class="layui-input-block">
+                            <textarea name="mxcms[s3][aad22]" class="layui-textarea" placeholder="填写自定义广告代码">{$config['mxcms']['s3']['aad22']}</textarea>
+                        </div>
+                    </div>
+                    
+                    
+                     <h3 class="layuih3">播放页广告</h3>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">广告状态：</label>
+                        <div class="layui-input-block">
+                            <input type="radio" name="mxcms[s3][ad3]" value="0" title="关闭" {if condition="$config['mxcms']['s3']['ad3'] eq 0"}checked {/if}>
+                            <input type="radio" name="mxcms[s3][ad3]" value="1" title="开启" {if condition="$config['mxcms']['s3']['ad3'] eq 1"}checked {/if}>
+                        </div>
+                    </div>
+                       <div class="layui-form-item">
+                          <div class="layui-input-block">
+                            <textarea name="mxcms[s3][aad3]" class="layui-textarea" placeholder="填写自定义广告代码">{$config['mxcms']['s3']['aad3']}</textarea>
+                        </div>
+                    </div>
+                    
+                    <h3 class="layuih3">筛选页广告</h3>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">广告状态：</label>
+                        <div class="layui-input-block">
+                            <input type="radio" name="mxcms[s3][ad4]" value="0" title="关闭" {if condition="$config['mxcms']['s3']['ad4'] eq 0"}checked {/if}>
+                            <input type="radio" name="mxcms[s3][ad4]" value="1" title="开启" {if condition="$config['mxcms']['s3']['ad4'] eq 1"}checked {/if}>
+                        </div>
+                    </div>
+                       <div class="layui-form-item">
+                          <div class="layui-input-block">
+                            <textarea name="mxcms[s3][aad4]" class="layui-textarea" placeholder="填写自定义广告代码">{$config['mxcms']['s3']['aad4']}</textarea>
+                        </div>
+                    </div>
+                    
+ 
+                     </div>
+
+                      <div class="layui-tab-item"> 
+                     <blockquote class="layui-elem-quote" style="margin: 20px 0;">
+                        <br> 图片广告添加：图片格式960*90  或者这个比列
+                        添加通用框架
+                        <xmp>
+                        <div class="module-adslist module-wrapper ads_w"> 
+                        <a target="_blank" href="广告链接" ><img src="广告图片链接" alt="广告名" width="100%">
+                        <i class="gg-icon"></i></a>
+                        <a target="_blank" href="广告链接" ><img src="广告图片链接" alt="广告名" width="100%">
+                        <i class="gg-icon"></i></a></div>
+                        </xmp>
+                      为了对称，每个框架加 <d style="color: red;">两个  a标签。</d>。 如果需要更多，就复制以此类推。
+                        <br><br>文字广告添加：<xmp><a href="#" target="_blank">广告名</a></xmp> 即可。
+                    </blockquote>
+                      
+                      </div>
+                      
+                      
+                    </div>  
+                </div>   
+                </div>
+                
+
+                    <div class="layui-tab-item">
+                    <h3 class="layuih3">主题安全</h3>
+                     <div class="layui-form-item">
+                      <label class="layui-form-label">屏蔽F12</label>                        
+                        <div class="layui-input-inline w300">
+                            <input type="radio" name="mxcms[s4][shier]" value="0" title="关闭" {if condition="$config['mxcms']['s4']['shier'] eq 0"}checked {/if}>
+                            <input type="radio" name="mxcms[s4][shier]" value="1" title="开启" {if condition="$config['mxcms']['s4']['shier'] eq 1"}checked {/if}>
+                        </div>
+                    </div>
+                    
+                      <div class="layui-form-item">
+                      <label class="layui-form-label">屏蔽快捷键</label>                        
+                        <div class="layui-input-inline w300">
+                            <input type="radio" name="mxcms[s4][ctrl]" value="0" title="关闭" {if condition="$config['mxcms']['s4']['ctrl'] eq 0"}checked {/if}>
+                            <input type="radio" name="mxcms[s4][ctrl]" value="1" title="开启" {if condition="$config['mxcms']['s4']['ctrl'] eq 1"}checked {/if}>
+                        </div>
+                    </div>
+                    
+                        <div class="layui-form-item">
+                      <label class="layui-form-label">屏蔽右键</label>                        
+                        <div class="layui-input-inline w300">
+                            <input type="radio" name="mxcms[s4][right]" value="0" title="关闭" {if condition="$config['mxcms']['s4']['right'] eq 0"}checked {/if}>
+                            <input type="radio" name="mxcms[s4][right]" value="1" title="开启" {if condition="$config['mxcms']['s4']['right'] eq 1"}checked {/if}>
+                        </div>
+                    </div>
+                    
+                       <div class="layui-form-item">
+                      <label class="layui-form-label">禁止调试</label>                        
+                        <div class="layui-input-inline w300">
+                            <input type="radio" name="mxcms[s4][mode]" value="0" title="关闭" {if condition="$config['mxcms']['s4']['mode'] eq 0"}checked {/if}>
+                            <input type="radio" name="mxcms[s4][mode]" value="1" title="开启" {if condition="$config['mxcms']['s4']['mode'] eq 1"}checked {/if}>
+                        </div>
+                    </div>
+                    
+                       <div class="layui-form-item">
+                        <label class="layui-form-label">屏蔽提示信息：</label>
+                        <div class="layui-input-block w500">
+                            <textarea name="mxcms[s4][pbtips]" class="layui-textarea"  placeholder="你知道的太多了">{$config['mxcms']['s4']['pbtips']}</textarea>
+                        </div>
+                    </div>  
+                    
+                        
+                            <div class="layui-form-item">
+                        <label class="layui-form-label">头部代码：</label>
+                        <div class="layui-input-block">
+                            <input type="radio" name="mxcms[s4][tbdm]" value="0" title="关闭" {if condition="$config['mxcms']['s4']['tbdm'] eq 0"}checked {/if}>
+                            <input type="radio" name="mxcms[s4][tbdm]" value="1" title="开启" {if condition="$config['mxcms']['s4']['tbdm'] eq 1"}checked {/if}>
+                        </div>
+                    </div>
+                       <div class="layui-form-item">
+                          <div class="layui-input-inline w600">
+                            <textarea name="mxcms[s4][tbdmtips]" class="layui-textarea" placeholder="支持填写html代码,例如某些统计站点需要验证meta标签等">{$config['mxcms']['s4']['tbdmtips']}</textarea>
+                        </div>
+                          <div class="layui-form-mid layui-word-aux">支持填写html代码,例如某些统计站点需要验证meta标签等</div>
+                    </div>
+                    
+                           <div class="layui-form-item">
+                        <label class="layui-form-label">底部代码：</label>
+                        <div class="layui-input-block">
+                            <input type="radio" name="mxcms[s4][dbdm]" value="0" title="关闭" {if condition="$config['mxcms']['s4']['dbdm'] eq 0"}checked {/if}>
+                            <input type="radio" name="mxcms[s4][dbdm]" value="1" title="开启" {if condition="$config['mxcms']['s4']['dbdm'] eq 1"}checked {/if}>
+                        </div>
+                    </div>
+                       <div class="layui-form-item">
+                          <div class="layui-input-inline w600">
+                            <textarea name="mxcms[s4][dbdmtips]" class="layui-textarea" placeholder="支持填写html代码,例如统计代码">{$config['mxcms']['s4']['dbdmtips']}</textarea>
+                        </div>
+                          <div class="layui-form-mid layui-word-aux">支持填写html代码,例如统计代码</div>
+                    </div>
+                           <div class="layui-form-item">
+                        <label class="layui-form-label">自定义CSS：</label>
+                        <div class="layui-input-block">
+                            <input type="radio" name="mxcms[s4][stylediy]" value="0" title="关闭" {if condition="$config['mxcms']['s4']['stylediy'] eq 0"}checked {/if}>
+                            <input type="radio" name="mxcms[s4][stylediy]" value="1" title="开启" {if condition="$config['mxcms']['s4']['stylediy'] eq 1"}checked {/if}>
+                        </div>
+                    </div>
+                       <div class="layui-form-item">
+                          <div class="layui-input-inline w600">
+                            <textarea name="mxcms[s4][stylecss]" class="layui-textarea" placeholder="自定义css样式">{$config['mxcms']['s4']['stylecss']}</textarea>
+                        </div>
+                          <div class="layui-form-mid layui-word-aux">填写css样式代码</div>
+                    </div>
+                    </div>
+                    
+                     <div class="layui-tab-item">
+                    <blockquote class="layui-elem-quote" style="margin: 20px 0;">
+                 	    感谢你使用MXoneV6.3主题，本主题由（www.iqshg.com）修改优化制作，谢谢支持！<br/>
+                	    请勿传播该主题，谢谢合作！！！
+                    </blockquote>  
+                  
+                     </div>
+                     
+                         <div class="layui-tab-item">
+                    <blockquote class="layui-elem-quote" style="margin: 20px 0;">
+                	    本站自定义图标部分来自于阿里巴巴矢量图标库！<br/><br/>
+                	    如你想使用自己的阿里巴巴矢量图标，可去mxstatic/css/aliicon.css替换成你自己对应字体库的代码应用<br/><br/>
+                	    <a href="https://www.iconfont.cn" target="_blank" style="color:red;">点击访问阿里巴巴矢量图标库</a><br/><br/>
+                	    以下是本站引用的图标库字体<br/><br/>
+                	    查看icon图标，复制对应的icon图标代码即可使用。
+                    </blockquote>  
+                      <h3 class="layuih3">内置图标一览表</h3>
+                   <ul class="site-doc-icon">
+      <li>
+        <i class="layui-icon icon-apple"></i>
+        <div class="doc-icon-fontclass">icon-apple</div>
+      </li>
+      <li>
+        <i class="layui-icon icon-app"></i>
+        <div class="doc-icon-fontclass">icon-app</div>
+      </li>
+      <li>
+        <i class="layui-icon icon-android"></i>
+        <div class="doc-icon-fontclass">icon-android</div>
+      </li>
+      <li>
+        <i class="layui-icon icon-domain"></i>
+        <div class="doc-icon-fontclass">icon-domain</div>
+      </li>
+      
+      <li>
+        <i class="layui-icon icon-next"></i>
+        <div class="doc-icon-fontclass">icon-next</div>
+      </li>
+      <li>
+        <i class="layui-icon icon-home"></i>
+        <div class="doc-icon-fontclass">icon-home</div>
+      </li>
+      <li>
+        <i class="layui-icon icon-happy"></i>
+        <div class="doc-icon-fontclass">icon-happy</div>
+      </li>
+      <li>
+        <i class="layui-icon icon-arrow-bottom-o"></i>
+        <div class="doc-icon-fontclass">icon-arrow-bottom-o</div>
+      </li>
+      <li>
+        <i class="layui-icon icon-watch-history"></i>
+        <div class="doc-icon-fontclass">icon-watch-history</div>
+      </li>
+      <li>
+        <i class="layui-icon icon-search"></i>
+        <div class="doc-icon-fontclass">icon-search</div>
+      </li>
+      <li>
+        <i class="layui-icon icon-arrow-bottom"></i>
+        <div class="doc-icon-fontclass">icon-arrow-bottom</div>
+      </li>
+      <li>
+        <i class="layui-icon icon-play"></i>
+        <div class="doc-icon-fontclass">icon-play</div>
+      </li>
+      <li>
+        <i class="layui-icon icon-cate-zy"></i>
+        <div class="doc-icon-fontclass">icon-cate-zy</div>
+      </li>
+      <li>
+        <i class="layui-icon icon-cate-dm"></i>
+        <div class="doc-icon-fontclass">icon-cate-dm</div>
+      </li>
+      <li>
+        <i class="layui-icon icon-cate-ds"></i>
+        <div class="doc-icon-fontclass">icon-cate-ds</div>
+      </li>
+      <li>
+        <i class="layui-icon icon-cate-dy"></i>
+        <div class="doc-icon-fontclass">icon-cate-dy</div>
+      </li>
+      <li>
+        <i class="layui-icon icon-close-o"></i>
+        <div class="doc-icon-fontclass">icon-close-o</div>
+      </li>
+      <li>
+        <i class="layui-icon icon-all"></i>
+        <div class="doc-icon-fontclass">icon-all</div>
+      </li>
+      <li>
+        <i class="layui-icon icon-arrow-right"></i>
+        <div class="doc-icon-fontclass">icon-arrow-right</div>
+      </li>
+      <li>
+        <i class="layui-icon icon-sort"></i>>
+        <div class="doc-icon-fontclass">icon-sort</div>
+      </li>
+      <li>
+        <i class="layui-icon icon-close"></i>
+        <div class="doc-icon-fontclass">icon-close</div>
+      </li>
+      <li>
+        <i class="layui-icon icon-share"></i>
+        <div class="doc-icon-fontclass">icon-share</div>
+      </li>
+      <li>
+        <i class="layui-icon icon-arrow-right-o"></i>
+        <div class="doc-icon-fontclass">icon-arrow-right-o</div>
+      </li>
+      <li>
+        <i class="layui-icon icon-hot"></i>
+        <div class="doc-icon-fontclass">icon-hot</div>
+      </li>
+      <li>
+        <i class="layui-icon icon-hot-o"></i>
+        <div class="doc-icon-fontclass">icon-hot-o</div>
+      </li>
+      <li>
+        <i class="layui-icon icon-more"></i>
+        <div class="doc-icon-fontclass">icon-more</div>
+      </li>
+      <li>
+        <i class="layui-icon icon-warn"></i>
+        <div class="doc-icon-fontclass">icon-warn</div>
+      </li>
+    
+      <li>
+        <i class="layui-icon icon-tv"></i>
+        <div class="doc-icon-fontclass">icon-tv</div>
+      </li>
+      <li>
+        <i class="layui-icon icon-video-file"></i>
+        <div class="doc-icon-fontclass">icon-video-file</div>
+      </li>
+      <li>
+        <i class="layui-icon icon-qrcode"></i>
+        <div class="doc-icon-fontclass">icon-qrcode</div>
+      </li>
+      <li>
+        <i class="layui-icon icon-download"></i>
+        <div class="doc-icon-fontclass">icon-download</div>
+      </li>
+      <li>
+        <i class="layui-icon icon-url"></i>
+        <div class="doc-icon-fontclass">icon-url</div>
+      </li>
+      <li>
+        <i class="layui-icon icon-download-bold"></i>
+        <div class="doc-icon-fontclass">icon-download-bold</div>
+      </li>
+      <li>
+        <i class="layui-icon icon-screen-o"></i>
+        <div class="doc-icon-fontclass">icon-screen-o</div>
+      </li>
+      
+    </ul>
+    
+    <h3 class="layuih3">阿里巴巴矢量图标一览表（116）</h3>
+        <ul class="site-doc-icon">
+        <li>
+        <i class="layui-icon iconfont icon-zhibobofangshexiangjiguankanmianxing"></i>
+        <div class="doc-icon-fontclass">iconfont icon-zhibobofangshexiangjiguankanmianxing</div>
+      </li>
+          <li>
+        <i class="layui-icon iconfont icon-zhibobofangshexiangjitianxianmianxing"></i>
+        <div class="doc-icon-fontclass">iconfont icon-zhibobofangshexiangjitianxianmianxing</div>
+      </li>
+          <li>
+        <i class="layui-icon iconfont icon-40238_shengguangbodianshiju_guangbodianshijiemuzhi"></i>
+        <div class="doc-icon-fontclass">iconfont icon-40238_shengguangbodianshiju_guangbodianshijiemuzhi</div>
+      </li>
+          <li>
+        <i class="layui-icon iconfont icon-dianshi1"></i>
+        <div class="doc-icon-fontclass">iconfont icon-dianshi1</div>
+      </li>
+          <li>
+        <i class="layui-icon iconfont icon-dianshi-2"></i>
+        <div class="doc-icon-fontclass">iconfont icon-dianshi-2</div>
+      </li>
+          <li>
+        <i class="layui-icon iconfont icon-xinwenzixun"></i>
+        <div class="doc-icon-fontclass">iconfont icon-xinwenzixun</div>
+      </li>
+          <li>
+        <i class="layui-icon iconfont icon-zixun-4"></i>
+        <div class="doc-icon-fontclass">iconfont icon-zixun-4</div>
+      </li>
+          <li>
+        <i class="layui-icon iconfont icon-zixun-3"></i>
+        <div class="doc-icon-fontclass">iconfont icon-zixun-3</div>
+      </li>
+          <li>
+        <i class="layui-icon iconfont icon-zixun-2"></i>
+        <div class="doc-icon-fontclass">iconfont icon-zixun-2</div>
+      </li>
+          <li>
+        <i class="layui-icon iconfont icon-zixun4"></i>
+        <div class="doc-icon-fontclass">iconfont icon-zixun4</div>
+      </li>
+          <li>
+        <i class="layui-icon iconfont icon-donghua"></i>
+        <div class="doc-icon-fontclass">iconfont icon-donghua</div>
+      </li>
+          <li>
+        <i class="layui-icon iconfont icon-zongyi"></i>
+        <div class="doc-icon-fontclass">iconfont icon-zongyi</div>
+      </li>
+          <li>
+        <i class="layui-icon iconfont icon-zongyifenlei"></i>
+        <div class="doc-icon-fontclass">iconfont icon-zongyifenlei</div>
+      </li>
+          <li>
+        <i class="layui-icon iconfont icon-dianshiju-xuanzhong"></i>
+        <div class="doc-icon-fontclass">iconfont icon-dianshiju-xuanzhong</div>
+      </li>
+          <li>
+        <i class="layui-icon iconfont icon-youxi"></i>
+        <div class="doc-icon-fontclass">iconfont icon-youxi</div>
+      </li>
+          <li>
+        <i class="layui-icon iconfont icon-yule"></i>
+        <div class="doc-icon-fontclass">iconfont icon-yule</div>
+      </li>
+          <li>
+        <i class="layui-icon iconfont icon-dianshiju"></i>
+        <div class="doc-icon-fontclass">iconfont icon-dianshiju</div>
+      </li>
+          <li>
+        <i class="layui-icon iconfont icon-suoyin"></i>
+        <div class="doc-icon-fontclass">iconfont icon-suoyin</div>
+      </li>
+          <li>
+        <i class="layui-icon iconfont icon-shenghuo"></i>
+        <div class="doc-icon-fontclass">iconfont icon-shenghuo</div>
+      </li>
+          <li>
+        <i class="layui-icon iconfont icon-wanjietuijian"></i>
+        <div class="doc-icon-fontclass">iconfont icon-wanjietuijian</div>
+      </li>
+          <li>
+        <i class="layui-icon iconfont icon-zuixinlianzai"></i>
+        <div class="doc-icon-fontclass">iconfont icon-zuixinlianzai</div>
+      </li>
+          <li>
+        <i class="layui-icon iconfont icon-bianjituijian"></i>
+        <div class="doc-icon-fontclass">iconfont icon-bianjituijian</div>
+      </li>
+          <li>
+        <i class="layui-icon iconfont icon-fanjutuijian"></i>
+        <div class="doc-icon-fontclass">iconfont icon-fanjutuijian</div>
+      </li>
+          <li>
+        <i class="layui-icon iconfont icon-zhibo2"></i>
+        <div class="doc-icon-fontclass">iconfont icon-zhibo2</div>
+      </li>
+          <li>
+        <i class="layui-icon iconfont icon-wodezhuifan"></i>
+        <div class="doc-icon-fontclass">iconfont icon-wodezhuifan</div>
+      </li>
+          <li>
+        <i class="layui-icon iconfont icon-guochandonghuatuijian"></i>
+        <div class="doc-icon-fontclass">iconfont icon-guochandonghuatuijian</div>
+      </li>
+          <li>
+        <i class="layui-icon iconfont icon-dong"></i>
+        <div class="doc-icon-fontclass">iconfont icon-dong</div>
+      </li>
+          <li>
+        <i class="layui-icon iconfont icon-guanggao"></i>
+        <div class="doc-icon-fontclass">iconfont icon-guanggao</div>
+      </li>
+          <li>
+        <i class="layui-icon iconfont icon-guixu"></i>
+        <div class="doc-icon-fontclass">iconfont icon-guixu</div>
+      </li>
+          <li>
+        <i class="layui-icon iconfont icon-dianying1"></i>
+        <div class="doc-icon-fontclass">iconfont icon-dianying1</div>
+      </li>
+      <li>
+        <i class="layui-icon iconfont icon-dianshiju"></i>
+        <div class="doc-icon-fontclass">iconfont icon-dianshiju</div>
+      </li>
+      <li>
+        <i class="layui-icon iconfont icon-dianying"></i>
+        <div class="doc-icon-fontclass">iconfont icon-dianying</div>
+      </li>
+      <li>
+        <i class="layui-icon iconfont icon-dianzan1"></i>
+        <div class="doc-icon-fontclass">iconfont icon-dianzan1</div>
+      </li>
+      <li>
+        <i class="layui-icon iconfont icon-dianying1"></i>
+        <div class="doc-icon-fontclass">iconfont icon-dianying1</div>
+      </li>
+      <li>
+        <i class="layui-icon iconfont icon-dianzan-2"></i>
+        <div class="doc-icon-fontclass">iconfont icon-dianzan-2</div>
+      </li>
+      <li>
+        <i class="layui-icon iconfont icon-dianzan"></i>
+        <div class="doc-icon-fontclass">iconfont icon-dianzan</div>
+      </li>
+      <li>
+        <i class="layui-icon iconfont icon-dianzan_bukedian_yejian"></i>
+        <div class="doc-icon-fontclass">iconfont icon-dianzan_bukedian_yejian</div>
+      </li>
+      <li>
+        <i class="layui-icon iconfont icon-yejianmoshi1x"></i>
+        <div class="doc-icon-fontclass">iconfont icon-yejianmoshi1x</div>
+      </li>
+      <li>
+        <i class="layui-icon iconfont icon-yejianmoshi"></i>
+        <div class="doc-icon-fontclass">iconfont icon-yejianmoshi</div>
+      </li>
+      <li>
+        <i class="layui-icon iconfont icon-yejian"></i>
+        <div class="doc-icon-fontclass">iconfont icon-yejian</div>
+      </li>
+      <li>
+        <i class="layui-icon iconfont icon-heiyemoshi"></i>
+        <div class="doc-icon-fontclass">iconfont icon-heiyemoshi</div>
+      </li>
+      <li>
+        <i class="layui-icon iconfont icon-pinglun6"></i>
+        <div class="doc-icon-fontclass">iconfont icon-pinglun6</div>
+      </li>
+          <li>
+        <i class="layui-icon iconfont icon-pinglun4"></i>
+        <div class="doc-icon-fontclass">iconfont icon-pinglun4</div>
+      </li>
+          <li>
+        <i class="layui-icon iconfont icon-pinglun3"></i>
+        <div class="doc-icon-fontclass">iconfont icon-pinglun3</div>
+      </li>
+          <li>
+        <i class="layui-icon iconfont icon-pinglun2"></i>
+        <div class="doc-icon-fontclass">iconfont icon-pinglun2</div>
+      </li>
+          <li>
+        <i class="layui-icon iconfont icon-zhuantiB"></i>
+        <div class="doc-icon-fontclass">iconfont icon-zhuantiB</div>
+      </li>
+          <li>
+        <i class="layui-icon iconfont icon-zhuanti4"></i>
+        <div class="doc-icon-fontclass">iconfont icon-zhuanti4</div>
+      </li>
+          <li>
+        <i class="layui-icon iconfont icon-zhuanti-21"></i>
+        <div class="doc-icon-fontclass">iconfont icon-zhuanti-21</div>
+      </li>
+          <li>
+        <i class="layui-icon iconfont icon-zhuanti-2"></i>
+        <div class="doc-icon-fontclass">iconfont icon-zhuanti-2</div>
+      </li>
+          <li>
+        <i class="layui-icon iconfont icon-zhuanti1"></i>
+        <div class="doc-icon-fontclass">iconfont icon-zhuanti1</div>
+      </li>
+          <li>
+        <i class="layui-icon iconfont icon-shoucang-21"></i>
+        <div class="doc-icon-fontclass">iconfont icon-shoucang-21</div>
+      </li>
+          <li>
+        <i class="layui-icon iconfont icon-shoucang2"></i>
+        <div class="doc-icon-fontclass">iconfont icon-shoucang2</div>
+      </li>
+          <li>
+        <i class="layui-icon iconfont icon-shoucang-2"></i>
+        <div class="doc-icon-fontclass">iconfont icon-shoucang-2</div>
+      </li>
+          <li>
+        <i class="layui-icon iconfont icon-shoucang1"></i>
+        <div class="doc-icon-fontclass">iconfont icon-shoucang1</div>
+      </li>
+          <li>
+        <i class="layui-icon iconfont icon-side_4"></i>
+        <div class="doc-icon-fontclass">iconfont icon-side_4</div>
+      </li>
+        <li>
+        <i class="layui-icon iconfont icon-gerenzhongxin-xuanzhong"></i>
+        <div class="doc-icon-fontclass">iconfont icon-gerenzhongxin-xuanzhong</div>
+      </li>
+        <li>
+        <i class="layui-icon iconfont icon-mingxingbang"></i>
+        <div class="doc-icon-fontclass">iconfont icon-mingxingbang</div>
+      </li>
+        <li>
+        <i class="layui-icon iconfont icon-192C6A"></i>
+        <div class="doc-icon-fontclass">iconfont icon-192C6A</div>
+      </li>
+        <li>
+        <i class="layui-icon iconfont icon-mingxing-2"></i>
+        <div class="doc-icon-fontclass">iconfont icon-mingxing-2</div>
+      </li>
+        <li>
+        <i class="layui-icon iconfont icon-mingxing1"></i>
+        <div class="doc-icon-fontclass">iconfont icon-mingxing1</div>
+      </li>
+        <li>
+        <i class="layui-icon iconfont icon-quanbuyanyuan"></i>
+        <div class="doc-icon-fontclass">iconfont icon-quanbuyanyuan</div>
+      </li>
+        <li>
+        <i class="layui-icon iconfont icon-yanyuanzhenrong"></i>
+        <div class="doc-icon-fontclass">iconfont icon-yanyuanzhenrong</div>
+      </li>
+        <li>
+        <i class="layui-icon iconfont icon-zhaoyanyuanxuanzhong"></i>
+        <div class="doc-icon-fontclass">iconfont icon-zhaoyanyuanxuanzhong</div>
+      </li>
+            
+      <li>
+        <i class="layui-icon iconfont icon-jiaoseguanli"></i>
+        <div class="doc-icon-fontclass">iconfont icon-jiaoseguanli</div>
+      </li>
+         <li>
+        <i class="layui-icon iconfont icon-send"></i>
+        <div class="doc-icon-fontclass">iconfont icon-send</div>
+      </li>
+        <li>
+        <i class="layui-icon iconfont icon-liulan1"></i>
+        <div class="doc-icon-fontclass">iconfont icon-liulan1</div>
+      </li>
+      <li>
+        <i class="layui-icon iconfont icon-gengduo"></i>
+        <div class="doc-icon-fontclass">iconfont icon-gengduo</div>
+      </li>
+         <li>
+        <i class="layui-icon iconfont icon-qiehuan"></i>
+        <div class="doc-icon-fontclass">iconfont icon-qiehuan</div>
+      </li>
+            <li>
+        <i class="layui-icon iconfont icon-juji"></i>
+        <div class="doc-icon-fontclass">iconfont icon-juji</div>
+      </li>
+              <li>
+        <i class="layui-icon iconfont icon-iconmingxinganlifanxiang"></i>
+        <div class="doc-icon-fontclass">iconfont icon-iconmingxinganlifanxiang</div>
+      </li>
+              <li>
+        <i class="layui-icon iconfont icon-xihuan2"></i>
+        <div class="doc-icon-fontclass">iconfont icon-xihuan2</div>
+      </li>
+              <li>
+        <i class="layui-icon iconfont icon-zidingyibiaoti"></i>
+        <div class="doc-icon-fontclass">iconfont icon-zidingyibiaoti</div>
+      </li>
+                 <li>
+        <i class="layui-icon iconfont icon-liuyan-A"></i>
+        <div class="doc-icon-fontclass">iconfont icon-liuyan-A</div>
+      </li>
+       <li>
+        <i class="layui-icon iconfont icon-yunshangchuan"></i>
+        <div class="doc-icon-fontclass">iconfont icon-yunshangchuan</div>
+      </li>
+        <li>
+        <i class="layui-icon iconfont icon-shangchuan_huabanfuben"></i>
+        <div class="doc-icon-fontclass">iconfont icon-shangchuan_huabanfuben</div>
+      </li>
+        <li>
+        <i class="layui-icon  iconfont icon-zidingyiquyu"></i>
+        <div class="doc-icon-fontclass">iconfont icon-zidingyiquyu</div>
+      </li>
+        <li>
+        <i class="layui-icon  iconfont icon-liuyanban-05"></i>
+        <div class="doc-icon-fontclass">iconfont icon-liuyanban-05</div>
+      </li>
+          <li>
+        <i class="layui-icon iconfont iconfont icon-liuyan1"></i>
+        <div class="doc-icon-fontclass">iconfont icon-liuyan1</div>
+      </li>
+             <li>
+        <i class="layui-icon iconfont icon-zidingyi"></i>
+        <div class="doc-icon-fontclass">iconfont icon-zidingyi</div>
+      </li>
+             <li>
+        <i class="layui-icon iconfont icon-qq"></i>
+        <div class="doc-icon-fontclass">iconfont icon-qq</div>
+      </li>
+              <li>
+        <i class="layui-icon iconfont icon-shipinbofangyingpian2"></i>
+        <div class="doc-icon-fontclass">iconfont icon-shipinbofangyingpian2</div>
+      </li>
+              <li>
+        <i class="layui-icon iconfont icon-zixun"></i>
+        <div class="doc-icon-fontclass">iconfont icon-zixun</div>
+      </li>
+              <li>
+        <i class="layui-icon iconfont icon-wufengpintu"></i>
+        <div class="doc-icon-fontclass">iconfont icon-wufengpintu</div>
+      </li>
+              <li>
+        <i class="layui-icon iconfont icon-icon"></i>
+        <div class="doc-icon-fontclass">iconfont icon-icon</div>
+      </li>
+              <li>
+        <i class="layui-icon iconfont icon-liuyan"></i>
+        <div class="doc-icon-fontclass">iconfont icon-liuyan</div>
+      </li>
+              <li>
+        <i class="layui-icon  iconfont icon-zcpt-wangzhanguanli"></i>
+        <div class="doc-icon-fontclass">iconfont icon-zcpt-wangzhanguanli</div>
+      </li>
+              <li>
+        <i class="layui-icon  iconfont icon-wechat-fill"></i>
+        <div class="doc-icon-fontclass">iconfont icon-wechat-fill</div>
+      </li>
+        <li>
+        <i class="layui-icon  iconfont icon-pinglun"></i>
+        <div class="doc-icon-fontclass">iconfont icon-pinglun</div>
+      </li>
+        <li>
+        <i class="layui-icon  iconfont icon-wechat-fill"></i>
+        <div class="doc-icon-fontclass">iconfont icon-wechat-fill</div>
+      </li>
+        <li>
+        <i class="layui-icon iconfont icon-wangzhanguanliICO"></i>
+        <div class="doc-icon-fontclass">iconfont icon-wangzhanguanliICO</div>
+      </li>
+        <li>
+        <i class="layui-icon iconfont icon-zixun1"></i>
+        <div class="doc-icon-fontclass">iconfont icon-zixun1</div>
+      </li>
+        <li>
+        <i class="layui-icon iconfont icon-gengduobeifen"></i>
+        <div class="doc-icon-fontclass">iconfont icon-gengduobeifen</div>
+      </li>
+        <li>
+        <i class="layui-icon iconfont icon-kongbaiwendang"></i>
+        <div class="doc-icon-fontclass">iconfont icon-kongbaiwendang</div>
+      </li>
+        <li>
+        <i class="layui-icon  iconfont icon-zixun2"></i>
+        <div class="doc-icon-fontclass">iconfont icon-zixun2</div>
+      </li>
+        <li>
+        <i class="layui-icon iconfont icon-dianshi"></i>
+        <div class="doc-icon-fontclass">iconfont icon-dianshi</div>
+      </li>
+        <li>
+        <i class="layui-icon  iconfont icon-pinglun1"></i>
+        <div class="doc-icon-fontclass">iconfont icon-pinglun1</div>
+      </li>
+       <li>
+        <i class="layui-icon iconfont icon-shipindianshi"></i>
+        <div class="doc-icon-fontclass">iconfont icon-shipindianshi</div>
+      </li>
+       <li>
+        <i class="layui-icon  iconfont icon-zixun3"></i>
+        <div class="doc-icon-fontclass">iconfont icon-zixun3</div>
+      </li>
+       <li>
+        <i class="layui-icon  iconfont icon-shangchuan"></i>
+        <div class="doc-icon-fontclass">iconfont icon-shangchuan</div>
+      </li>
+       <li>
+        <i class="layui-icon iconfont iconfont icon-wenben"></i>
+        <div class="doc-icon-fontclass">iconfont icon-wenben</div>
+      </li>
+       <li>
+        <i class="layui-icon iconfont icon-tv3"></i>
+        <div class="doc-icon-fontclass">iconfont icon-tv3</div>
+      </li>
+       <li>
+        <i class="layui-icon iconfont icon-zhuanti"></i>
+        <div class="doc-icon-fontclass">iconfont icon-zhuanti</div>
+      </li>
+       <li>
+        <i class="layui-icon iconfont icon-zhuantiweihu"></i>
+        <div class="doc-icon-fontclass">iconfont icon-zhuantiweihu</div>
+      </li>
+       <li>
+        <i class="layui-icon iconfont icon-shoucang"></i>
+        <div class="doc-icon-fontclass">iconfont icon-shoucang</div>
+      </li>
+       <li>
+        <i class="layui-icon iconfont icon-zhibo"></i>
+        <div class="doc-icon-fontclass">iconfont icon-zhibo</div>
+      </li>
+       <li>
+        <i class="layui-icon iconfont icon-douyin"></i>
+        <div class="doc-icon-fontclass">iconfont icon-douyin</div>
+      </li>
+       <li>
+        <i class="layui-icon iconfont icon-tv4"></i>
+        <div class="doc-icon-fontclass">iconfont icon-tv4</div>
+      </li>
+       <li>
+        <i class="layui-icon iconfont icon-yonghu-fuben"></i>
+        <div class="doc-icon-fontclass">iconfont icon-yonghu-fuben</div>
+      </li>
+      
+      
+          </ul>
+            </div>
+            
+              <div class="layui-tab-item gxrz">
+			   <h3 class="layuih3">6.3.1更新日志</h3>    
+				 <p>1.分类页优化</p>
+				 <p>2.主页幻灯片下方优化.</p>
+                 <P>3.播放页面优化</P>	
+                 <P>4.其他各种优化.</P>	                 
+                 
+			    <h3 class="layuih3">6.1.1更新日志</h3>    
+				 <p>1.增加详情页和播放页相关演员框架</p>
+				 <p>2.替换主页 vip 直播 片库 图片.</p>
+                 <P>3.修改预告时间显示BUG,已经过时间还没上线，改为即将上线</P>	
+                 <P>4.修复幻灯片左下角视频标题信息显示偏暗的问题.</P>	                 
+                 <P>5.修复解析单页，不支持其他网址的问题.</P>
+                 <p>6.修复其他bug</p>	                            
+			    <h3 class="layuih3">6.1更新日志</h3>    
+				 <p>1.增加仿优酷幻灯下-目录，让版面更自然</p>
+                 <P>2.删除多余自定义幻灯片</P>				 
+                 <P>3.删除电脑端，手机端广告。保留自适应广告</P>
+                 <p>4.修复其他bug</p>	                  
+			    <h3 class="layuih3">6.0更新日志</h3>    
+				 <p>1.更新大图幻灯片</p>
+                 <p>2.增加解析线路</p>
+                 <p>3.增加预告板块</p>
+                 <p>4.修复搜索、下拉等众多bug</p>
+			    <h3 class="layuih3">5.1更新日志</h3>    
+				 <p>1.修复搜索框图标不显示问题</p>
+                 <p>2.修复内容页展开收起问题</p>
+                 <p>3.更改内容页、下载页、播放页密码访问样式</p>
+                 <p>4.更改购买影片页面样式</p>
+                 <p>5.修复明星筛选页广告位无法关闭问题</p>
+               </div>   
+            </div>
+        </div>
+        <div class="layui-form-item center" style="padding-top: 20px;">
+            <div class="layui-input-block">
+                <button type="submit" class="layui-btn" lay-submit="" lay-filter="formSubmit">保 存</button>
+            </div>
+        </div>
+    </form>
+</div>
+{include file="../../../application/admin/view/public/foot" /}
+<script type="text/javascript">
+    layui.use(['form','upload', 'layer'], function(){
+        // 操作对象
+        var form = layui.form
+            , layer = layui.layer
+            , upload = layui.upload;
+
+        form.on('radio(cache_type)',function(data){
+            $('.row_cache_server').hide();
+            if(data.value=='memcache' || data.value=='redis' || data.value=='memcached'){
+                $('.row_cache_server').show();
+            }
+        });
+        upload.render({
+            elem: '.layui-upload'
+            ,url: "{:url('upload/upload')}?flag=mxcms"
+            ,method: 'post'
+            ,before: function(input) {
+                layer.msg('文件上传中...', {time:3000000});
+            },done: function(res, index, upload) {
+                var obj = this.item;
+                if (res.code == 0) {
+                    layer.msg(res.msg);
+                    return false;
+                }
+                layer.closeAll();
+                var input = $(obj).parent().parent().find('.upload-input');
+                if ($(obj).attr('lay-type') == 'image') {
+                    input.siblings('img').attr('src', res.data.file).show();
+                }
+                input.val(res.data.file);
+
+                if(res.data.thumb_class !=''){
+                    $('.'+ res.data.thumb_class).val(res.data.thumb[0].file);
+                }
+            }
+        });
+        $('.upload-input').hover(function (e){
+            var e = window.event || e;
+            var imgsrc = $(this).val();
+            if(imgsrc.trim()==""){ return; }
+            var left = e.clientX+document.body.scrollLeft+20;
+            var top = e.clientY+document.body.scrollTop+20;
+            $(".showpic").css({left:left,top:top,display:""});
+            if(imgsrc.indexOf('://')<0){ imgsrc = ROOT_PATH + '/' + imgsrc;	} else{ imgsrc = imgsrc.replace('mac:','http:'); }
+            $(".showpic_img").attr("src", imgsrc);
+        },function (e){
+            $(".showpic").css("display","none");
+        });
+
+    });
+</script>
+
+<link href="https://cdn.jsdelivr.net/gh/kyong98/mxone@4.4/layuiicon.css" rel="stylesheet" type="text/css">
+      
+<style>
+    .layuih3{
+    padding-left: 10px;
+    font-size: 18px;
+    line-height: 1.2;
+    border-left: 4px solid #5FB878;
+    margin: 20px 0 20px;
+    }
+.site-doc-color{margin: 15px 0;}
+.site-doc-color li div{padding: 20px 10px; color: #fff; text-align: center; border-radius: 2px; line-height: 1.6; font-size: 14px;}
+.site-doc-color li p[tips]{opacity: 0.8; font-size: 12px;}
+.site-doc-necolor li div{border-radius: 0; color: #000;}
+.site-doc-bgcolor li{padding: 20px 10px;}
+.site-doc-icon{margin-bottom: 50px; font-size: 0;}
+.site-doc-icon li{display: inline-block; vertical-align: middle; width: 14%;  line-height: 25px; padding: 20px 0; margin-right: -1px; margin-bottom: -1px; border: 1px solid #e2e2e2; font-size: 14px; text-align: center; color: #666; transition: all .3s; -webkit-transition: all .3s;word-break: break-all;}
+.site-doc-anim li{height: auto;}
+.site-doc-icon li .layui-icon{display: inline-block; font-size: 36px;}
+.site-doc-icon li .doc-icon-name,
+.site-doc-icon li .doc-icon-code{color: #c2c2c2;}
+.site-doc-icon li .doc-icon-fontclass{height: 40px; line-height: 20px; padding: 0 5px; font-size: 13px; color: #333; }
+.site-doc-icon li:hover{background-color: #f2f2f2; color: #000;}
+.gxrz p{margin-bottom: 10px;}
+.gmmxone{z-index:30;}
+</style>
+</body>
+</html>

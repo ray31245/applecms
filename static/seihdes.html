@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>果果剧场APP - 看剧得金币，兑换精美礼品</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'PingFang SC', 'Microsoft YaHei', sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #fff8f8, #f0f7ff);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            color: #333;
+            position: relative;
+            overflow-x: hidden;
+        }
+        
+        .container {
+            max-width: 1200px;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            z-index: 10;
+        }
+        
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding: 0 20px;
+        }
+        
+        .logo {
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            width: 100px;
+            height: 100px;
+            background: linear-gradient(135deg, #ff4e50, #ff9d6e);
+            border-radius: 24px;
+            margin-bottom: 20px;
+            box-shadow: 0 10px 20px rgba(255, 78, 80, 0.3);
+        }
+        
+        .logo i {
+            font-size: 50px;
+            color: white;
+        }
+        
+        h1 {
+            font-size: 42px;
+            color: #ff4e50;
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+            position: relative;
+            display: inline-block;
+        }
+        
+        h1:after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 4px;
+            background: linear-gradient(to right, #ff4e50, #ff9d6e);
+            border-radius: 2px;
+        }
+        
+        .subtitle {
+            font-size: 28px;
+            color: #444;
+            margin-top: 25px;
+            line-height: 1.6;
+            font-weight: 600;
+        }
+        
+        .highlight {
+            color: #ff4e50;
+            font-weight: bold;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .highlight:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 6px;
+            background: rgba(255, 78, 80, 0.2);
+            border-radius: 3px;
+        }
+        
+        .content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            width: 100%;
+            margin: 40px 0;
+            gap: 50px;
+        }
+        
+        .download-section {
+            text-align: center;
+            padding: 40px;
+            background: rgba(255, 255, 255, 0.92);
+            border-radius: 25px;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+            backdrop-filter: blur(8px);
+            max-width: 500px;
+            width: 100%;
+            z-index: 20;
+        }
+        
+        .qr-container {
+            padding: 25px;
+            background: linear-gradient(45deg, #ffebee, #fce4ec);
+            border-radius: 20px;
+            display: inline-block;
+            box-shadow: 0 8px 20px rgba(255, 78, 80, 0.15);
+            margin: 20px 0 30px;
+            border: 2px dashed #ff9d6e;
+        }
+        
+        .qr-code {
+            width: 220px;
+            height: 220px;
+            background: linear-gradient(135deg, #ff4e50, #ff9d6e);
+            border-radius: 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0 auto;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .qr-code i {
+            font-size: 110px;
+            color: rgba(255, 255, 255, 0.9);
+        }
+        
+        .qr-text {
+            font-size: 22px;
+            color: #ff4e50;
+            margin: 25px 0 15px;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+        
+        .qr-text i {
+            font-size: 28px;
+        }
+        
+        .download-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            background: linear-gradient(to right, #ff4e50, #ff9d6e);
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+            padding: 20px 55px;
+            border-radius: 60px;
+            text-decoration: none;
+            box-shadow: 0 8px 25px rgba(255, 78, 80, 0.5);
+            transition: all 0.3s ease;
+            margin: 15px 0 25px;
+            position: relative;
+            overflow: hidden;
+            border: none;
+            cursor: pointer;
+        }
+        
+        .download-btn:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 30px rgba(255, 78, 80, 0.7);
+            background: linear-gradient(to right, #ff3437, #ff8d5e);
+        }
+        
+        .download-btn:active {
+            transform: translateY(0);
+        }
+        
+        .download-btn::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -60%;
+            width: 30px;
+            height: 200%;
+            background: rgba(255, 255, 255, 0.25);
+            transform: rotate(30deg);
+            transition: all 0.6s;
+        }
+        
+        .download-btn:hover::after {
+            left: 130%;
+        }
+        
+        .benefits-section {
+            max-width: 550px;
+            padding: 40px;
+            background: rgba(255, 255, 255, 0.92);
+            border-radius: 25px;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+            backdrop-filter: blur(8px);
+            width: 100%;
+        }
+        
+        .section-title {
+            text-align: center;
+            color: #ff4e50;
+            font-size: 32px;
+            margin-bottom: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+        }
+        
+        .benefits {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 25px;
+        }
+        
+        .benefit-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            padding: 25px 15px;
+            background: #f9f9ff;
+            border-radius: 18px;
+            transition: all 0.3s ease;
+            border: 1px solid #ffebee;
+        }
+        
+        .benefit-item:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 10px 25px rgba(255, 78, 80, 0.15);
+            background: white;
+            border-color: #ffcdd2;
+        }
+        
+        .benefit-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #ff9d6e, #ff4e50);
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 20px;
+            font-size: 32px;
+            color: white;
+            box-shadow: 0 6px 15px rgba(255, 78, 80, 0.3);
+        }
+        
+        .benefit-text h3 {
+            color: #ff4e50;
+            margin-bottom: 10px;
+            font-size: 20px;
+        }
+        
+        .benefit-text p {
+            color: #666;
+            line-height: 1.5;
+            font-size: 16px;
+        }
+        
+        .gifts-section {
+            text-align: center;
+            margin: 50px 0 30px;
+            width: 100%;
+            padding: 0 20px;
+        }
+        
+        .gifts-title {
+            font-size: 32px;
+            color: #ff4e50;
+            margin-bottom: 35px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+        }
+        
+        .gift-showcase {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin: 30px 0;
+        }
+        
+        .gift-item {
+            width: 120px;
+            height: 120px;
+            background: white;
+            border-radius: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            padding: 15px;
+        }
+        
+        .gift-item:hover {
+            transform: scale(1.1);
+            box-shadow: 0 15px 35px rgba(255, 78, 80, 0.25);
+        }
+        
+        .gift-item i {
+            font-size: 48px;
+            color: #ff4e50;
+            margin-bottom: 10px;
+        }
+        
+        .gift-item span {
+            font-size: 14px;
+            color: #666;
+            font-weight: 500;
+        }
+        
+        footer {
+            text-align: center;
+            margin-top: 30px;
+            color: #777;
+            font-size: 16px;
+            padding: 20px;
+            width: 100%;
+        }
+        
+        /* 装饰元素 */
+        .decoration {
+            position: absolute;
+            z-index: 1;
+            pointer-events: none;
+        }
+        
+        .circle {
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(255,78,80,0.1) 0%, rgba(255,78,80,0) 70%);
+            top: -100px;
+            right: -100px;
+        }
+        
+        .circle2 {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(255,157,110,0.15) 0%, rgba(255,157,110,0) 70%);
+            bottom: -50px;
+            left: -50px;
+        }
+        
+        .diamond {
+            width: 150px;
+            height: 150px;
+            background: linear-gradient(45deg, rgba(255,78,80,0.08), rgba(255,157,110,0.08));
+            transform: rotate(45deg);
+            top: 30%;
+            left: 10%;
+        }
+        
+        .wave {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 100px;
+            background: url('data:image/svg+xml;utf8,<svg viewBox="0 0 1200 120" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"><path d="M321.39 56.44c58-10.79 114.16-30.13 172-41.86 82.39-16.72 168.19-17.73 250.45-.39C823.78 31 906.67 72 985.66 92.83c70.05 18.48 146.53 26.09 214.34 3V0H0v27.35a600.21 600.21 0 00321.39 29.09z" fill="%23ff4e5033"/></svg>');
+            background-size: cover;
+            opacity: 0.7;
+            z-index: 0;
+        }
+        
+        @media (max-width: 900px) {
+            .content {
+                flex-direction: column;
+            }
+            
+            h1 {
+                font-size: 36px;
+            }
+            
+            .subtitle {
+                font-size: 22px;
+            }
+            
+            .download-section, .benefits-section {
+                max-width: 100%;
+            }
+            
+            .benefits {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 30px;
+            }
+            
+            .subtitle {
+                font-size: 20px;
+            }
+            
+            .download-btn {
+                font-size: 20px;
+                padding: 18px 40px;
+            }
+            
+            .qr-code {
+                width: 180px;
+                height: 180px;
+            }
+            
+            .section-title, .gifts-title {
+                font-size: 26px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="decoration circle"></div>
+    <div class="decoration circle2"></div>
+    <div class="decoration diamond"></div>
+    <div class="wave"></div>
+    
+    <div class="container">
+        <header>
+            <div class="logo">
+                <i class="fas fa-film"></i>
+            </div>
+            <h1>果果剧场APP</h1>
+<p class="subtitle">海量视频<span class="highlight">免费看</span>，边看边赚<span class="highlight">金币雨</span>，提现到账<span class="highlight">快如电</span></p>
+        </header>
+        
+        <div class="content">
+            <!-- 下载区域 - 放在左侧更显眼位置 -->
+            <div class="download-section">
+                <div class="qr-text">
+                    <i class="fas fa-mobile-alt"></i> 扫描二维码打开果果剧场APP
+                </div>
+                
+                <div class="qr-container">
+                    <div class="qr-code">
+                        <img src="http://app.jiahaoping.com/guoguo.png" alt="樱花动漫APP二维码">
+                    </div>
+                </div>
+                
+                <a href="http://app.jiahaoping.com/guoguo.apk" class="download-btn">
+                    <i class="fas fa-download"></i> 点击下载APP
+                </a>
+                
+                <p style="color: #666; margin-top: 15px; font-size: 18px;">
+                    支持 iOS 和 Android 系统
+                </p>
+            </div>
+            
+            <!-- 福利区域 -->
+            <div class="benefits-section">
+                <h2 class="section-title">
+                    <i class="fas fa-gift"></i> 应用特色
+                </h2>
+                
+                <div class="benefits">
+                    <div class="benefit-item">
+                        <div class="benefit-icon">
+                            <i class="fas fa-coins"></i>
+                        </div>
+                        <div class="benefit-text">
+                            <h3>看剧赚金币</h3>
+                            <p>观看剧集即可获得金币，每集最高200金币</p>
+                        </div>
+                    </div>
+                    
+                    <div class="benefit-item">
+                        <div class="benefit-icon">
+                            <i class="fas fa-gift"></i>
+                        </div>
+                        <div class="benefit-text">
+                            <h3>金币兑好礼</h3>
+                            <p>兑换话费、购物卡、电子产品等精美礼品</p>
+                        </div>
+                    </div>
+                    
+                    <div class="benefit-item">
+                        <div class="benefit-icon">
+                            <i class="fas fa-video"></i>
+                        </div>
+                        <div class="benefit-text">
+                            <h3>海量影视资源</h3>
+                            <p>最新电影、电视剧、综艺节目一网打尽</p>
+                        </div>
+                    </div>
+                    
+                    <div class="benefit-item">
+                        <div class="benefit-icon">
+                            <i class="fas fa-crown"></i>
+                        </div>
+                        <div class="benefit-text">
+                            <h3>会员专属特权</h3>
+                            <p>VIP会员享双倍金币、专属内容和免广告</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="gifts-section">
+            <h2 class="gifts-title">
+                <i class="fas fa-award"></i> 可兑换精美礼品
+            </h2>
+            
+            <div class="gift-showcase">
+                <div class="gift-item">
+                    <i class="fas fa-mobile-alt"></i>
+                    <span>最新手机</span>
+                </div>
+                <div class="gift-item">
+                    <i class="fas fa-shopping-bag"></i>
+                    <span>购物卡</span>
+                </div>
+                <div class="gift-item">
+                    <i class="fas fa-headphones"></i>
+                    <span>蓝牙耳机</span>
+                </div>
+                <div class="gift-item">
+                    <i class="fas fa-gamepad"></i>
+                    <span>游戏机</span>
+                </div>
+                <div class="gift-item">
+                    <i class="fas fa-tv"></i>
+                    <span>智能电视</span>
+                </div>
+            </div>
+        </div>
+        
+        <footer>
+            <p>© 2025 果果剧场APP 版权所有 | 客服热线: 400-888-8888 | 邮箱: service@guoguo.com</p>
+        </footer>
+    </div>
+
+    <script>
+        // 添加简单的动画效果
+        document.addEventListener('DOMContentLoaded', function() {
+            const benefitItems = document.querySelectorAll('.benefit-item');
+            benefitItems.forEach((item, index) => {
+                setTimeout(() => {
+                    item.style.opacity = '0';
+                    item.style.transform = 'translateY(30px)';
+                    item.style.transition = 'all 0.5s ease';
+                    
+                    setTimeout(() => {
+                        item.style.opacity = '1';
+                        item.style.transform = 'translateY(0)';
+                    }, 100);
+                }, index * 200);
+            });
+            
+            // 礼品项动画
+            const giftItems = document.querySelectorAll('.gift-item');
+            giftItems.forEach((item, index) => {
+                setTimeout(() => {
+                    item.style.opacity = '0';
+                    item.style.transform = 'scale(0.8)';
+                    item.style.transition = 'all 0.5s ease';
+                    
+                    setTimeout(() => {
+                        item.style.opacity = '1';
+                        item.style.transform = 'scale(1)';
+                    }, 150);
+                }, index * 150 + 500);
+            });
+            
+            // 按钮悬停效果增强
+            const downloadBtn = document.querySelector('.download-btn');
+            downloadBtn.addEventListener('mouseenter', function() {
+                this.style.background = 'linear-gradient(to right, #ff3437, #ff8d5e)';
+            });
+            
+            downloadBtn.addEventListener('mouseleave', function() {
+                this.style.background = 'linear-gradient(to right, #ff4e50, #ff9d6e)';
+            });
+        });
+    </script>
+</body>
+</html>

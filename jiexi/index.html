@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VIP解析-vip视频解析-视频解析网站-樱花动漫网</title>
+      <meta name="keywords" content="vip视频解析,视频解析,vip视频在线解析,vip解析,万能vip视频解析,vip视频全能解析,vip视频,手机vip视频解析,手机在线解析vip视频,优酷vip解析,爱奇艺vip解析,腾讯vip解析,乐视vip解析,芒果vip解析">
+  <meta name="description" content="本站为大家提供免费的vip视频解析，优酷VIP解析，爱奇艺VIP解析，腾讯VIP解析，乐视VIP解析，芒果VIP解析等视频解析服务，为您省去大笔的视频VIP消费，在本站看VIP视频不要钱，最新的电影，最热的电视剧全部免费看！">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#165DFF',
+                        secondary: '#FF7D00',
+                        dark: '#1E293B',
+                        light: '#F8FAFC'
+                    },
+                    fontFamily: {
+                        inter: ['Inter', 'system-ui', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .content-auto {
+                content-visibility: auto;
+            }
+            .gradient-text {
+                background-image: linear-gradient(135deg, #165DFF 0%, #7B61FF 100%);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+            .card-hover {
+                transition: all 0.3s ease;
+            }
+            .card-hover:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 10px 25px -5px rgba(22, 93, 255, 0.1), 0 10px 10px -5px rgba(22, 93, 255, 0.04);
+            }
+            .btn-gradient {
+                background: linear-gradient(135deg, #165DFF 0%, #7B61FF 100%);
+                transition: all 0.3s ease;
+            }
+            .btn-gradient:hover {
+                background: linear-gradient(135deg, #0F46D2 0%, #6A4DFF 100%);
+                transform: translateY(-2px);
+            }
+            .btn-gradient:active {
+                transform: translateY(0);
+            }
+            .scale-up-hover {
+                transition: transform 0.3s ease;
+            }
+            .scale-up-hover:hover {
+                transform: scale(1.05);
+            }
+        }
+    </style>
+</head>
+<body class="font-inter bg-gray-50 min-h-screen flex flex-col">
+    <!-- 导航栏 -->
+    <nav class="bg-white shadow-md sticky top-0 z-50 transition-all duration-300" id="navbar">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <i class="fa-solid fa-play-circle text-primary text-2xl"></i>
+                <span class="text-xl font-bold gradient-text">VIP视频解析</span>
+            </div>
+            <div class="hidden md:flex items-center space-x-6">
+                <a href="/" class="text-gray-700 hover:text-primary transition-colors">首页</a>
+                <a href="/vodtype/1.html" class="text-gray-700 hover:text-primary transition-colors">电影</a>
+                <a href="/vodtype/4.html" class="text-gray-700 hover:text-primary transition-colors">动漫</a>
+                <a href="/vodtype/2.html" class="text-gray-700 hover:text-primary transition-colors">电视剧</a>
+                <a href="/vodtype/20.html" class="text-gray-700 hover:text-primary transition-colors">短剧</a>
+            </div>
+            <button class="md:hidden text-gray-700 focus:outline-none" id="menu-toggle">
+                <i class="fa-solid fa-bars text-xl"></i>
+            </button>
+        </div>
+        <!-- 移动端菜单 -->
+        <div class="md:hidden hidden bg-white border-t" id="mobile-menu">
+            <div class="container mx-auto px-4 py-2 flex flex-col space-y-3">
+                <a href="/" class="text-gray-700 hover:text-primary py-2 transition-colors">首页</a>
+                <a href="/vodtype/1.html" class="text-gray-700 hover:text-primary py-2 transition-colors">电影</a>
+                <a href="/vodtype/4.html" class="text-gray-700 hover:text-primary py-2 transition-colors">动漫</a>
+                <a href="/vodtype/2.html" class="text-gray-700 hover:text-primary py-2 transition-colors">电视剧</a>
+                <a href="/vodtype/20.html" class="text-gray-700 hover:text-primary transition-colors">短剧</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 主内容区 -->
+    <main class="flex-grow container mx-auto px-4 py-8">
+        <!-- 英雄区域 -->
+        <section class="relative overflow-hidden rounded-3xl bg-gradient-to-br from-primary/90 to-primary mb-16 shadow-2xl">
+            <div class="absolute inset-0 bg-[url('https://picsum.photos/seed/video/1920/1080')] opacity-10 bg-cover bg-center"></div>
+            <div class="relative px-6 py-16 md:py-24 max-w-4xl mx-auto text-center">
+                <h1 class="text-[clamp(2rem,5vw,3.5rem)] font-bold text-white mb-6">全网<span class="text-secondary">VIP视频</span>免费解析</h1>
+                <p class="text-white/80 text-lg md:text-xl mb-8 max-w-2xl mx-auto">无需会员，无需安装插件，一键解析各大平台VIP视频，畅享高清观影体验</p>
+                <div class="flex flex-col sm:flex-row justify-center gap-4 mb-10">
+                    <a href="#parser" class="btn-gradient text-white font-medium py-3 px-8 rounded-full shadow-lg flex items-center justify-center">
+                        <i class="fa-solid fa-play-circle mr-2"></i>
+                        <span>立即解析</span>
+                    </a>
+                    <a href="#platforms" class="bg-white/20 hover:bg-white/30 text-white font-medium py-3 px-8 rounded-full backdrop-blur-sm flex items-center justify-center transition-all">
+                        <i class="fa-solid fa-th-large mr-2"></i>
+                        <span>支持平台</span>
+                    </a>
+                </div>
+                <div class="flex flex-wrap justify-center gap-6 text-white/70">
+                    <div class="flex items-center">
+                        <i class="fa-solid fa-check-circle text-secondary mr-2"></i>
+                        <span>完全免费</span>
+                    </div>
+                    <div class="flex items-center">
+                        <i class="fa-solid fa-check-circle text-secondary mr-2"></i>
+                        <span>高速解析</span>
+                    </div>
+                    <div class="flex items-center">
+                        <i class="fa-solid fa-check-circle text-secondary mr-2"></i>
+                        <span>多平台支持</span>
+                    </div>
+                    <div class="flex items-center">
+                        <i class="fa-solid fa-check-circle text-secondary mr-2"></i>
+                        <span>无广告打扰</span>
+                    </div>
+                </div>
+            </div>
+            <div class="absolute -bottom-1 -left-1 w-full h-12 bg-gray-50 rounded-t-3xl"></div>
+        </section>
+
+        <!-- 解析区域 -->
+        <section id="parser" class="max-w-4xl mx-auto mb-16">
+            <div class="bg-white rounded-2xl shadow-xl overflow-hidden">
+                <div class="p-6 md:p-8">
+                    <h2 class="text-2xl md:text-3xl font-bold mb-6 text-center">视频解析</h2>
+                    <div class="space-y-4">
+                        <div>
+                            <label for="video-url" class="block text-sm font-medium text-gray-700 mb-1">视频链接</label>
+                            <div class="relative">
+                                <span class="absolute inset-y-0 left-0 flex items-center pl-3 text-gray-500">
+                                    <i class="fa-solid fa-link"></i>
+                                </span>
+                                <input type="text" id="video-url" class="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary transition-all" placeholder="请粘贴视频链接">
+                            </div>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                            <label class="block text-sm font-medium text-gray-700 mb-1">选择解析线路</label>
+                            <div class="relative">
+                                <select id="parse-line" class="w-full pl-4 pr-10 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-primary appearance-none bg-white">
+                                    <option value="https://jx.xmflv.cc/?url=" >全网vip视频解析</option>
+                                    <option value="line1">默认线路</option>
+                                    <option value="line2">备用线路1</option>
+                                    <option value="line3">备用线路2</option>
+                                    <option value="line4">高清线路</option>
+                                </select>
+                                <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-500">
+                                    <i class="fa-solid fa-chevron-down text-xs"></i>
+                                </div>
+                            </div>
+                            
+                            <button id="parse-btn" class="btn-gradient text-white font-medium py-3 px-6 rounded-lg shadow flex items-center justify-center">
+                                <i class="fa-solid fa-play mr-2"></i>
+                                <span>开始解析</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-gray-50 p-6 border-t border-gray-100">
+                    <div class="flex items-center text-gray-500 mb-4">
+                        <i class="fa-solid fa-info-circle text-primary mr-2"></i>
+                        <span>提示：请复制视频网站中的完整视频链接（例如：https://www.iqiyi.com/v_xxxxxx.html）</span>
+                    </div>
+                    <div class="flex flex-wrap gap-3">
+                        <a href="#" class="text-primary hover:text-primary/80 text-sm flex items-center">
+                            <i class="fa-solid fa-play-circle mr-1"></i>
+                            <span>如何获取视频链接？</span>
+                        </a>
+                        <a href="#" class="text-primary hover:text-primary/80 text-sm flex items-center">
+                            <i class="fa-solid fa-exclamation-triangle mr-1"></i>
+                            <span>解析失败怎么办？</span>
+                        </a>
+                        <a href="#" class="text-primary hover:text-primary/80 text-sm flex items-center">
+                            <i class="fa-solid fa-shield mr-1"></i>
+                            <span>使用须知</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 解析结果 -->
+        <section id="result" class="max-w-6xl mx-auto mb-16 hidden">
+            <div class="bg-white rounded-2xl shadow-xl overflow-hidden">
+                <div class="p-6 md:p-8">
+                    <h2 class="text-2xl font-bold mb-6">vip视频解析结果</h2>
+                    <div class="aspect-w-16 aspect-h-9 rounded-xl overflow-hidden shadow-lg mb-6">
+                        <iframe id="video-player" src="" width="100%" height="600px" frameborder="0" ></iframe>
+                    </div>
+                    <div class="flex flex-col md:flex-row gap-4">
+                        <button id="download-btn" class="bg-secondary hover:bg-secondary/90 text-white font-medium py-3 px-6 rounded-lg shadow flex items-center justify-center">
+                            <i class="fa-solid fa-download mr-2"></i>
+                            <span>下载视频</span>
+                        </button>
+                        <button id="share-btn" class="bg-primary hover:bg-primary/90 text-white font-medium py-3 px-6 rounded-lg shadow flex items-center justify-center">
+                            <i class="fa-solid fa-share-alt mr-2"></i>
+                            <span>分享链接</span>
+                        </button>
+                        <button id="new-parse-btn" class="bg-gray-200 hover:bg-gray-300 text-gray-700 font-medium py-3 px-6 rounded-lg shadow flex items-center justify-center">
+                            <i class="fa-solid fa-plus mr-2"></i>
+                            <span>新的解析</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 支持平台 -->
+        <section id="platforms" class="max-w-6xl mx-auto mb-16">
+            <h2 class="text-2xl md:text-3xl font-bold mb-8 text-center">支持平台</h2>
+            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4 md:gap-6">
+                <div class="bg-white rounded-xl shadow-md p-6 text-center card-hover">
+                    <div class="w-16 h-16 mx-auto mb-4 bg-red-50 rounded-full flex items-center justify-center">
+                        <i class="fa-brands fa-youtube text-red-500 text-2xl"></i>
+                    </div>
+                    <h3 class="font-medium">腾讯视频</h3>
+                </div>
+                <div class="bg-white rounded-xl shadow-md p-6 text-center card-hover">
+                    <div class="w-16 h-16 mx-auto mb-4 bg-red-50 rounded-full flex items-center justify-center">
+                        <i class="fa-brands fa-youtube text-red-500 text-2xl"></i>
+                    </div>
+                    <h3 class="font-medium">爱奇艺</h3>
+                </div>
+                <div class="bg-white rounded-xl shadow-md p-6 text-center card-hover">
+                    <div class="w-16 h-16 mx-auto mb-4 bg-red-50 rounded-full flex items-center justify-center">
+                        <i class="fa-brands fa-youtube text-red-500 text-2xl"></i>
+                    </div>
+                    <h3 class="font-medium">优酷</h3>
+                </div>
+                <div class="bg-white rounded-xl shadow-md p-6 text-center card-hover">
+                    <div class="w-16 h-16 mx-auto mb-4 bg-red-50 rounded-full flex items-center justify-center">
+                        <i class="fa-brands fa-youtube text-red-500 text-2xl"></i>
+                    </div>
+                    <h3 class="font-medium">芒果TV</h3>
+                </div>
+                <div class="bg-white rounded-xl shadow-md p-6 text-center card-hover">
+                    <div class="w-16 h-16 mx-auto mb-4 bg-red-50 rounded-full flex items-center justify-center">
+                        <i class="fa-brands fa-youtube text-red-500 text-2xl"></i>
+                    </div>
+                    <h3 class="font-medium">B站</h3>
+                </div>
+                <div class="bg-white rounded-xl shadow-md p-6 text-center card-hover">
+                    <div class="w-16 h-16 mx-auto mb-4 bg-red-50 rounded-full flex items-center justify-center">
+                        <i class="fa-brands fa-youtube text-red-500 text-2xl"></i>
+                    </div>
+                    <h3 class="font-medium">更多平台</h3>
+                </div>
+            </div>
+        </section>
+
+        <!-- 解析教程 -->
+        <section id="tutorial" class="max-w-4xl mx-auto mb-16">
+            <h2 class="text-2xl md:text-3xl font-bold mb-8 text-center">vip视频解析教程</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="bg-white rounded-xl shadow-md overflow-hidden">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-4 flex items-center">
+                            <span class="bg-primary text-white w-8 h-8 rounded-full flex items-center justify-center mr-3">1</span>
+                            <span>获取视频链接</span>
+                        </h3>
+                        <p class="text-gray-600 mb-4">在视频网站中找到您想要观看的VIP视频，复制浏览器地址栏中的链接。</p>
+                        <img src="https://picsum.photos/seed/step1/600/400" alt="获取视频链接步骤" class="rounded-lg w-full h-48 object-cover">
+                    </div>
+                </div>
+                <div class="bg-white rounded-xl shadow-md overflow-hidden">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-4 flex items-center">
+                            <span class="bg-primary text-white w-8 h-8 rounded-full flex items-center justify-center mr-3">2</span>
+                            <span>粘贴链接解析</span>
+                        </h3>
+                        <p class="text-gray-600 mb-4">将复制的链接粘贴到上方的输入框中，选择合适的解析线路，点击"开始解析"按钮。</p>
+                        <img src="https://picsum.photos/seed/step2/600/400" alt="粘贴链接解析步骤" class="rounded-lg w-full h-48 object-cover">
+                    </div>
+                </div>
+                <div class="bg-white rounded-xl shadow-md overflow-hidden">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-4 flex items-center">
+                            <span class="bg-primary text-white w-8 h-8 rounded-full flex items-center justify-center mr-3">3</span>
+                            <span>观看视频</span>
+                        </h3>
+                        <p class="text-gray-600 mb-4">解析成功后，将在下方显示视频播放窗口，点击播放按钮即可免费观看。</p>
+                        <img src="https://picsum.photos/seed/step3/600/400" alt="观看视频步骤" class="rounded-lg w-full h-48 object-cover">
+                    </div>
+                </div>
+                <div class="bg-white rounded-xl shadow-md overflow-hidden">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-4 flex items-center">
+                            <span class="bg-primary text-white w-8 h-8 rounded-full flex items-center justify-center mr-3">4</span>
+                            <span>收藏本站</span>
+                        </h3>
+                        <p class="text-gray-600 mb-4">为了方便下次使用，请将本站添加到书签或收藏夹中，随时免费观看VIP视频。</p>
+                        <img src="https://picsum.photos/seed/step4/600/400" alt="收藏本站步骤" class="rounded-lg w-full h-48 object-cover">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 常见问题 -->
+        <section id="faq" class="max-w-4xl mx-auto mb-16">
+            <h2 class="text-2xl md:text-3xl font-bold mb-8 text-center">常见问题</h2>
+            <div class="space-y-4">
+                <div class="bg-white rounded-xl shadow-md overflow-hidden">
+                    <button class="w-full text-left p-6 focus:outline-none" onclick="toggleFAQ(this)">
+                        <div class="flex justify-between items-center">
+                            <h3 class="text-lg font-medium">为什么解析失败？</h3>
+                            <i class="fa-solid fa-chevron-down text-gray-400 transition-transform duration-300"></i>
+                        </div>
+                    </button>
+                    <div class="p-0 px-6 pb-6 hidden" id="faq-1">
+                        <p class="text-gray-600">vip解析失败可能有以下原因：
+                        <ol class="list-decimal pl-5 mt-2 space-y-1">
+                            <li>视频链接无效或不完整，请确保复制的是完整的视频链接</li>
+                            <li>视频平台更新了加密方式，我们正在努力更新解析线路</li>
+                            <li>选择的解析线路不兼容该视频，请尝试切换其他解析线路</li>
+                            <li>网络问题，请检查您的网络连接是否正常</li>
+                        </ol>
+                        </p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-xl shadow-md overflow-hidden">
+                    <button class="w-full text-left p-6 focus:outline-none" onclick="toggleFAQ(this)">
+                        <div class="flex justify-between items-center">
+                            <h3 class="text-lg font-medium">解析后的视频质量如何？</h3>
+                            <i class="fa-solid fa-chevron-down text-gray-400 transition-transform duration-300"></i>
+                        </div>
+                    </button>
+                    <div class="p-0 px-6 pb-6 hidden" id="faq-2">
+                        <p class="text-gray-600">解析后的视频质量取决于原视频的质量和解析线路。一般来说，我们提供的解析线路可以支持高清（720P）和超清（1080P）画质。如果您希望获得更高质量的视频，可以尝试切换到"高清线路"。</p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-xl shadow-md overflow-hidden">
+                    <button class="w-full text-left p-6 focus:outline-none" onclick="toggleFAQ(this)">
+                        <div class="flex justify-between items-center">
+                            <h3 class="text-lg font-medium">是否需要安装插件或客户端？</h3>
+                            <i class="fa-solid fa-chevron-down text-gray-400 transition-transform duration-300"></i>
+                        </div>
+                    </button>
+                    <div class="p-0 px-6 pb-6 hidden" id="faq-3">
+                        <p class="text-gray-600">不需要。我们的视频解析服务完全基于网页，无需安装任何插件或客户端。只需在浏览器中打开本网站，粘贴视频链接即可解析观看。</p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-xl shadow-md overflow-hidden">
+                    <button class="w-full text-left p-6 focus:outline-none" onclick="toggleFAQ(this)">
+                        <div class="flex justify-between items-center">
+                            <h3 class="text-lg font-medium">使用本站是否安全？</h3>
+                            <i class="fa-solid fa-chevron-down text-gray-400 transition-transform duration-300"></i>
+                        </div>
+                    </button>
+                    <div class="p-0 px-6 pb-6 hidden" id="faq-4">
+                        <p class="text-gray-600">本站严格遵守相关法律法规，不存储任何视频内容，所有视频均来自各大视频平台。我们承诺不会收集用户个人信息，也不会在网站中植入任何恶意软件或广告。但请注意，观看的视频内容应遵守版权规定。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 推荐视频 -->
+        <section id="recommended" class="max-w-6xl mx-auto mb-16">
+            <h2 class="text-2xl md:text-3xl font-bold mb-8 text-center">推荐视频</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="bg-white rounded-xl shadow-md overflow-hidden scale-up-hover">
+                    <div class="relative">
+                        <img src="https://picsum.photos/seed/movie1/600/400" alt="电影海报" class="w-full h-48 object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end">
+                            <div class="p-4">
+                                <span class="bg-primary/90 text-white text-xs px-2 py-1 rounded">VIP可看</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-bold text-lg mb-2">复仇者联盟4：终局之战</h3>
+                        <div class="flex items-center text-sm text-gray-500 mb-3">
+                            <span class="mr-3"><i class="fa-solid fa-film mr-1"></i> 科幻/冒险</span>
+                            <span><i class="fa-solid fa-star mr-1"></i> 9.2分</span>
+                        </div>
+                        <p class="text-gray-600 text-sm line-clamp-2">钢铁侠、美国队长、雷神等超级英雄集结，共同对抗灭霸，为宇宙和平而战。</p>
+                        <button class="mt-4 w-full bg-primary hover:bg-primary/90 text-white font-medium py-2 rounded-lg flex items-center justify-center">
+                            <i class="fa-solid fa-play-circle mr-2"></i>
+                            <span>立即解析</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="bg-white rounded-xl shadow-md overflow-hidden scale-up-hover">
+                    <div class="relative">
+                        <img src="https://picsum.photos/seed/movie2/600/400" alt="电影海报" class="w-full h-48 object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end">
+                            <div class="p-4">
+                                <span class="bg-primary/90 text-white text-xs px-2 py-1 rounded">VIP可看</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-bold text-lg mb-2">流浪地球2</h3>
+                        <div class="flex items-center text-sm text-gray-500 mb-3">
+                            <span class="mr-3"><i class="fa-solid fa-film mr-1"></i> 科幻/灾难</span>
+                            <span><i class="fa-solid fa-star mr-1"></i> 8.5分</span>
+                        </div>
+                        <p class="text-gray-600 text-sm line-clamp-2">太阳即将毁灭，人类在地球表面建造出巨大的推进器，寻找新家园的故事。</p>
+                        <button class="mt-4 w-full bg-primary hover:bg-primary/90 text-white font-medium py-2 rounded-lg flex items-center justify-center">
+                            <i class="fa-solid fa-play-circle mr-2"></i>
+                            <span>立即解析</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="bg-white rounded-xl shadow-md overflow-hidden scale-up-hover">
+                    <div class="relative">
+                        <img src="https://picsum.photos/seed/movie3/600/400" alt="电影海报" class="w-full h-48 object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end">
+                            <div class="p-4">
+                                <span class="bg-primary/90 text-white text-xs px-2 py-1 rounded">VIP可看</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-bold text-lg mb-2">狂飙</h3>
+                        <div class="flex items-center text-sm text-gray-500 mb-3">
+                            <span class="mr-3"><i class="fa-solid fa-film mr-1"></i> 剧情/犯罪</span>
+                            <span><i class="fa-solid fa-star mr-1"></i> 9.0分</span>
+                        </div>
+                        <p class="text-gray-600 text-sm line-clamp-2">以扫黑除恶为背景，讲述了刑警安欣与黑恶势力展开长达二十年的生死搏斗故事。</p>
+                        <button class="mt-4 w-full bg-primary hover:bg-primary/90 text-white font-medium py-2 rounded-lg flex items-center justify-center">
+                            <i class="fa-solid fa-play-circle mr-2"></i>
+                            <span>立即解析</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 订阅区域 -->
+        <section class="max-w-4xl mx-auto mb-16">
+            <div class="bg-gradient-to-r from-primary to-primary/80 rounded-2xl shadow-xl p-8 md:p-10 text-white">
+                <div class="text-center mb-8">
+                    <h2 class="text-2xl md:text-3xl font-bold mb-4">获取最新解析线路</h2>
+                    <p class="text-white/80 max-w-2xl mx-auto">订阅我们的通讯，第一时间获取最新解析线路和VIP视频资源，不错过任何精彩内容</p>
+                </div>
+                <form class="max-w-xl mx-auto">
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <input type="email" placeholder="请输入您的电子邮箱" class="flex-grow px-4 py-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-white/50 text-gray-800">
+                        <button type="submit" class="bg-white text-primary font-medium py-3 px-6 rounded-lg shadow-lg hover:bg-gray-100 transition-colors">
+                            立即订阅
+                        </button>
+                    </div>
+                    <p class="text-white/60 text-sm mt-4 text-center">我们尊重您的隐私，绝不会向第三方泄露您的信息</p>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- 页脚 -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center space-x-2 mb-4">
+                        <i class="fa-solid fa-play-circle text-primary text-2xl"></i>
+                        <span class="text-xl font-bold">VIP视频解析</span>
+                    </div>
+                    <p class="text-gray-400 mb-4">无需会员，免费观看全网VIP视频</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-primary transition-colors">
+                            <i class="fa-brands fa-weibo"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-primary transition-colors">
+                            <i class="fa-brands fa-wechat"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-primary transition-colors">
+                            <i class="fa-brands fa-qq"></i>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold mb-4">快速链接</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-primary transition-colors">首页</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-primary transition-colors">解析教程</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-primary transition-colors">支持平台</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-primary transition-colors">常见问题</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold mb-4">法律信息</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-primary transition-colors">隐私政策</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-primary transition-colors">使用条款</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-primary transition-colors">版权声明</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-primary transition-colors">联系我们</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold mb-4">下载APP</h3>
+                    <div class="bg-white p-2 inline-block rounded-lg">
+                        <img src="https://picsum.photos/seed/qrcode/120/120" alt="APP下载二维码" class="w-24 h-24">
+                    </div>
+                    <p class="text-gray-400 mt-2 text-sm">扫描二维码下载移动应用</p>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-500 text-sm">
+                <p>本网站内容均来自互联网公开资源，仅供学习交流使用，请支持正版。如侵犯了您的权益，请联系我们删除。</p>
+                <p class="mt-2">© 2025 VIP视频解析 版权所有 | 浙ICP备12345678号</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 成功提示框 -->
+    <div id="success-toast" class="fixed bottom-4 right-4 bg-green-500 text-white px-6 py-3 rounded-lg shadow-lg transform translate-y-20 opacity-0 transition-all duration-500 flex items-center z-50">
+        <i class="fa-solid fa-check-circle mr-2"></i>
+        <span>操作成功</span>
+    </div>
+
+    <script>
+        // 导航栏滚动效果
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 10) {
+                navbar.classList.add('py-2');
+                navbar.classList.add('shadow-lg');
+            } else {
+                navbar.classList.remove('py-2');
+                navbar.classList.remove('shadow-lg');
+            }
+        });
+
+        // 移动端菜单切换
+        const menuToggle = document.getElementById('menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+        menuToggle.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // FAQ 切换
+        function toggleFAQ(button) {
+            const content = button.nextElementSibling;
+            const icon = button.querySelector('i');
+            
+            content.classList.toggle('hidden');
+            icon.classList.toggle('rotate-180');
+        }
+
+        // 解析按钮点击事件
+        const parseBtn = document.getElementById('parse-btn');
+        const resultSection = document.getElementById('result');
+        const videoUrl = document.getElementById('video-url');
+        const videoPlayer = document.getElementById('video-player');
+        const successToast = document.getElementById('success-toast');
+        const parseLine = document.getElementById('parse-line');
+
+        parseBtn.addEventListener('click', () => {
+            const url = videoUrl.value.trim();
+            if (!url) {
+                alert('请输入视频链接');
+                return;
+            }
+            
+            // 模拟解析过程
+            parseBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin mr-2"></i> 解析中...';
+            parseBtn.disabled = true;
+            
+            setTimeout(() => {
+                // 模拟解析成功
+                videoPlayer.src = `https://v.qq.com/x/cover/mzc00200x1t7a8o.html`; // 示例视频
+                resultSection.classList.remove('hidden');
+                
+                // 滚动到结果区域
+                resultSection.scrollIntoView({ behavior: 'smooth' });
+                
+                // 恢复按钮状态
+                parseBtn.innerHTML = '<i class="fa-solid fa-play mr-2"></i> 开始解析';
+                parseBtn.disabled = false;
+                
+                // 显示成功提示
+                showToast('解析成功！正在加载视频...');
+            }, 2000);
+        });
+
+        // 新的解析按钮
+        const newParseBtn = document.getElementById('new-parse-btn');
+        newParseBtn.addEventListener('click', () => {
+            videoUrl.value = '';
+            resultSection.classList.add('hidden');
+            videoPlayer.src = '';
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // 显示提示框
+        function showToast(message) {
+            successToast.querySelector('span').textContent = message;
+            successToast.classList.remove('translate-y-20', 'opacity-0');
+            setTimeout(() => {
+                successToast.classList.add('translate-y-20', 'opacity-0');
+            }, 3000);
+        }
+
+        // 下载按钮点击事件
+        const downloadBtn = document.getElementById('download-btn');
+        downloadBtn.addEventListener('click', () => {
+            showToast('下载功能开发中，敬请期待！');
+        });
+
+        // 分享按钮点击事件
+        const shareBtn = document.getElementById('share-btn');
+        shareBtn.addEventListener('click', () => {
+            showToast('分享功能开发中，敬请期待！');
+        });
+
+        // 推荐视频卡片点击事件
+        const recommendButtons = document.querySelectorAll('#recommended button');
+        recommendButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                videoUrl.value = 'https://v.qq.com/x/cover/mzc00200x1t7a8o.html'; // 示例链接
+                parseBtn.click();
+            });
+        });
+
+        // 平滑滚动
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
+    

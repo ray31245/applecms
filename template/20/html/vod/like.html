@@ -1,0 +1,255 @@
+
+
+<div class="stui-pannel clearfix" id="desc">
+	<div class="stui-pannel__head clearfix">
+		<h3 class="title"><img src="{$maccms.path}statics/icon/icon_6.png" />《{$obj.vod_name}》常见问题</h3>
+	</div>
+	<div class="stui-content__desc col-pd clearfix">
+		<div class="qa-list">
+			<div class="qa-item">
+				<div class="question"><i class="qa-icon">Q1</i>请问哪个平台可以免费在线观看《{$obj.vod_name}》?</div>
+				<div class="answer"><i class="qa-icon">A</i><a
+						href="{$maccms.path}">{$maccms.site_name}</a>网友：在线观看地址：http://{$maccms.site_url}{:mac_url_vod_play($obj,['sid'=>1,'nid'=>1])}
+				</div>
+			</div>
+
+			<div class="qa-item">
+				<div class="question"><i class="qa-icon">Q2</i>《{$obj.vod_name}》哪些演员主演的？</div>
+				<div class="answer"><i class="qa-icon">A</i>网友：主演有{$obj.vod_actor|mac_substring=40}</div>
+			</div>
+
+			<div class="qa-item">
+				<div class="question"><i class="qa-icon">Q3</i>《{$obj.vod_name}》是什么时候上映/什么时候开播的？</div>
+				<div class="answer"><i class="qa-icon">A</i>网友：{$obj.vod_year}年，详细日期也可以去<a
+						 href="https://baike.baidu.com/" rel="nofollow" class="link">百度百科</a>查询。</div>
+			</div>
+
+			<div class="qa-item">
+				<div class="question"><i class="qa-icon">Q4</i>《{$obj.vod_name}》如果播放卡顿怎么办？</div>
+				<div class="answer"><i class="qa-icon">A</i><a href="https://tieba.baidu.com/index.html" rel="nofollow"
+						class="link">百度贴吧</a>网友：播放页面卡顿可以刷新网页或者更换播放源。</div>
+			</div>
+
+			<div class="qa-item">
+				<div class="question"><i class="qa-icon">Q5</i>手机版免费在线点播《{$obj.vod_name}》哪些网站还有资源？</div>
+				<div class="answer"><i class="qa-icon">A</i>网友：<a href="https://www.mgtv.com/" rel="nofollow"
+						class="link">芒果TV</a>、<a href="https://www.iqiyi.com/" rel="nofollow" class="link">爱奇艺</a>、<a
+						href="https://www.youku.com/" rel="nofollow" class="link">优酷视频</a>、<a href="http://v.baidu.com/"
+						rel="nofollow" class="link">百度视频</a></div>
+			</div>
+
+			
+		</div>
+	</div>
+</div>
+
+<style>
+	.qa-list {
+		padding: 15px;
+		background: #fff;
+		border-radius: 8px;
+		box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+	}
+
+	.qa-item {
+		margin-bottom: 20px;
+		padding-bottom: 15px;
+		border-bottom: 1px solid #f0f0f0;
+	}
+
+	.qa-item:last-child {
+		border-bottom: none;
+		margin-bottom: 0;
+	}
+
+	.question {
+		font-size: 16px;
+		color: #333;
+		font-weight: 500;
+		margin-bottom: 10px;
+		display: flex;
+		align-items: center;
+	}
+
+	.answer {
+		font-size: 14px;
+		color: #666;
+		line-height: 1.6;
+		padding-left: 30px;
+		position: relative;
+		display: flex;
+		align-items: flex-start;
+	}
+
+	.qa-icon {
+		display: inline-block;
+		width: 24px;
+		height: 24px;
+		line-height: 24px;
+		text-align: center;
+		border-radius: 12px;
+		margin-right: 8px;
+		font-style: normal;
+		font-size: 12px;
+		color: #fff;
+	}
+
+	.question .qa-icon {
+		background: #40CC92;
+	}
+
+	.answer .qa-icon {
+		background: #FF9800;
+		position: absolute;
+		left: 0;
+		top: 0;
+	}
+
+	.link {
+		color: #40CC92;
+		text-decoration: none;
+		transition: all 0.3s ease;
+	}
+
+	.link:hover {
+		color: #2fb67e;
+		text-decoration: underline;
+	}
+
+	.review-content {
+		font-style: italic;
+		color: #666;
+		line-height: 1.8;
+	}
+
+	.stui-pannel__head {
+		padding: 15px;
+		border-bottom: 1px solid #f0f0f0;
+	}
+
+	.stui-pannel__head .title {
+		font-size: 18px;
+		font-weight: 500;
+		color: #333;
+		display: flex;
+		align-items: center;
+	}
+
+	.stui-pannel__head .title img {
+		width: 24px;
+		height: 24px;
+		margin-right: 8px;
+	}
+</style>
+
+<div class="stui-pannel stui-pannel-bg clearfix">
+	<div class="stui-pannel-box">
+		<div class="stui-pannel_hd">
+			<div class="stui-pannel__head active bottom-line clearfix">
+				<h3 class="title">
+					<img src="{$maccms.path}statics/icon/icon_6.png"/>
+					猜你喜欢
+				</h3>						
+			</div>																		
+		</div>
+		<div class="stui-pannel_bd">
+			<ul class="stui-vodlist__bd clearfix">
+				{maccms:vod num="12" type="current" order="desc" by="time"}
+				<li class="col-md-6 col-sm-4 col-xs-3 {if condition="$key gt 8"}hidden-md{/if}">
+					{include file="block/vod_box"}														
+				</li>			
+				{/maccms:vod}
+			</ul>	
+			<ul class="stui-vodlist__text col-pd clearfix hidden-xs">
+				{maccms:vod num="50" type="all" order="desc" by="time" start="1"}
+				<li class="col-md-4 col-sm-3 col-xs-1 padding-0">
+					<a class="top-line-dot text-overflow" href="{:mac_url_vod_detail($vo)}" title="{$vo.vod_name}">
+						<span class="text-muted pull-right">{if condition="$vo.vod_remarks neq ''"}{$vo.vod_remarks}{elseif condition="$vo.vod_serial gt 0"}第{$vo.vod_serial}集{else /}已完结{/if}</span>
+						{$vo.vod_name|mac_substring=12}
+					</a>									
+				</li>
+				{/maccms:vod}
+			</ul>
+			
+			
+			<ul class="stui-vodlist__text col-pd clearfix hidden-xs">
+				{maccms:vod num="150" type="all" order="desc" by="time" start="100"}
+				<li class="col-md-4 col-sm-3 col-xs-1 padding-0">
+					<a class="top-line-dot text-overflow" href="{:mac_url_vod_detail($vo)}" title="{$vo.vod_name}">
+						<span class="text-muted pull-right">{if condition="$vo.vod_remarks neq ''"}{$vo.vod_remarks}{elseif condition="$vo.vod_serial gt 0"}第{$vo.vod_serial}集{else /}已完结{/if}</span>
+						{$vo.vod_name|mac_substring=12}
+					</a>									
+				</li>
+				{/maccms:vod}
+			</ul>
+			
+			
+			
+		</div>			
+	</div>						
+</div>
+
+<div class="stui-pannel clearfix" id="desc">
+	<div class="stui-pannel__head clearfix">
+		<h3 class="title"><img src="{$maccms.path}statics/icon/icon_6.png" />《<strong>{$obj.vod_name}</strong>》相关搜索
+		</h3>
+	</div>
+	<div class="stui-content__desc col-pd clearfix">
+		<a href="https://www.baidu.com/s?wd={$obj.vod_name}爱奇艺在线&amp;si={$maccms.site_url}&amp;ct=2097152"
+			target="_blank" rel="nofollow">{$obj.vod_name}爱奇艺在线</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+		<a href="https://www.baidu.com/s?wd={$obj.vod_name}优酷在线&amp;si={$maccms.site_url}&amp;ct=2097152"
+			target="_blank" rel="nofollow">{$obj.vod_name}优酷在线</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+		<a href="https://www.baidu.com/s?wd={$obj.vod_name}西瓜影音&amp;si={$maccms.site_url}&amp;ct=2097152"
+			target="_blank" rel="nofollow">{$obj.vod_name}西瓜影音</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+		<a href="https://www.baidu.com/s?wd={$obj.vod_name}百度百科&amp;si={$maccms.site_url}&amp;ct=2097152"
+			target="_blank" rel="nofollow">{$obj.vod_name}百度百科</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+		<a href="https://www.baidu.com/s?wd={$obj.vod_name}预告片&amp;si={$maccms.site_url}&amp;ct=2097152" target="_blank"
+			rel="nofollow">{$obj.vod_name}预告片</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+		<a href="https://www.baidu.com/s?wd={$obj.vod_name}原著&amp;si={$maccms.site_url}&amp;ct=2097152" target="_blank"
+			rel="nofollow">{$obj.vod_name}原著</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+		<a href="https://www.baidu.com/s?wd={$obj.vod_name}什么时候播&amp;si={$maccms.site_url}&amp;ct=2097152"
+			target="_blank" rel="nofollow">{$obj.vod_name}什么时候播</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+		<a href="https://www.baidu.com/s?wd={$obj.vod_name}小说原著&amp;si={$maccms.site_url}&amp;ct=2097152"
+			target="_blank" rel="nofollow">{$obj.vod_name}小说原著</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+		<a href="https://www.baidu.com/s?wd={$obj.vod_name}在线免费观看&amp;si={$maccms.site_url}&amp;ct=2097152"
+			target="_blank" rel="nofollow">{$obj.vod_name}在线免费观看</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+		<a href="https://www.baidu.com/s?wd={$obj.vod_name}豆瓣评分&amp;si={$maccms.site_url}&amp;ct=2097152"
+			target="_blank" rel="nofollow">{$obj.vod_name}豆瓣评分</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+		<a href="https://www.baidu.com/s?wd={$obj.vod_name}演员表&amp;si={$maccms.site_url}&amp;ct=2097152" target="_blank"
+			rel="nofollow">{$obj.vod_name}演员表</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+		<a href="https://www.baidu.com/s?wd=剧情片{$obj.vod_name}评价&amp;si={$maccms.site_url}&amp;ct=2097152"
+			target="_blank" rel="nofollow">剧情片{$obj.vod_name}评价</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+		<a href="https://www.baidu.com/s?wd={$obj.vod_name}结局&amp;si={$maccms.site_url}&amp;ct=2097152" target="_blank"
+			rel="nofollow">{$obj.vod_name}结局</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+		<a href="https://www.baidu.com/s?wd=电影{$obj.vod_name}说的是什么&amp;si={$maccms.site_url}&amp;ct=2097152"
+			target="_blank" rel="nofollow">电影{$obj.vod_name}说的是什么</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+		<a href="https://www.baidu.com/s?wd={$obj.vod_name}图片&amp;si={$maccms.site_url}&amp;ct=2097152" target="_blank"
+			rel="nofollow">{$obj.vod_name}图片</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+		<a href="https://www.baidu.com/s?wd={$obj.vod_name}定档&amp;si={$maccms.site_url}&amp;ct=2097152" target="_blank"
+			rel="nofollow">{$obj.vod_name}定档</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+		<a href="https://www.baidu.com/s?wd=在线电影{$obj.vod_name}好看吗&amp;si={$maccms.site_url}&amp;ct=2097152"
+			target="_blank" rel="nofollow">在线电影{$obj.vod_name}好看吗</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+		<a href="https://www.baidu.com/s?wd={$obj.vod_name}剧情介绍&amp;si={$maccms.site_url}&amp;ct=2097152"
+			target="_blank" rel="nofollow">{$obj.vod_name}剧情介绍</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+		<a href="https://www.baidu.com/s?wd={$obj.vod_name}幕后花絮&amp;si={$maccms.site_url}&amp;ct=2097152"
+			target="_blank" rel="nofollow">{$obj.vod_name}幕后花絮</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+		<a href="https://www.baidu.com/s?wd={$obj.vod_name}人物关系&amp;si={$maccms.site_url}&amp;ct=2097152"
+			target="_blank" rel="nofollow">{$obj.vod_name}人物关系</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+		<a href="https://www.baidu.com/s?wd={$obj.vod_name}角色介绍&amp;si={$maccms.site_url}&amp;ct=2097152"
+			target="_blank" rel="nofollow">{$obj.vod_name}角色介绍</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+		<a href="https://www.baidu.com/s?wd={$obj.vod_name}上映时间&amp;si={$maccms.site_url}&amp;ct=2097152"
+			target="_blank" rel="nofollow">{$obj.vod_name}上映时间</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+		<a href="https://www.baidu.com/s?wd={$obj.vod_name}迅雷下载地址&amp;si={$maccms.site_url}&amp;ct=2097152"
+			target="_blank" rel="nofollow">{$obj.vod_name}迅雷下载</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+		<a href="https://www.baidu.com/s?wd={$obj.vod_name}百度影音&si={$maccms.site_url}&ct=2097152" target="_blank"
+			rel="nofollow">{$obj.vod_name}百度影音</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+		<a href="https://www.baidu.com/s?wd={$obj.vod_name}快播&si={$maccms.site_url}&ct=2097152" target="_blank"
+			rel="nofollow">{$obj.vod_name}快播</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+		<a href="https://www.baidu.com/s?wd={$obj.vod_name}qvod&si={$maccms.site_url}&ct=2097152" target="_blank"
+			rel="nofollow">{$obj.vod_name}qvod</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+		<a href="https://www.baidu.com/s?wd={$obj.vod_name}百度云&si={$maccms.site_url}&ct=2097152" target="_blank"
+			rel="nofollow">{$obj.vod_name}百度云</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+
+
+	</div>
+</div>
